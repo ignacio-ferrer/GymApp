@@ -19,6 +19,7 @@ namespace GymApp
     {
 
         DatosPersonales datosPersonales = new DatosPersonales();
+        DatosMedicos datosMedicos = new DatosMedicos();
 
         public Inscripciones()
         {
@@ -39,7 +40,11 @@ namespace GymApp
                     string.IsNullOrWhiteSpace(BoxCodigoPostal.Text) ||
                     string.IsNullOrWhiteSpace(BoxTel.Text) ||
                     string.IsNullOrWhiteSpace(BoxContactoEmergencia.Text) ||
-                    string.IsNullOrWhiteSpace(BoxMail.Text))
+                    string.IsNullOrWhiteSpace(BoxMail.Text) ||
+                    string.IsNullOrWhiteSpace(BoxMedicoUno.Text) ||
+                    string.IsNullOrWhiteSpace(BoxMedicoDos.Text) ||
+                    string.IsNullOrWhiteSpace(BoxMedicoTres.Text))
+
                 {
                     MessageBox.Show("Todos los campos son obligatorios.");
                     return;
@@ -79,6 +84,34 @@ namespace GymApp
                 datosPersonales.telefonoEmergencia = BoxDeTelefonoEmergencia;
                 datosPersonales.correo = BoxMail.Text;
                 datosPersonales.fechaInscripcion = FechaInscripcion;
+
+                // Guardando todas las variables de la ficha: Datos Medicos
+                datosMedicos.lesionOsea = BoxMedicoUno.Text;
+                datosMedicos.lesionMuscular = BoxMedicoDos.Text;
+                datosMedicos.enfermedadCardio = BoxMedicoTres.Text;
+
+                //bools
+                datosMedicos.preguntaUno = BtnSiUno.IsChecked == true;
+                datosMedicos.preguntaDos = BtnSiDos.IsChecked == true;
+                datosMedicos.preguntaTres = BtnSiTres.IsChecked == true;
+                datosMedicos.preguntaCuatro = BtnSiCuatro.IsChecked == true;
+                
+                //bool 5:
+                datosMedicos.preguntaAsmatico = BtnAsmatico.IsChecked == true;
+                datosMedicos.preguntaEpileptico = BtnEpileptico.IsChecked == true;
+                datosMedicos.preguntaDiabetico = BtnDiabetico.IsChecked == true;
+                datosMedicos.preguntaFumador = BtnFumador.IsChecked == true;
+
+                //bool 6
+                datosMedicos.preguntaMareos = BtnMareos.IsChecked == true;
+                datosMedicos.preguntaDesmayos = BtnDesmayos.IsChecked == true;  
+                datosMedicos.preguntaRespirar = BtnRespirar.IsChecked == true;
+                datosMedicos.preguntaNauseas = BtnNauseas.IsChecked == true;
+
+                datosMedicos.preguntaSiete = BtnSiSiete.IsChecked == true;
+                datosMedicos.preguntaOcho = BtnSiOcho.IsChecked == true;
+                datosMedicos.preguntaNueve = BtnSiNueve.IsChecked == true;
+
 
                 // Confirmación de que los datos han sido guardados correctamente
                 MessageBox.Show("Datos personales guardados correctamente.");
