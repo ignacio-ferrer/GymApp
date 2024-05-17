@@ -8,7 +8,7 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Inscripciones">
 
-    <Grid Background="#FFE8E0E0" RenderTransformOrigin="0.499,0.469">
+    <Grid RenderTransformOrigin="0.499,0.469" Background="#FF9294A0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1"/>
             <ColumnDefinition Width="1*"/>
@@ -18,70 +18,70 @@
         <GroupBox Header="Datos Personales" Margin="1,1,5,0" Background="White" VerticalAlignment="Top" Height="336" FontSize="15" Grid.Column="1">
             <Canvas Height="302">
                 <!--Seccion Nombre-->
-                <Label Content="Nombre: " Canvas.Left="7" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40" />
-                <TextBox TextWrapping="Wrap" Text="" Width="200" Canvas.Left="75" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40"/>
+                <Label Content="Nombre: " Canvas.Left="7" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40"/>
+                <TextBox x:Name="BoxNombre" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="75" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40" TextChanged="BoxNombre_TextChanged"/>
 
                 <!--Seccion Apellido-->
                 <Label Content="Apellido: " Canvas.Left="369" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40" />
-                <TextBox TextWrapping="Wrap" Text="" Width="208" Canvas.Left="437" Canvas.Top="29" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40"/>
+                <TextBox x:Name="BoxApellido" TextWrapping="Wrap" Text="" Width="208" Canvas.Left="437" Canvas.Top="29" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40" TextChanged="BoxApellido_TextChanged"/>
 
                 <!--Seccion Edad-->
                 <Label Content="Edad: " Canvas.Left="723" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40" />
-                <TextBox TextWrapping="Wrap" Text="" Width="206" Canvas.Left="773" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40"/>
-
-                <!--Seccion Sexo-->
-                <Label Content="Sexo: " Canvas.Left="1042" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40" />
-                <RadioButton Content="Hombre" Canvas.Left="1089.1" Canvas.Top="32.666" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" />
-                <RadioButton Content="Mujer" Canvas.Left="1178.6" Canvas.Top="32.999" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" />
+                <TextBox x:Name="BoxEdad" TextWrapping="Wrap" Text="" Width="206" Canvas.Left="773" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Margin="0.1,0,0,40" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
 
                 <!--Seccion DNI-->
-                <Label Content="DNI: " Canvas.Left="1317.6" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" />
-                <TextBox TextWrapping="Wrap" Text="" Width="206" Canvas.Left="1356.6" Canvas.Top="29.333" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1"/>
+                <Label Content="DNI: " Canvas.Left="1029.1" Canvas.Top="24" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" />
+                <TextBox x:Name="BoxDni" TextWrapping="Wrap" Text="" Width="206" Canvas.Left="1068.1" Canvas.Top="26" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+
+                <!--Seccion Sexo-->
+                <Label Content="Sexo: " Canvas.Left="1315.6" Canvas.Top="24" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" />
+                <RadioButton x:Name="BtnHombre" Content="Hombre" Canvas.Left="1364.6" Canvas.Top="31.666" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" />
+                <RadioButton x:Name="BtnMujer" Content="Mujer" Canvas.Left="1454.1" Canvas.Top="31.999" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo"/>
 
                 <!--Seccion Fecha-->
                 <Label Content="Fecha de nacimiento: " Canvas.Left="8" Canvas.Top="110" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" />
-                <DatePicker Canvas.Left="156" Canvas.Top="108" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <DatePicker x:Name="DateCumple" Canvas.Left="156" Canvas.Top="108" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" />
 
                 <!--Seccion Direcc-->
                 <Label Content="Direccion: " Canvas.Left="370" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox TextWrapping="Wrap" Text="" Width="206" Canvas.Left="444" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                <TextBox x:Name="BoxDirec" TextWrapping="Wrap" Text="" Width="206" Canvas.Left="444" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
 
                 <!--Seccion Localidad-->
                 <Label Content="Localidad: " Canvas.Left="720" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox TextWrapping="Wrap" Text="" Width="206" Canvas.Left="796" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                <TextBox x:Name="BoxLocalidad" TextWrapping="Wrap" Text="" Width="206" Canvas.Left="796" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" TextChanged="BoxLocalidad_TextChanged"/>
 
                 <!--Seccion C.P-->
                 <Label Content="Codigo Postal: " Canvas.Left="1095" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" />
-                <TextBox TextWrapping="Wrap" Text="" Width="206" Canvas.Left="1197" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                <TextBox x:Name="BoxCodigoPostal" TextWrapping="Wrap" Text="" Width="206" Canvas.Left="1197" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
 
                 <!--Seccion Tel-->
                 <Label Content="Telefono: " Canvas.Left="11" Canvas.Top="190" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox TextWrapping="Wrap" Text="" Width="206" Canvas.Left="80" Canvas.Top="190" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
-
-                <!--Seccion Mail-->
-                <Label Content="Correo Electronico: " Canvas.Left="757" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox TextWrapping="Wrap" Text="" Width="206" Canvas.Left="892" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                <TextBox x:Name="BoxTel" TextWrapping="Wrap" Text="" Width="206" Canvas.Left="80" Canvas.Top="190" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
 
                 <!--Seccion Contacto-Emergencia-->
                 <Label Content="Contacto de emergencia: " Canvas.Left="355" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox TextWrapping="Wrap" Text="" Width="206" Canvas.Left="528" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                <TextBox x:Name="BoxContactoEmergencia" TextWrapping="Wrap" Text="" Width="206" Canvas.Left="528" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+
+                <!--Seccion Mail-->
+                <Label Content="Correo Electronico: " Canvas.Left="757" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
+                <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="206" Canvas.Left="892" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
 
                 <!--Seccion Fecha Inscripcion-->
                 <Label Canvas.Left="1128" Canvas.Top="190" Content="Fecha de inscripcion: " HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <DatePicker Canvas.Left="1272" Canvas.Top="186" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
+                <DatePicker x:Name="DateInscripcion" Canvas.Left="1273" Canvas.Top="189" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
             </Canvas>
         </GroupBox>
 
         <!--FICHA MEDICA-->
         <GroupBox Header="Ficha Medica" Margin="3,366,2,0" Background="White" VerticalAlignment="Top" Height="696" FontSize="15" Grid.Column="1">
-            <Canvas Height="664" RenderTransformOrigin="0.393,-0.048">
+            <Canvas Height="670" RenderTransformOrigin="0.393,-0.048">
                 <!--PREGUNTA 1-->
                 <Label Content="1. ¿Ha tenido o tiene alguna lesion osea? " HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="7" Canvas.Top="6" Grid.Column="1" Margin="5"/>
                 <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="35" Canvas.Top="39" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
                 <TextBox Canvas.Left="23" TextWrapping="Wrap" Text="" Canvas.Top="81" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top" Background="White" Grid.Column="1" Margin="5"/>
                 <RadioButton Content="SI" Canvas.Left="472" Canvas.Top="35" Grid.Column="1" Margin="5" />
                 <RadioButton Content="NO" Canvas.Left="527" Canvas.Top="35" Grid.Column="1" Margin="5"/>
-                <Border Height="2" Background="Gray" Width="1890" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Margin="5"/>
+                <Border Height="2" Background="Gray" Width="1903" Canvas.Top="139" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="5"/>
 
                 <!--PREGUNTA 2-->
                 <Label Content="2. ¿Ha tenido o tiene alguna lesion muscular? " Canvas.Left="13" Canvas.Top="145" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
@@ -89,7 +89,7 @@
                 <TextBox Canvas.Left="36" TextWrapping="Wrap" Text="" Canvas.Top="215" Width="400" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
                 <RadioButton Content="SI" Canvas.Left="466" Canvas.Top="192" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="5" />
                 <RadioButton Content="NO" Canvas.Left="519" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
-                <Border Height="2" Background="Gray" Width="1890" Canvas.Top="421" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1" Grid.Column="1" Margin="5"/>
+                <Border Height="2" Background="Gray" Width="769" Canvas.Top="426" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="6" Grid.Column="1"/>
 
                 <!--PREGUNTA 3-->
                 <Label Content="3. ¿Padece alguna enfermedad cardiovascular? " Canvas.Left="12" Canvas.Top="293" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
@@ -97,13 +97,13 @@
                 <TextBox Canvas.Left="55" TextWrapping="Wrap" Text="" Canvas.Top="380" Width="400" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
                 <RadioButton Content="SI" Canvas.Left="477" Canvas.Top="317" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
                 <RadioButton Content="NO" Canvas.Left="530" Canvas.Top="317" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
-                <Border Height="2" Background="Gray" Width="1890" Canvas.Top="280" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1" Grid.Column="1" Margin="5"/>
+                <Border Height="2" Background="Gray" Width="770" Canvas.Top="285" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="6" Grid.Column="1"/>
 
                 <!--PREGUNTA 4-->
                 <Label Content="4. ¿Se afixia con facilidad al realizar ejercicio fisico? " Canvas.Left="8" Canvas.Top="429" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Margin="5"/>
                 <RadioButton Content="SI" Canvas.Left="473" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
                 <RadioButton Content="NO" Canvas.Left="526" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
-                <Border Height="2" Background="Gray" Width="1890" Canvas.Top="496" Canvas.Left="2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
+                <Border Height="2" Background="Gray" Width="769" Canvas.Top="501" Canvas.Left="7" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
 
                 <!--PREGUNTA 5-->
                 <Label Content="5. ¿Es usted? " Canvas.Left="9" Canvas.Top="506" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
@@ -140,38 +140,86 @@
                 </Border>
 
                 <!--PREGUNTA 6-->
-                <Label Content="6. ¿Esta ud. Embarazada o sospecha estarlo?" Canvas.Left="792" Canvas.Top="13" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="SI" Canvas.Left="1114" Canvas.Top="22" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="NO" Canvas.Left="1169" Canvas.Top="22" Grid.Column="1" Margin="2"/>
+                <Label Content="6. Indique si ha tenido alguno de estos sintomas al realizar esfuerzos o ejercicio fisico: " Canvas.Left="785" Canvas.Top="11" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <!--A.-->
+                <Label Content="A) Mareos: " Canvas.Left="807" Canvas.Top="49" Grid.Column="1"/>
+                <RadioButton Content="SI" Canvas.Left="891" Canvas.Top="56" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <RadioButton Content="NO" Canvas.Left="931" Canvas.Top="56" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                <!--B.-->
+                <Label Content="B) Desmayos o Lipotomias: " Canvas.Left="807" Canvas.Top="84" Grid.Column="1"/>
+                <RadioButton Content="SI" Canvas.Left="997" Canvas.Top="92" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <RadioButton Content="NO" Canvas.Left="1037" Canvas.Top="92" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <!--C.-->
+                <Label Content="C) Dificultad para respirar: " Canvas.Left="1127" Canvas.Top="51" Grid.Column="1"/>
+                <RadioButton Content="SI" Canvas.Left="1312" Canvas.Top="60" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
+                <RadioButton Content="NO" Canvas.Left="1357" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <!--D.-->
+                <Label Content="D) Nauseas: " Canvas.Left="1127" Canvas.Top="81" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <RadioButton Content="SI" Canvas.Left="1227" Canvas.Top="91" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <RadioButton Content="NO" Canvas.Left="1267" Canvas.Top="91" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+
 
                 <!--PREGUNTA 7-->
                 <Label Content="7. ¿Padece de anemia en la actualidad?" Canvas.Left="783" Canvas.Top="144" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="SI" Canvas.Left="1067" Canvas.Top="152" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2" />
-                <RadioButton Content="NO" Canvas.Left="1122" Canvas.Top="152" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
+                <RadioButton Content="SI" Canvas.Left="1060" Canvas.Top="174" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
+                <RadioButton Content="NO" Canvas.Left="1115" Canvas.Top="174" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
 
                 <!--PREGUNTA 8-->
-                <Label Content="8. Indique si ha tenido alguno de estos sintomas al realizar esfuerzos o ejercicio fisico: " Canvas.Left="778" Canvas.Top="290" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
-                <!--A.-->
-                <Label Content="A) Mareos: " Canvas.Left="800" Canvas.Top="328" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="SI" Canvas.Left="900" Canvas.Top="334" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="NO" Canvas.Left="950" Canvas.Top="334" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
-                <!--B.-->
-                <Label Content="B) Desmayos o Lipotomias: " Canvas.Left="800" Canvas.Top="363" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="SI" Canvas.Left="990" Canvas.Top="371" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="NO" Canvas.Left="1030" Canvas.Top="371" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
-                <!--C.-->
-                <Label Content="C) Dificultad para respirar: " Canvas.Left="1120" Canvas.Top="330" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="SI" Canvas.Left="1305" Canvas.Top="339" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2" />
-                <RadioButton Content="NO" Canvas.Left="1350" Canvas.Top="338" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
-                <!--D.-->
-                <Label Content="D) Nauseas: " Canvas.Left="1120" Canvas.Top="360" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="SI" Canvas.Left="1220" Canvas.Top="370" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="NO" Canvas.Left="1260" Canvas.Top="370" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="2"/>
+                <Label Content="8. ¿Esta ud. Embarazada o sospecha estarlo?" Canvas.Left="784" Canvas.Top="211" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <RadioButton Content="SI" Canvas.Left="1084" Canvas.Top="256" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <RadioButton Content="NO" Canvas.Left="1131" Canvas.Top="256" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
                 <!--PREGUNTA 9-->
-                <Label Content="9. ¿Ha practicado o practica alguna actividad deportiva?" Canvas.Left="792" Canvas.Top="440" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="SI" Canvas.Left="1204" Canvas.Top="466" Grid.Column="1" Margin="2"/>
-                <RadioButton Content="NO" Canvas.Left="1251" Canvas.Top="465" Grid.Column="1" Margin="2"/>
+                <Label Content="9. ¿Ha practicado o practica alguna actividad deportiva?" Canvas.Left="781" Canvas.Top="297" Grid.Column="1"/>
+                <RadioButton Content="SI" Canvas.Left="1152" Canvas.Top="333" Grid.Column="1"/>
+                <RadioButton Content="NO" Canvas.Left="1198" Canvas.Top="333" Grid.Column="1"/>
+
+                <!--Guardar datos-->
+                <Button x:Name="BtnGuardar" Content="¡Guardar Datos!" Canvas.Left="782" Canvas.Top="575" Height="30" Width="110" Click="BtnGuardar_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
+
+                <Border Height="1" Background="Gray" Width="237" Canvas.Top="611" Canvas.Left="779" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                </Border>
+
+                <!--Imprimir datos-->
+                <Button x:Name="BtnImprimir" Content="¡Imprimir planilla!" Canvas.Left="896" Canvas.Top="575" Height="30" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
+                <Border Height="2" Background="Gray" Width="1136" Canvas.Top="202" Canvas.Left="775" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                </Border>
+                <Border Height="2" Background="Gray" Width="1134" Canvas.Top="285" Canvas.Left="776" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                </Border>
+                <Border Height="2" Background="Gray" Width="1127" Canvas.Top="355" Canvas.Left="776" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                </Border>
 
             </Canvas>
         </GroupBox>

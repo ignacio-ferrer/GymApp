@@ -23,13 +23,9 @@ namespace GymApp
         public MainWindow()
         {
             InitializeComponent();
+            //DatosPersonales datosPersonales = new DatosPersonales();
         }
 
-
-        private void BtnClientes_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void BtnInscripciones_Click(object sender, RoutedEventArgs e)
         {
