@@ -175,5 +175,30 @@ namespace GymApp
                 e.Handled = true;
             }
         }
+
+        //funcionalidad imprimir
+        private void BtnImprimir_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            // Mostrar el diálogo de impresión
+            if (printDialog.ShowDialog() == true)
+            {
+                // Obtener el contenido visual del formulario
+                var visual = new DrawingVisual();
+                using (var context = visual.RenderOpen())
+                {
+                    var brush = new VisualBrush(this);
+                    context.DrawRectangle(brush, null, new Rect(new Point(0, 0), new Size(this.ActualWidth, this.ActualHeight)));
+                }
+
+                // Ajustar el contenido al tamaño de la página
+                double scale = Math.Min(printDialog.PrintableAreaWidth / this.ActualWidth, printDialog.PrintableAreaHeight / this.ActualHeight);
+                visual.Transform = new ScaleTransform(scale, scale);
+
+                // Imprimir el contenido visual ajustado
+                printDialog.PrintVisual(visual, "Formulario Inscripcion.");
+            }
+        }
     }
 }

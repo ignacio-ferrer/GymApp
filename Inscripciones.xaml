@@ -272,7 +272,7 @@
                 </Border>
 
                 <!--Imprimir datos-->
-                <Button x:Name="BtnImprimir" Content="¡Imprimir planilla!" Canvas.Left="1450" Canvas.Top="589" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                <Button x:Name="BtnImprimir" Content="¡Imprimir planilla!" Canvas.Left="1450" Canvas.Top="589" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Click="BtnImprimir_Click"/>
                 <Border Height="2" Background="Gray" Width="1129" Canvas.Top="199" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
