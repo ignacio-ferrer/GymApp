@@ -26,7 +26,7 @@
                 <Separator Margin="45"/>
 
                 <!-- Opción Clientes -->
-                <Button x:Name="BtnClientes" Content="Clientes" Margin="5" FontSize="25"/>
+                <Button x:Name="BtnClientes" Content="Clientes" Margin="5" FontSize="25" Click="BtnClientes_Click"/>
                 <Separator Margin="45"/>
 
                 <!-- Opción Rutinas -->
