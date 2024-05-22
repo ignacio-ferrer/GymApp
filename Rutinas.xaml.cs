@@ -28,10 +28,10 @@ namespace GymApp
 
             EjerciciosDisponibles = new ObservableCollection<Ejercicio>
             {
-                new Ejercicio { Name = "Pendular circular - Codman" },
-                new Ejercicio { Name = "Almeja o abducción de cadera con mini banda" },
-                new Ejercicio { Name = "Equilibrio a una pierna sobre tabla de equilibrio" },
-                new Ejercicio { Name = "Puente de glúteos con mini banda elástica" }
+                new Ejercicio { Nombre = "Pendular circular - Codman" },
+                new Ejercicio { Nombre = "Almeja o abducción de cadera con mini banda" },
+                new Ejercicio { Nombre = "Equilibrio a una pierna sobre tabla de equilibrio" },
+                new Ejercicio { Nombre = "Puente de glúteos con mini banda elástica" }
             };
 
             EjerciciosSeleccionados = new ObservableCollection<Ejercicio>();
@@ -51,7 +51,7 @@ namespace GymApp
 
     public class Ejercicio
     {
-        public string Name { get; set; }
+        public string Nombre { get; set; }
     }
 
     public class RelayCommand : ICommand

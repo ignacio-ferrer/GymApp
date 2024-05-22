@@ -16,11 +16,11 @@
 
         <!-- Ejercicios seleccionados -->
         <ListBox x:Name="ListaEjerciciosSeleccionados" Grid.Column="0" 
-                 ItemsSource="{Binding EjerciciosSeleccionados}" Background="#FFB9AFAF">
+                 ItemsSource="{Binding EjerciciosSeleccionados}" Background="#FFB9AFAF" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Name}" Margin="5" />
+                        <TextBlock Text="{Binding Nombre}" Margin="5" />
                         <!-- Puedes agregar más detalles aquí -->
                     </StackPanel>
                 </DataTemplate>
@@ -29,11 +29,11 @@
 
         <!-- Ejercicios disponibles -->
         <ListBox x:Name="ListaEjerciciosDisponibles" Grid.Column="1" 
-                 ItemsSource="{Binding EjerciciosDisponibles}" Background="#FF7D7D7D">
+                 ItemsSource="{Binding EjerciciosDisponibles}" Background="#FF7D7D7D" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Name}" Margin="5" />
+                        <TextBlock Text="{Binding Nombre}" Margin="5" />
                         <Button Content="+" Command="{Binding DataContext.ComandoAgregarEjercicios, RelativeSource={RelativeSource AncestorType=ListBox}}"
                                 CommandParameter="{Binding}" Margin="5"/>
                     </StackPanel>
