@@ -30,7 +30,7 @@
                 <Separator Margin="45"/>
 
                 <!-- Opción Rutinas -->
-                <Button x:Name="BtnRutinas" Content="Rutinas" Margin="5" FontSize="25"/>
+                <Button x:Name="BtnRutinas" Content="Rutinas" Margin="5" FontSize="25" Click="BtnRutinas_Click"/>
                 <Separator Margin="45"/>
                 
             </StackPanel>

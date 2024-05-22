@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 
 namespace GymApp
 {
-
     public partial class Clientes : Page
     {
         DatosPersonales datosPersonales = new DatosPersonales();
@@ -44,6 +43,5 @@ namespace GymApp
             
             dataGrid.ItemsSource = clientes;
         }
-
     }
 }

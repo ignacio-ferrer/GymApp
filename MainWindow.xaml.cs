@@ -37,5 +37,10 @@ namespace GymApp
             frameInscripciones.Navigate(new Uri("Clientes.xaml", UriKind.Relative));
 
         }
+
+        private void BtnRutinas_Click(object sender, RoutedEventArgs e)
+        {
+            frameInscripciones.Navigate(new Uri("Rutinas.xaml", UriKind.Relative));
+        }
     }
 }
