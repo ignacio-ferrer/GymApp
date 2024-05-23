@@ -30,7 +30,7 @@
 
         <!-- Ejercicios de Pecho -->
         <StackPanel Grid.Column="1" Background="#FF2F3133">
-            <Label Content="Pecho" FontWeight="Bold" FontSize="20" Margin="1" Height="34" Background="#00000000" Foreground="#FFEDEDED"/>
+            <Label Content="Pecho" FontWeight="Bold" FontSize="22" Margin="1" Height="34" Background="#00000000" Foreground="#FFEDEDED"/>
             <ListBox x:Name="ListaEjerciciosPecho" 
                  ItemsSource="{Binding EjerciciosPecho}" Background="#FF2F3133" d:ItemsSource="{d:SampleData ItemCount=5}" Height="136" Width="836" Grid.Column="1" BorderBrush="{x:Null}" Foreground="#FFC8C5C5" >
                 <ListBox.ItemTemplate>
@@ -48,8 +48,8 @@
 
 
         <!-- Ejercicios de Espalda -->
-        <StackPanel Grid.Column="1" Margin="0,175,0,0">
-            <Label Content="Espalda" FontWeight="Bold" FontSize="20" Margin="1"  Height="35" Background="#00000000" Foreground="#FFEDEDED"/>
+        <StackPanel Grid.Column="1" Margin="0,170,0,0">
+            <Label Content="Espalda" FontWeight="Bold" FontSize="22" Margin="1"  Height="42" Background="#00000000" Foreground="#FFEDEDED"/>
             <ListBox x:Name="ListaEjerciciosEspalda" 
                  ItemsSource="{Binding EjerciciosEspalda}" Background="#FF2F3133" d:ItemsSource="{d:SampleData ItemCount=5}" 
                  Height="136" Width="836" BorderBrush="{x:Null}" Foreground="#FFC8C5C5" >
@@ -83,7 +83,7 @@
         </StackPanel>
 
         <!-- Ejercicios de Biceps -->
-        <StackPanel Grid.Column="1" Margin="0,525,0,0">
+        <StackPanel Grid.Column="1" Margin="0,520,0,0">
             <Label Content="Biceps" FontWeight="Bold" FontSize="20" Margin="1"  Height="35" Background="#00000000" Foreground="#FFEDEDED"/>
             <ListBox x:Name="ListaEjerciciosBiceps" 
                  ItemsSource="{Binding EjerciciosBiceps}" Background="#FF2F3133" d:ItemsSource="{d:SampleData ItemCount=3}" Height="85" Width="834" BorderBrush="{x:Null}" Foreground="#FFC8C5C5">
@@ -100,7 +100,7 @@
         </StackPanel>
 
         <!-- Ejercicios de Triceps -->
-        <StackPanel Grid.Column="1" Margin="0,640,0,0">
+        <StackPanel Grid.Column="1" Margin="1,640,0,0">
             <Label Content="Triceps" FontWeight="Bold" FontSize="20" Margin="1"  Height="35" Background="#00000000" Foreground="#FFEDEDED"/>
             <ListBox x:Name="ListaEjerciciosTriceps" 
                  ItemsSource="{Binding EjerciciosTriceps}" Background="#FF2F3133" d:ItemsSource="{d:SampleData ItemCount=3}" Height="85" Width="834" BorderBrush="{x:Null}" Foreground="#FFC8C5C5">
@@ -117,10 +117,10 @@
         </StackPanel>
 
         <!-- Ejercicios de Hombros -->
-        <StackPanel Grid.Column="1" Margin="0,750,0,0">
-            <Label Content="Hombros" FontWeight="Bold" FontSize="20" Margin="1"  Height="32" Background="#00000000" Foreground="#FFEDEDED"/>
+        <StackPanel Grid.Column="1" Margin="0,760,0,0">
+            <Label Content="Hombros" FontWeight="Bold" FontSize="20" Margin="1" Height="35" Background="#00000000" Foreground="#FFEDEDED"/>
             <ListBox x:Name="ListaEjerciciosHombros" 
-                 ItemsSource="{Binding EjerciciosHombros}" Background="#FF2F3133" d:ItemsSource="{d:SampleData ItemCount=3}" Height="85" Width="834" BorderBrush="{x:Null}" Foreground="#FFC8C5C5">
+                 ItemsSource="{Binding EjerciciosHombros}" Background="#FF2F3133" d:ItemsSource="{d:SampleData ItemCount=3}" Height="109" Width="834" BorderBrush="{x:Null}" Foreground="#FFC8C5C5">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -134,8 +134,8 @@
         </StackPanel>
 
         <!-- Ejercicios de Trapecio -->
-        <StackPanel Grid.Column="1" Margin="0,860,0,0">
-            <Label Content="Trapecio" FontWeight="Bold" FontSize="20" Margin="1"  Height="35" Background="#00000000" Foreground="#FFEDEDED"/>
+        <StackPanel Grid.Column="1" Margin="0,870,0,0">
+            <Label Content="Trapecio" FontWeight="Bold" FontSize="20" Margin="1"  Height="38" Background="#00000000" Foreground="#FFEDEDED"/>
             <ListBox x:Name="ListaEjerciciosTrapecio" 
                  ItemsSource="{Binding EjerciciosTrapecio}" Background="#FF2F3133" d:ItemsSource="{d:SampleData ItemCount=2}" Height="56" Width="837" BorderBrush="{x:Null}" Foreground="#FFC8C5C5">
                 <ListBox.ItemTemplate>
@@ -151,7 +151,7 @@
         </StackPanel>
 
         <!-- Ejercicios de Gemelos -->
-        <StackPanel Grid.Column="1" Margin="0,950,0,0">
+        <StackPanel Grid.Column="1" Margin="0,960,0,0">
             <Label Content="Gemelos" FontWeight="Bold" FontSize="20" Margin="1"  Height="32" Background="#00000000" Foreground="#FFEDEDED"/>
             <ListBox x:Name="ListaEjerciciosGemelos" 
                  ItemsSource="{Binding EjerciciosGemelos}" Background="#FF2F3133" d:ItemsSource="{d:SampleData ItemCount=2}"  Grid.Column="1" Height="60" Width="850" BorderBrush="{x:Null}" Foreground="#FFC8C5C5" >

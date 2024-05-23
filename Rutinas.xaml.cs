@@ -86,7 +86,7 @@ namespace GymApp
             {
                 new Ejercicio { Nombre = "Press militar"},
                 new Ejercicio { Nombre = "Vuelos laterales"},
-                new Ejercicio { Nombre = " Peck Deck"}
+                new Ejercicio { Nombre = "Peck Deck"}
             };
 
             EjerciciosTrapecio = new ObservableCollection<Ejercicio>
