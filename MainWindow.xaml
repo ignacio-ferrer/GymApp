@@ -17,10 +17,10 @@
         </Grid.ColumnDefinitions>
 
         <!-- Menú lateral -->
-        <Border Padding="0,180,0,0" Background="#FF4A4747">
+        <Border Padding="0,180,0,0" Background="#1C1C1E">
             <StackPanel VerticalAlignment="Top">
                 <Separator Margin="45"/>
-                
+
                 <!-- Opción Inscripciones -->
                 <Button x:Name="BtnInscripciones" Content="Inscripciones" Margin="5" FontSize="25" Click="BtnInscripciones_Click"/>
                 <Separator Margin="45"/>
@@ -32,13 +32,26 @@
                 <!-- Opción Rutinas -->
                 <Button x:Name="BtnRutinas" Content="Rutinas" Margin="5" FontSize="25" Click="BtnRutinas_Click"/>
                 <Separator Margin="45"/>
-                
+
             </StackPanel>
         </Border>
 
         <!-- Contenido principal -->
-        <Border Grid.Column="1" Background="#FF312C2C">
-            <Frame x:Name="frameInscripciones" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1763px"/>
+        <Border Grid.Column="1">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF1B1B1B" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Frame x:Name="frameInscripciones" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1763px">
+                <Frame.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF151515" Offset="1"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+            </Frame>
         </Border>
     </Grid>
 </Window>
