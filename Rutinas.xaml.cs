@@ -18,7 +18,19 @@ namespace GymApp
 {
     public partial class Rutinas : Page
     {
-        public ObservableCollection<Ejercicio> EjerciciosDisponibles { get; set; }
+        //grupo muscular grande
+        public ObservableCollection<Ejercicio> EjerciciosPecho { get; set; }
+        public ObservableCollection<Ejercicio> EjerciciosEspalda { get; set; }
+        public ObservableCollection<Ejercicio> EjerciciosPiernas { get; set; }
+
+        //grupo muscular chico
+        public ObservableCollection<Ejercicio> EjerciciosBiceps { get; set; }
+        public ObservableCollection<Ejercicio> EjerciciosTriceps { get; set; }
+        public ObservableCollection<Ejercicio> EjerciciosHombros { get; set; }
+        public ObservableCollection<Ejercicio> EjerciciosTrapecio { get; set; }
+        public ObservableCollection<Ejercicio> EjerciciosGemelos { get; set; }
+
+
         public ObservableCollection<Ejercicio> EjerciciosSeleccionados { get; set; }
         public ICommand ComandoAgregarEjercicios { get; set; }
 
@@ -26,12 +38,67 @@ namespace GymApp
         {
             InitializeComponent();
 
-            EjerciciosDisponibles = new ObservableCollection<Ejercicio>
+            //GRUPO MUSCULAR GRANDE
+            EjerciciosPecho = new ObservableCollection<Ejercicio>
             {
-                new Ejercicio { Nombre = "Pendular circular - Codman" },
-                new Ejercicio { Nombre = "Almeja o abducción de cadera con mini banda" },
-                new Ejercicio { Nombre = "Equilibrio a una pierna sobre tabla de equilibrio" },
-                new Ejercicio { Nombre = "Puente de glúteos con mini banda elástica" }
+                new Ejercicio { Nombre = "Press de banca"},
+                new Ejercicio { Nombre = "Press en banco inclinado"},
+                new Ejercicio { Nombre = "Peck Deck"},
+                new Ejercicio { Nombre = "Apertura en polea"},
+                new Ejercicio { Nombre = "Flexiones de brazo"}
+            };
+
+            EjerciciosEspalda = new ObservableCollection<Ejercicio>
+            {
+                new Ejercicio { Nombre = "Peso muerto"},
+                new Ejercicio { Nombre = "Remo con barra"},
+                new Ejercicio { Nombre = "Jalon alto en polea"},
+                new Ejercicio { Nombre = "Pull Over"},
+                new Ejercicio { Nombre = "Dominadas"}
+            };
+
+            EjerciciosPiernas = new ObservableCollection<Ejercicio>
+            {
+                new Ejercicio { Nombre = "Sentadilla"},
+                new Ejercicio { Nombre = "Prensa"},
+                new Ejercicio { Nombre = "Extension de cuadriceps en maquina"},
+                new Ejercicio { Nombre = "Curl femoral en maquina"},
+                new Ejercicio { Nombre = "Hip Thrust"}
+            };
+
+
+            //GRUPO MUSCULAR CHICO
+            EjerciciosBiceps = new ObservableCollection<Ejercicio>
+            {
+                new Ejercicio { Nombre = "Curl inclinado en banco con mancuernas (Enfasis en cabeza larga)"},
+                new Ejercicio { Nombre = "Curl en banco scott con barra Z (Enfasis en cabeza corta)"},
+                new Ejercicio { Nombre = "Curl martillo (Enfasis en el braquial)"}
+            };
+
+            EjerciciosTriceps = new ObservableCollection<Ejercicio>
+            {
+                new Ejercicio { Nombre = "Extensiones de triceps sobre cabeza (Enfasis en cabeza larga)"},
+                new Ejercicio { Nombre = "Jalon de tricep (Enfasis en cabeza lateral)"},
+                new Ejercicio { Nombre = "Fondos (Enfasis en cabeza medial)"}
+            };
+
+            EjerciciosHombros = new ObservableCollection<Ejercicio>
+            {
+                new Ejercicio { Nombre = "Press militar"},
+                new Ejercicio { Nombre = "Vuelos laterales"},
+                new Ejercicio { Nombre = " Peck Deck"}
+            };
+
+            EjerciciosTrapecio = new ObservableCollection<Ejercicio>
+            {
+                new Ejercicio { Nombre = "Encogimientos de hombro"},
+                new Ejercicio { Nombre = "Remo al cuello"}
+            };
+
+            EjerciciosGemelos = new ObservableCollection<Ejercicio>
+            {
+                new Ejercicio { Nombre = "Elevacion de talones"},
+                new Ejercicio { Nombre = "Extension de gemelos sentado"}
             };
 
             EjerciciosSeleccionados = new ObservableCollection<Ejercicio>();

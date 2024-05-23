@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GymApp"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Rutinas">
 
     <Grid>
@@ -27,9 +27,9 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <!-- Ejercicios disponibles -->
-        <ListBox x:Name="ListaEjerciciosDisponibles" Grid.Column="1" 
-                 ItemsSource="{Binding EjerciciosDisponibles}" Background="#FF7D7D7D" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <!-- Ejercicios de Pecho -->
+        <ListBox x:Name="ListaEjerciciosPecho" Grid.Column="1" 
+                 ItemsSource="{Binding EjerciciosPecho}" Background="#FF7D7D7D" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -40,5 +40,6 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        
     </Grid>
 </Page>
