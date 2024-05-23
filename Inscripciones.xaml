@@ -34,9 +34,9 @@
                 <TextBox x:Name="BoxDni" TextWrapping="Wrap" Text="" Width="190" Canvas.Left="1063.35" Canvas.Top="33.333" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
 
                 <!--Seccion Sexo-->
-                <Label Content="Sexo: " Canvas.Left="1346.849" Canvas.Top="32.916" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
-                <RadioButton x:Name="BtnHombre" Content="Hombre" Canvas.Left="1390.599" Canvas.Top="39.332" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" Foreground="#FFECEFF4" Background="#FFF2F2F7" />
-                <RadioButton x:Name="BtnMujer" Content="Mujer" Canvas.Left="1469.849" Canvas.Top="39.165" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" Foreground="#FFECEFF4" Background="#FFF2F2F7"/>
+                <Label Content="Sexo: " Canvas.Left="1346.305" Canvas.Top="32.81" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
+                <RadioButton x:Name="BtnHombre" Content="Hombre" Canvas.Left="1391.721" Canvas.Top="39.163" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" Foreground="#FFECEFF4" Background="#FFF2F2F7" />
+                <RadioButton x:Name="BtnMujer" Content="Mujer" Canvas.Left="1471.887" Canvas.Top="39.244" HorizontalAlignment="Center" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" Foreground="#FFECEFF4" Background="#FFF2F2F7"/>
 
                 <!--Seccion Fecha-->
                 <Label Content="Fecha de nacimiento: " Canvas.Left="5" Canvas.Top="113" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
