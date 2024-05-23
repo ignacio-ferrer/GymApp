@@ -8,88 +8,89 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Inscripciones">
 
-    <Grid RenderTransformOrigin="0.499,0.469" Background="#FF9294A0">
+    <Grid RenderTransformOrigin="0.499,0.469" Background="#2E3440">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
+        <!--#F2F2F7  #3A3A3C-->
 
         <!--DATOS PERSONALES-->
-        <GroupBox Header="Datos Personales" Margin="1,1,5,0" Background="White" VerticalAlignment="Top" Height="336" FontSize="15" Grid.Column="1">
+        <GroupBox Header="Datos Personales" Margin="1,1,11,0" Background="#3A3A3C" VerticalAlignment="Top" Height="336" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
             <Canvas Height="302">
                 <!--Seccion Nombre-->
-                <Label Content="Nombre: " Canvas.Left="5.766" Canvas.Top="33" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1"/>
-                <TextBox x:Name="BoxNombre" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="72.017" Canvas.Top="34.499" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxNombre_TextChanged" Height="20"/>
+                <Label Content="Nombre: " Canvas.Left="5.766" Canvas.Top="33" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4"/>
+                <TextBox x:Name="BoxNombre" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="72.017" Canvas.Top="34.499" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxNombre_TextChanged" Height="20" SelectionTextBrush="#FFF2F2F7" Background="#FFF2F2F7"/>
 
                 <!--Seccion Apellido-->
-                <Label Content="Apellido: " Canvas.Left="388.849" Canvas.Top="32.583" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" />
-                <TextBox x:Name="BoxApellido" TextWrapping="Wrap" Text="" Width="177" Canvas.Left="455.349" Canvas.Top="34.5" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxApellido_TextChanged" Height="20"/>
+                <Label Content="Apellido: " Canvas.Left="388.849" Canvas.Top="32.583" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxApellido" TextWrapping="Wrap" Text="" Width="177" Canvas.Left="455.349" Canvas.Top="34.5" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxApellido_TextChanged" Height="20" Background="#FFF2F2F7"/>
 
                 <!--Seccion Edad-->
-                <Label Content="Edad: " Canvas.Left="706.599" Canvas.Top="32.583" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" />
-                <TextBox x:Name="BoxEdad" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="751.433" Canvas.Top="35.333" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="19"/>
+                <Label Content="Edad: " Canvas.Left="706.599" Canvas.Top="32.583" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxEdad" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="751.433" Canvas.Top="35.333" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="19" Background="#FFF2F2F7"/>
 
                 <!--Seccion DNI-->
-                <Label Content="DNI: " Canvas.Left="1026.1" Canvas.Top="33.083" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" />
-                <TextBox x:Name="BoxDni" TextWrapping="Wrap" Text="" Width="190" Canvas.Left="1063.35" Canvas.Top="33.333" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+                <Label Content="DNI: " Canvas.Left="1026.1" Canvas.Top="33.083" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxDni" TextWrapping="Wrap" Text="" Width="190" Canvas.Left="1063.35" Canvas.Top="33.333" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
 
                 <!--Seccion Sexo-->
-                <Label Content="Sexo: " Canvas.Left="1346.849" Canvas.Top="32.916" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" />
-                <RadioButton x:Name="BtnHombre" Content="Hombre" Canvas.Left="1390.599" Canvas.Top="39.332" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" />
-                <RadioButton x:Name="BtnMujer" Content="Mujer" Canvas.Left="1469.849" Canvas.Top="39.165" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo"/>
+                <Label Content="Sexo: " Canvas.Left="1346.849" Canvas.Top="32.916" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
+                <RadioButton x:Name="BtnHombre" Content="Hombre" Canvas.Left="1390.599" Canvas.Top="39.332" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" Foreground="#FFECEFF4" Background="#FFF2F2F7" />
+                <RadioButton x:Name="BtnMujer" Content="Mujer" Canvas.Left="1469.849" Canvas.Top="39.165" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" Foreground="#FFECEFF4" Background="#FFF2F2F7"/>
 
                 <!--Seccion Fecha-->
-                <Label Content="Fecha de nacimiento: " Canvas.Left="5" Canvas.Top="113" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" />
-                <DatePicker x:Name="DateCumple" Canvas.Left="152" Canvas.Top="109" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="174" PreviewTextInput="BoxNumerico_PreviewTextInput" />
+                <Label Content="Fecha de nacimiento: " Canvas.Left="5" Canvas.Top="113" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                <DatePicker x:Name="DateCumple" Canvas.Left="152" Canvas.Top="109" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="174" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" />
 
                 <!--Seccion Direcc-->
-                <Label Content="Direccion: " Canvas.Left="388" Canvas.Top="111" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox x:Name="BoxDirec" TextWrapping="Wrap" Text="" Width="170" Canvas.Left="462" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="20"/>
+                <Label Content="Direccion: " Canvas.Left="388" Canvas.Top="111" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxDirec" TextWrapping="Wrap" Text="" Width="170" Canvas.Left="462" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="20" Background="#FFF2F2F7"/>
 
                 <!--Seccion Localidad-->
-                <Label Content="Localidad: " Canvas.Left="707" Canvas.Top="113" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox x:Name="BoxLocalidad" TextWrapping="Wrap" Text="" Width="171" Canvas.Left="780" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" TextChanged="BoxLocalidad_TextChanged" Height="20"/>
+                <Label Content="Localidad: " Canvas.Left="707" Canvas.Top="113" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxLocalidad" TextWrapping="Wrap" Text="" Width="171" Canvas.Left="780" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" TextChanged="BoxLocalidad_TextChanged" Height="20" Background="#FFF2F2F7"/>
 
                 <!--Seccion C.P-->
-                <Label Content="Codigo Postal: " Canvas.Left="1027" Canvas.Top="113" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox x:Name="BoxCodigoPostal" TextWrapping="Wrap" Text="" Width="141" Canvas.Left="1130" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="19"/>
+                <Label Content="Codigo Postal: " Canvas.Left="1027" Canvas.Top="113" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxCodigoPostal" TextWrapping="Wrap" Text="" Width="141" Canvas.Left="1130" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="19" Background="#FFF2F2F7"/>
 
                 <!--Seccion Tel-->
-                <Label Content="Telefono: " Canvas.Left="3" Canvas.Top="193" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox x:Name="BoxTel" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="70" Canvas.Top="194" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="21"/>
+                <Label Content="Telefono: " Canvas.Left="3" Canvas.Top="193" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxTel" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="70" Canvas.Top="194" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="21" Background="#FFF2F2F7"/>
 
                 <!--Seccion Contacto-Emergencia-->
-                <Label Content="Contacto de emergencia: " Canvas.Left="387" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" />
-                <TextBox x:Name="BoxContactoEmergencia" TextWrapping="Wrap" Text="" Width="125" Canvas.Left="560" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="22"/>
+                <Label Content="Contacto de emergencia: " Canvas.Left="387" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxContactoEmergencia" TextWrapping="Wrap" Text="" Width="125" Canvas.Left="560" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="22" Background="#FFF2F2F7"/>
 
                 <!--Seccion Mail-->
-                <Label Content="Correo Electronico: " Canvas.Left="707" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="151" Canvas.Left="841" Canvas.Top="195" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="19"/>
+                <Label Content="Correo Electronico: " Canvas.Left="707" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="151" Canvas.Left="841" Canvas.Top="195" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="19" Background="#FFF2F2F7"/>
 
                 <!--Seccion Fecha Inscripcion-->
-                <Label Canvas.Left="1026" Canvas.Top="193" Content="Fecha de inscripcion: " HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                <DatePicker x:Name="DateInscripcion" Canvas.Left="1171" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="25" Width="173" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+                <Label Canvas.Left="1026" Canvas.Top="193" Content="Fecha de inscripcion: " HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                <DatePicker x:Name="DateInscripcion" Canvas.Left="1171" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="25" Width="173" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" BorderBrush="#FF617584"/>
             </Canvas>
         </GroupBox>
 
         <!--FICHA MEDICA-->
-        <GroupBox Header="Ficha Medica" Margin="3,354,6,0" Background="White" VerticalAlignment="Top" Height="708" FontSize="15" Grid.Column="1">
+        <GroupBox Header="Ficha Medica" Margin="3,354,11,0" Background="#3A3A3C" VerticalAlignment="Top" Height="695" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
             <Canvas Height="670" RenderTransformOrigin="0.393,-0.048">
                 <!--GROUP BOX 1-->
-                <GroupBox Height="37" Header="" Width="94"  HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="101" Canvas.Left="466" BorderBrush="White"/>
+                <GroupBox Height="37" Header="" Width="94"  HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="101" Canvas.Left="466" BorderBrush="#3A3A3C" Foreground="#FF3A3A3C" Opacity="0"/>
 
                 <Canvas>
                     <!--PREGUNTA 1-->
-                    <Label Content="1. ¿Ha tenido o tiene alguna lesion osea? " HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="14" Canvas.Top="18" Grid.Column="1"/>
-                    <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="45" Canvas.Top="57" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBox x:Name="BoxMedicoUno" Canvas.Left="51" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Background="White" Grid.Column="1" Height="19"/>
-                    <RadioButton x:Name="BtnSiUno" Content="SI" Canvas.Left="470" Canvas.Top="119" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <RadioButton x:Name="BtnNoUno" Content="NO" Canvas.Left="510" Canvas.Top="119" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Border Height="2" Background="Gray" Width="1908" Canvas.Top="139" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="-5"/>
+                    <Label Content="1. ¿Ha tenido o tiene alguna lesion osea? " HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="14" Canvas.Top="18" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="45" Canvas.Top="57" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <TextBox x:Name="BoxMedicoUno" Canvas.Left="51" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFF2F2F7" Grid.Column="1" Height="19"/>
+                    <RadioButton x:Name="BtnSiUno" Content="SI" Canvas.Left="470" Canvas.Top="119" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFECEFF4" />
+                    <RadioButton x:Name="BtnNoUno" Content="NO" Canvas.Left="510" Canvas.Top="119" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
+                    <Border Height="2" Background="Gray" Width="1899" Canvas.Top="139" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="-3"/>
                 </Canvas>
 
                 <!--GROUP BOX 2-->
-                <GroupBox Height="34" Header="" Width="93"  HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="466" Canvas.Top="249">
+                <GroupBox Height="34" Header="" Width="93"  HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="466" Canvas.Top="249" Opacity="0">
                     <GroupBox.BorderBrush>
                         <SolidColorBrush Color="White"/>
                     </GroupBox.BorderBrush>
@@ -97,16 +98,16 @@
 
                 <Canvas>
                     <!--PREGUNTA 2-->
-                    <Label Content="2. ¿Ha tenido o tiene alguna lesion muscular? " Canvas.Left="14" Canvas.Top="158" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="198" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBox x:Name="BoxMedicoDos" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="240" Width="400" Background="White" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="19"/>
-                    <RadioButton x:Name="BtnSiDos" Content="SI" Canvas.Left="470" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                    <RadioButton x:Name="BtnNoDos" Content="NO" Canvas.Left="510" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
-                    <Border Height="2" Background="Gray" Width="781" Canvas.Top="420" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-5" Grid.Column="1"/>
+                    <Label Content="2. ¿Ha tenido o tiene alguna lesion muscular? " Canvas.Left="14" Canvas.Top="158" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="198" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <TextBox x:Name="BoxMedicoDos" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="240" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="19"/>
+                    <RadioButton x:Name="BtnSiDos" Content="SI" Canvas.Left="470" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                    <RadioButton x:Name="BtnNoDos" Content="NO" Canvas.Left="510" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <Border Height="2" Background="Gray" Width="779" Canvas.Top="420" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-3" Grid.Column="1"/>
                 </Canvas>
 
                 <!--GROUP BOX 3-->
-                <GroupBox Height="38" Header="" Width="119"  HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="381" Canvas.Left="465">
+                <GroupBox Height="38" Header="" Width="119"  HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="381" Canvas.Left="465" Opacity="0">
                     <GroupBox.BorderBrush>
                         <SolidColorBrush Color="White"/>
                     </GroupBox.BorderBrush>
@@ -114,17 +115,17 @@
 
                 <Canvas>
                     <!--PREGUNTA 3-->
-                    <Label Content="3. ¿Padece alguna enfermedad cardiovascular? " Canvas.Left="12" Canvas.Top="293" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5"/>
-                    <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="338" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBox x:Name="BoxMedicoTres" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="380" Width="400" Background="White" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="19"/>
-                    <RadioButton x:Name="BtnSiTres" Content="SI" Canvas.Left="470" Canvas.Top="399" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnNoTres" Content="NO" Canvas.Left="530" Canvas.Top="399" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <Border Height="2" Background="Gray" Width="780" Canvas.Top="285" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-5" Grid.Column="1"/>
+                    <Label Content="3. ¿Padece alguna enfermedad cardiovascular? " Canvas.Left="12" Canvas.Top="293" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5" Foreground="#FFECEFF4"/>
+                    <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="338" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <TextBox x:Name="BoxMedicoTres" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="380" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="19"/>
+                    <RadioButton x:Name="BtnSiTres" Content="SI" Canvas.Left="470" Canvas.Top="399" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoTres" Content="NO" Canvas.Left="530" Canvas.Top="399" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <Border Height="2" Background="Gray" Width="777" Canvas.Top="285" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-2" Grid.Column="1"/>
                 </Canvas>
 
 
                 <!--GROUP BOX 4-->
-                <GroupBox Height="33" Header="" Width="91"  HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="466" Canvas.Left="348">
+                <GroupBox Height="33" Header="" Width="91"  HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="466" Canvas.Left="348" Opacity="0">
                     <GroupBox.BorderBrush>
                         <SolidColorBrush Color="White"/>
                     </GroupBox.BorderBrush>
@@ -132,50 +133,50 @@
 
                 <Canvas>
                     <!--PREGUNTA 4-->
-                    <Label Content="4. ¿Se afixia con facilidad al realizar ejercicio fisico? " Canvas.Left="13" Canvas.Top="438" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnSiCuatro" Content="SI" Canvas.Left="350" Canvas.Top="479" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnNoCuatro" Content="NO" Canvas.Left="390" Canvas.Top="479" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
-                    <Border Height="2" Background="Gray" Width="781" Canvas.Top="499" Canvas.Left="-5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+                    <Label Content="4. ¿Se afixia con facilidad al realizar ejercicio fisico? " Canvas.Left="13" Canvas.Top="438" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnSiCuatro" Content="SI" Canvas.Left="350" Canvas.Top="479" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoCuatro" Content="NO" Canvas.Left="390" Canvas.Top="479" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <Border Height="2" Background="Gray" Width="779" Canvas.Top="499" Canvas.Left="-3" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
                 </Canvas>
 
 
                 <!--PREGUNTA 5-->
-                <Label Content="5. ¿Es usted? " Canvas.Left="14" Canvas.Top="518" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                <Label Content="5. ¿Es usted? " Canvas.Left="14" Canvas.Top="518" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
 
                 <!--G.P 1-->
-                <GroupBox Height="35" Header="" Width="88" Canvas.Top="568" Canvas.Left="508" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <GroupBox Height="35" Header="" Width="88" Canvas.Top="568" Canvas.Left="508" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0"/>
                 <!--1.-->
                 <Canvas>
-                    <Label Content="Asmatico/a" Canvas.Left="205" Canvas.Top="538" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnAsmatico" Content="SI" Canvas.Left="290" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnNoCincoA" Content="NO" Canvas.Left="330" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label Content="Asmatico/a" Canvas.Left="205" Canvas.Top="538" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnAsmatico" Content="SI" Canvas.Left="290" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Background="#FFECEFF4" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoCincoA" Content="NO" Canvas.Left="330" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Background="#FFECEFF4" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 2-->
-                <GroupBox Height="37" Header="" Width="88" Canvas.Top="567" Canvas.Left="288" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <GroupBox Height="37" Header="" Width="88" Canvas.Top="567" Canvas.Left="288" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="{x:Null}" Opacity="0"/>
                 <Canvas>
                     <!--2.-->
-                    <Label Content="Epileptico/a" Canvas.Left="204" Canvas.Top="578" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnEpileptico" Content="SI" Canvas.Left="290" Canvas.Top="584" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnNoCincoE" Content="NO" Canvas.Left="330" Canvas.Top="584" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                    <Label Content="Epileptico/a" Canvas.Left="204" Canvas.Top="578" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnEpileptico" Content="SI" Canvas.Left="290" Canvas.Top="584" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoCincoE" Content="NO" Canvas.Left="330" Canvas.Top="584" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 3-->
-                <GroupBox Height="37" Header="" Width="90" Canvas.Top="530" Canvas.Left="287" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <GroupBox Height="40" Header="" Width="92" Canvas.Top="527" Canvas.Left="288"  HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Opacity="0"/>
                 <Canvas>
                     <!--3.-->
-                    <Label Content="Diabetico/a" Canvas.Left="424" Canvas.Top="538" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnDiabetico" Content="SI" Canvas.Left="510" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
-                    <RadioButton x:Name="BtnNoCincoD" Content="NO" Canvas.Left="550" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label Content="Diabetico/a" Canvas.Left="424" Canvas.Top="538" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnDiabetico" Content="SI" Canvas.Left="510" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                    <RadioButton x:Name="BtnNoCincoD" Content="NO" Canvas.Left="550" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 4-->
-                <GroupBox Height="37" Header="" Width="87" Canvas.Top="528" Canvas.Left="507" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <GroupBox Height="38" Header="" Width="88" Canvas.Top="528" Canvas.Left="508" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--4.-->
-                    <Label Content="Fumador/a" Canvas.Left="424" Canvas.Top="578" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnFumador" Content="SI" Canvas.Left="510" Canvas.Top="584" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnNoCincoF" Content="NO" Canvas.Left="550" Canvas.Top="584" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label Content="Fumador/a" Canvas.Left="424" Canvas.Top="578" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnFumador" Content="SI" Canvas.Left="510" Canvas.Top="584" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoCincoF" Content="NO" Canvas.Left="550" Canvas.Top="584" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <Border Height="2" Background="Gray" Width="670" Canvas.Top="334" Canvas.Left="440" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
@@ -191,74 +192,74 @@
 
 
                 <!--PREGUNTA 6-->
-                <Label Content="6. Indique si ha tenido alguno de estos sintomas al realizar esfuerzos o ejercicio fisico: " Canvas.Left="785" Canvas.Top="18" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label Content="6. Indique si ha tenido alguno de estos sintomas al realizar esfuerzos o ejercicio fisico: " Canvas.Left="785" Canvas.Top="18" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
 
                 <!--G.P 1-->
-                <GroupBox Height="38" Header="" Width="93" Canvas.Top="42" Canvas.Left="1285" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <GroupBox Height="38" Header="" Width="93" Canvas.Top="42" Canvas.Left="1285" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--A.-->
-                    <Label Content="A) Mareos: " Canvas.Left="805" Canvas.Top="49" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <RadioButton x:Name="BtnMareos" Content="SI" Canvas.Left="889" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnNoSeisM" Content="NO" Canvas.Left="930" Canvas.Top="59" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label Content="A) Mareos: " Canvas.Left="805" Canvas.Top="49" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnMareos" Content="SI" Canvas.Left="889" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoSeisM" Content="NO" Canvas.Left="930" Canvas.Top="59" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 2-->
-                <GroupBox Height="37" Header="" Width="88" Canvas.Top="84" Canvas.Left="1188" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <GroupBox Height="37" Header="" Width="88" Canvas.Top="84" Canvas.Left="1188" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--B.-->
-                    <Label Content="B) Desmayos o Lipotomias: " Canvas.Left="804" Canvas.Top="89" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnDesmayos" Content="SI" Canvas.Left="989" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnNoSeisD" Content="NO" Canvas.Left="1029" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label Content="B) Desmayos o Lipotomias: " Canvas.Left="804" Canvas.Top="89" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnDesmayos" Content="SI" Canvas.Left="989" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoSeisD" Content="NO" Canvas.Left="1029" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 3-->
-                <GroupBox Height="40" Header="" Width="88" Canvas.Top="84" Canvas.Left="987" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <GroupBox Height="40" Header="" Width="88" Canvas.Top="82" Canvas.Left="987"  HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Opacity="0"/>
                 <Canvas>
                     <!--C.-->
-                    <Label Content="C) Dificultad para respirar: " Canvas.Left="1104" Canvas.Top="49" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnRespirar" Content="SI" Canvas.Left="1287" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" />
-                    <RadioButton x:Name="BtnNoSeisR" Content="NO" Canvas.Left="1330" Canvas.Top="59" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+                    <Label Content="C) Dificultad para respirar: " Canvas.Left="1104" Canvas.Top="49" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnRespirar" Content="SI" Canvas.Left="1287" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
+                    <RadioButton x:Name="BtnNoSeisR" Content="NO" Canvas.Left="1330" Canvas.Top="59" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 4-->
-                <GroupBox Height="39" Header="" Width="106" Canvas.Top="42" Canvas.Left="886" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <GroupBox Height="39" Header="" Width="106" Canvas.Top="43" Canvas.Left="884" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--D.-->
-                    <Label Content="D) Nauseas: " Canvas.Left="1104" Canvas.Top="89" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnNauseas" Content="SI" Canvas.Left="1190" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnNoSeisN" Content="NO" Canvas.Left="1230" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                    <Label Content="D) Nauseas: " Canvas.Left="1104" Canvas.Top="89" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNauseas" Content="SI" Canvas.Left="1190" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoSeisN" Content="NO" Canvas.Left="1230" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
 
                 <!--G.P 7-->
-                <GroupBox Height="37" Header="" Width="94" Canvas.Top="163" Canvas.Left="1045" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <GroupBox Height="37" Header="" Width="94" Canvas.Top="163" Canvas.Left="1045" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--PREGUNTA 7-->
-                    <Label Content="7. ¿Padece de anemia en la actualidad?" Canvas.Left="785" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
-                    <RadioButton x:Name="BtnSiSiete" Content="SI" Canvas.Left="1051" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" />
-                    <RadioButton x:Name="BtnNoSiete" Content="NO" Canvas.Left="1091" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label Content="7. ¿Padece de anemia en la actualidad?" Canvas.Left="785" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnSiSiete" Content="SI" Canvas.Left="1051" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                    <RadioButton x:Name="BtnNoSiete" Content="NO" Canvas.Left="1091" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 8-->
-                <GroupBox Height="37" Header="" Width="94" Canvas.Top="320" Canvas.Left="1132" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <GroupBox Height="37" Header="" Width="94" Canvas.Top="320" Canvas.Left="1132" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--PREGUNTA 8-->
-                    <Label Content="8. ¿Esta ud. Embarazada o sospecha estarlo?" Canvas.Left="785" Canvas.Top="198" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="BtnSiOcho" Content="SI" Canvas.Left="1070" Canvas.Top="259" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="BtnNoOcho" Content="NO" Canvas.Left="1110" Canvas.Top="259" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label Content="8. ¿Esta ud. Embarazada o sospecha estarlo?" Canvas.Left="785" Canvas.Top="198" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnSiOcho" Content="SI" Canvas.Left="1070" Canvas.Top="259" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoOcho" Content="NO" Canvas.Left="1110" Canvas.Top="259" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 9-->
-                <GroupBox Height="37" Header="" Width="94" Canvas.Top="241" Canvas.Left="1067" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <GroupBox Height="37" Header="" Width="94" Canvas.Top="243" Canvas.Left="1066" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--PREGUNTA 9-->
-                    <Label Content="9. ¿Ha practicado o practica alguna actividad deportiva?" Canvas.Left="785" Canvas.Top="278" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <RadioButton x:Name="BtnSiNueve" Content="SI" Canvas.Left="1137" Canvas.Top="338" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <RadioButton x:Name="BtnNoNueve" Content="NO" Canvas.Left="1183" Canvas.Top="338" Grid.Column="1"/>
+                    <Label Content="9. ¿Ha practicado o practica alguna actividad deportiva?" Canvas.Left="785" Canvas.Top="278" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnSiNueve" Content="SI" Canvas.Left="1137" Canvas.Top="338" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoNueve" Content="NO" Canvas.Left="1183" Canvas.Top="338" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--Guardar datos-->
-                <Button x:Name="BtnGuardar" Content="¡Guardar Datos!" Canvas.Left="1310" Canvas.Top="589" Height="30" Width="120" Click="BtnGuardar_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                <Button x:Name="BtnGuardar" Content="¡Guardar Datos!" Canvas.Left="1310" Canvas.Top="589" Height="30" Width="120" Click="BtnGuardar_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Background="#FFFFAB40"/>
 
                 <Border Height="2" Background="#FFEAEAEA" Width="260" Canvas.Top="625" Canvas.Left="1310" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Border.RenderTransform>
@@ -272,8 +273,8 @@
                 </Border>
 
                 <!--Imprimir datos-->
-                <Button x:Name="BtnImprimir" Content="¡Imprimir planilla!" Canvas.Left="1450" Canvas.Top="589" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Click="BtnImprimir_Click"/>
-                <Border Height="2" Background="Gray" Width="1129" Canvas.Top="199" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button x:Name="BtnImprimir" Content="¡Imprimir planilla!" Canvas.Left="1450" Canvas.Top="589" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Click="BtnImprimir_Click" Background="#FFFFAB40"/>
+                <Border Height="2" Background="Gray" Width="1122" Canvas.Top="199" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -283,18 +284,7 @@
                         </TransformGroup>
                     </Border.RenderTransform>
                 </Border>
-                <Border Height="2" Background="Gray" Width="1129" Canvas.Top="279" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Border.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Border.RenderTransform>
-                </Border>
-
-                <Border Height="2" Background="Gray" Width="1127" Canvas.Top="357" Canvas.Left="776" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border Height="2" Background="Gray" Width="1122" Canvas.Top="279" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -305,33 +295,45 @@
                     </Border.RenderTransform>
                 </Border>
 
-                <GroupBox Height="267" Header="Formas de pago" Width="500" Canvas.Left="787" Canvas.Top="362" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="#FF676464">
+                <Border Height="2" Background="Gray" Width="1120" Canvas.Top="357" Canvas.Left="776" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                </Border>
+
+                <GroupBox Height="267" Header="Formas de pago" Width="500" Canvas.Left="787" Canvas.Top="362" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFFFAB40" BorderBrush="{x:Null}">
                     <Canvas Margin="2,-5,-2,-1">
                         <!--TARJETA-->
-                        <Label Content="N° Tarjeta:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="9"/>
-                        <TextBox x:Name="BoxTarjeta" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="41" Width="140" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+                        <Label Content="N° Tarjeta:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="9" Foreground="#FFECEFF4"/>
+                        <TextBox x:Name="BoxTarjeta" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="41" Width="140" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
 
                         <!--CADUCIDAD-->
-                        <Label Content="Caducidad:"  Canvas.Top="75" RenderTransformOrigin="-0.378,-0.699" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Canvas.Left="10"/>
-                        <TextBox x:Name="BoxCaducidadUno" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
-                        <TextBox x:Name="BoxCaducidadDos" Canvas.Left="75" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+                        <Label Content="Caducidad:"  Canvas.Top="75" RenderTransformOrigin="-0.378,-0.699" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Canvas.Left="10" Foreground="#FFECEFF4"/>
+                        <TextBox x:Name="BoxCaducidadUno" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
+                        <TextBox x:Name="BoxCaducidadDos" Canvas.Left="75" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
 
                         <!--CODIGO SEGURIDAD-->
-                        <Label Content="Cod. Seguridad:"  Canvas.Top="160" Grid.Column="1" Canvas.Left="9" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <PasswordBox x:Name="BoxCodigoSeguridad" Canvas.Left="15" Canvas.Top="201" Width="60" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+                        <Label Content="Cod. Seguridad:"  Canvas.Top="160" Grid.Column="1" Canvas.Left="9" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
+                        <PasswordBox x:Name="BoxCodigoSeguridad" Canvas.Left="15" Canvas.Top="201" Width="60" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
 
                         <!--EFECTIVO-->
-                        <Label Content="Efectivo: " Canvas.Left="251" Canvas.Top="5"/>
-                        <RadioButton x:Name="BtnSiEfectivo" Content="Si" Canvas.Left="317" Canvas.Top="9"/>
-                        <RadioButton x:Name="BtnNoEfectivo" Content="No" Canvas.Left="356" Canvas.Top="9" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Label Content="Efectivo: " Canvas.Left="251" Canvas.Top="5" Foreground="#FFECEFF4"/>
+                        <RadioButton x:Name="BtnSiEfectivo" Content="Si" Canvas.Left="317" Canvas.Top="9" Foreground="#FFECEFF4"/>
+                        <RadioButton x:Name="BtnNoEfectivo" Content="No" Canvas.Left="356" Canvas.Top="9" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
 
                         <!--$ CUOTA-->
-                        <Label Content="Valor de cuota:" Canvas.Left="250" Canvas.Top="80" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBox x:Name="BoxValorCuota" Canvas.Left="355" TextWrapping="Wrap" Text="" Canvas.Top="82" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+                        <Label Content="Valor de cuota:" Canvas.Left="250" Canvas.Top="80" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
+                        <TextBox x:Name="BoxValorCuota" Canvas.Left="355" TextWrapping="Wrap" Text="" Canvas.Top="82" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
+                        <GridSplitter Height="21" Canvas.Left="69" Canvas.Top="121" Width="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFFFAB40"/>
                     </Canvas>
                 </GroupBox>
 
-                <Border Height="2" Background="Gray" Width="234" Canvas.Top="501" Canvas.Left="913" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="2" Background="#FFFFAB40" Width="234" Canvas.Top="501" Canvas.Left="913" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -351,17 +353,6 @@
                         </TransformGroup>
                     </Border.RenderTransform>
                 </Border>
-                <Border Height="2" Background="DarkGray" Width="20" Canvas.Top="508" Canvas.Left="854" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Border.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="270"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Border.RenderTransform>
-                </Border>
-
             </Canvas>
         </GroupBox>
     </Grid>

@@ -22,15 +22,15 @@
                 <Separator Margin="45"/>
 
                 <!-- Opción Inscripciones -->
-                <Button x:Name="BtnInscripciones" Content="Inscripciones" Margin="5" FontSize="25" Click="BtnInscripciones_Click"/>
+                <Button x:Name="BtnInscripciones" Content="Inscripciones" Margin="5" FontSize="25" Click="BtnInscripciones_Click" Background="#FFFFAB40"/>
                 <Separator Margin="45"/>
 
                 <!-- Opción Clientes -->
-                <Button x:Name="BtnClientes" Content="Clientes" Margin="5" FontSize="25" Click="BtnClientes_Click"/>
+                <Button x:Name="BtnClientes" Content="Clientes" Margin="5" FontSize="25" Click="BtnClientes_Click" Background="#FFFFAB40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <Separator Margin="45"/>
 
                 <!-- Opción Rutinas -->
-                <Button x:Name="BtnRutinas" Content="Rutinas" Margin="5" FontSize="25" Click="BtnRutinas_Click"/>
+                <Button x:Name="BtnRutinas" Content="Rutinas" Margin="5" FontSize="25" Click="BtnRutinas_Click" Background="#FFFFAB40"/>
                 <Separator Margin="45"/>
 
             </StackPanel>
