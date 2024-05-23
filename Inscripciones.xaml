@@ -13,7 +13,6 @@
             <ColumnDefinition Width="1"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <!--#F2F2F7  #3A3A3C-->
 
         <!--DATOS PERSONALES-->
         <GroupBox Header="Datos Personales" Margin="1,1,11,0" Background="#3A3A3C" VerticalAlignment="Top" Height="336" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
@@ -306,7 +305,7 @@
                     </Border.RenderTransform>
                 </Border>
 
-                <GroupBox Height="267" Header="Formas de pago" Width="500" Canvas.Left="787" Canvas.Top="362" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFFFAB40" BorderBrush="{x:Null}">
+                <GroupBox Height="267" Header="Formas de pago" Width="500" Canvas.Left="787" Canvas.Top="362" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFFFAB40" BorderBrush="#FFFFAB40">
                     <Canvas Margin="2,-5,-2,-1">
                         <!--TARJETA-->
                         <Label Content="N° Tarjeta:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="9" Foreground="#FFECEFF4"/>
