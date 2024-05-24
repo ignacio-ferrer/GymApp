@@ -30,7 +30,7 @@
 
         <!-- Ejercicios de Pecho -->
         <StackPanel Grid.Column="1" Background="#3A3A3C">
-            <Label Content="Pecho" FontWeight="Bold" FontSize="22" Margin="1" Height="34" Foreground="#FFECEFF4"/>
+            <Label Content="Pecho" FontSize="22" Margin="1" Height="34" Foreground="#FFECEFF4" UseLayoutRounding="False" FontWeight="Bold" />
             <ListBox x:Name="ListaEjerciciosPecho" 
                  ItemsSource="{Binding EjerciciosPecho}"  d:ItemsSource="{d:SampleData ItemCount=5}" Height="134" Width="836" Grid.Column="1" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#F2F2F7">
                 <ListBox.ItemTemplate>
@@ -38,7 +38,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Nombre}" Margin="1" />
                             <Button Content=" + " Command="{Binding DataContext.ComandoAgregarEjercicios, RelativeSource={RelativeSource AncestorType=ListBox}}"
-                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40"/>
+                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40" FontWeight="Bold" FontFamily="Arial Black" Foreground="Black" BorderBrush="{x:Null}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -58,7 +58,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Nombre}" Margin="1" />
                             <Button Content=" + " Command="{Binding DataContext.ComandoAgregarEjercicios, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
-                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40"/>
+                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="{x:Null}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -75,7 +75,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Nombre}" Margin="1" />
                             <Button Content=" + " Command="{Binding DataContext.ComandoAgregarEjercicios, RelativeSource={RelativeSource AncestorType=ListBox}}"
-                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40"/>
+                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="{x:Null}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -92,7 +92,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Nombre}" Margin="1" />
                             <Button Content=" + " Command="{Binding DataContext.ComandoAgregarEjercicios, RelativeSource={RelativeSource AncestorType=ListBox}}"
-                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40"/>
+                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="{x:Null}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -109,7 +109,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Nombre}" Margin="1" />
                             <Button Content=" + " Command="{Binding DataContext.ComandoAgregarEjercicios, RelativeSource={RelativeSource AncestorType=ListBox}}"
-                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40"/>
+                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="{x:Null}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -126,7 +126,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Nombre}" Margin="1" />
                             <Button Content=" + " Command="{Binding DataContext.ComandoAgregarEjercicios, RelativeSource={RelativeSource AncestorType=ListBox}}"
-                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40"/>
+                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="{x:Null}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -137,13 +137,13 @@
         <StackPanel Grid.Column="1" Margin="0,825,0,0">
             <Label Content="Trapecio" FontWeight="Bold" FontSize="20" Margin="1"  Height="38" Background="#00000000" Foreground="#FFECEFF4"/>
             <ListBox x:Name="ListaEjerciciosTrapecio" 
-                 ItemsSource="{Binding EjerciciosTrapecio}" Background="{x:Null}" d:ItemsSource="{d:SampleData ItemCount=2}" Height="56" Width="837" BorderBrush="{x:Null}" Foreground="#FFF2F2F7">
+                 ItemsSource="{Binding EjerciciosTrapecio}" Background="{x:Null}" d:ItemsSource="{d:SampleData ItemCount=2}" Height="56" Width="837" BorderBrush="{x:Null}" Foreground="#FFF2F2F7" FontFamily="Arial">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Nombre}" Margin="1" />
                             <Button Content=" + " Command="{Binding DataContext.ComandoAgregarEjercicios, RelativeSource={RelativeSource AncestorType=ListBox}}"
-                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40"/>
+                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="{x:Null}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -160,7 +160,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Nombre}" Margin="1" />
                             <Button Content=" + " Command="{Binding DataContext.ComandoAgregarEjercicios, RelativeSource={RelativeSource AncestorType=ListBox}}"
-                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40"/>
+                                CommandParameter="{Binding}" Margin="1" Background="#FFAB40" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="{x:Null}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

@@ -16,7 +16,7 @@
 
         <!--DATOS PERSONALES-->
         <GroupBox Header="Datos Personales" Margin="1,1,11,0" Background="#3A3A3C" VerticalAlignment="Top" Height="336" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
-            <Canvas Height="302">
+            <Canvas Height="316">
                 <!--Seccion Nombre-->
                 <Label Content="Nombre: " Canvas.Left="5.766" Canvas.Top="33" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4"/>
                 <TextBox x:Name="BoxNombre" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="72.017" Canvas.Top="34.499" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxNombre_TextChanged" Height="20" SelectionTextBrush="#FFF2F2F7" Background="#FFF2F2F7"/>
@@ -74,7 +74,7 @@
 
         <!--FICHA MEDICA-->
         <GroupBox Header="Ficha Medica" Margin="3,354,11,0" Background="#3A3A3C" VerticalAlignment="Top" Height="695" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
-            <Canvas Height="670" RenderTransformOrigin="0.393,-0.048">
+            <Canvas Height="670" RenderTransformOrigin="0.393,-0.048" Margin="0,0,-1,0">
                 <!--GROUP BOX 1-->
                 <GroupBox Height="37" Header="" Width="94"  HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="101" Canvas.Left="466" BorderBrush="#3A3A3C" Foreground="#FF3A3A3C" Opacity="0"/>
 
@@ -85,7 +85,7 @@
                     <TextBox x:Name="BoxMedicoUno" Canvas.Left="51" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFF2F2F7" Grid.Column="1" Height="19"/>
                     <RadioButton x:Name="BtnSiUno" Content="SI" Canvas.Left="470" Canvas.Top="119" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFECEFF4" />
                     <RadioButton x:Name="BtnNoUno" Content="NO" Canvas.Left="510" Canvas.Top="119" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
-                    <Border Height="2" Background="Gray" Width="1899" Canvas.Top="139" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="-3"/>
+                    <Border Height="2" Background="Gray" Width="1896" Canvas.Top="139" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="-3"/>
                 </Canvas>
 
                 <!--GROUP BOX 2-->
@@ -194,39 +194,39 @@
                 <Label Content="6. Indique si ha tenido alguno de estos sintomas al realizar esfuerzos o ejercicio fisico: " Canvas.Left="785" Canvas.Top="18" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
 
                 <!--G.P 1-->
-                <GroupBox Height="38" Header="" Width="93" Canvas.Top="42" Canvas.Left="1285" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
+                <GroupBox Height="31" Header="" Width="93" Canvas.Top="60" Canvas.Left="1268" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--A.-->
-                    <Label Content="A) Mareos: " Canvas.Left="805" Canvas.Top="49" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
-                    <RadioButton x:Name="BtnMareos" Content="SI" Canvas.Left="889" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <RadioButton x:Name="BtnNoSeisM" Content="NO" Canvas.Left="930" Canvas.Top="59" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <Label Content="Mareos: " Canvas.Left="804" Canvas.Top="63" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnMareos" Content="SI" Canvas.Left="870" Canvas.Top="69" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoSeisM" Content="NO" Canvas.Left="910" Canvas.Top="69" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 2-->
-                <GroupBox Height="37" Header="" Width="88" Canvas.Top="84" Canvas.Left="1188" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
+                <GroupBox Height="28" Header="" Width="88" Canvas.Top="104" Canvas.Left="1186" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--B.-->
-                    <Label Content="B) Desmayos o Lipotomias: " Canvas.Left="804" Canvas.Top="89" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <RadioButton x:Name="BtnDesmayos" Content="SI" Canvas.Left="989" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <RadioButton x:Name="BtnNoSeisD" Content="NO" Canvas.Left="1029" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <Label Content="Desmayos o Lipotomias: " Canvas.Left="804" Canvas.Top="103" Grid.Column="1" Foreground="#FFECEFF4" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="BtnDesmayos" Content="SI" Canvas.Left="990" Canvas.Top="109" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoSeisD" Content="NO" Canvas.Left="1030" Canvas.Top="109" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 3-->
-                <GroupBox Height="40" Header="" Width="88" Canvas.Top="82" Canvas.Left="987"  HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Opacity="0"/>
+                <GroupBox Height="30" Header="" Width="87" Canvas.Top="102" Canvas.Left="989"  HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="{x:Null}" Opacity="0"/>
                 <Canvas>
                     <!--C.-->
-                    <Label Content="C) Dificultad para respirar: " Canvas.Left="1104" Canvas.Top="49" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <RadioButton x:Name="BtnRespirar" Content="SI" Canvas.Left="1287" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
-                    <RadioButton x:Name="BtnNoSeisR" Content="NO" Canvas.Left="1330" Canvas.Top="59" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <Label Content="Dificultad para respirar: " Canvas.Left="1104" Canvas.Top="63" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnRespirar" Content="SI" Canvas.Left="1271" Canvas.Top="69" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
+                    <RadioButton x:Name="BtnNoSeisR" Content="NO" Canvas.Left="1314" Canvas.Top="69" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
                 <!--G.P 4-->
-                <GroupBox Height="39" Header="" Width="106" Canvas.Top="43" Canvas.Left="884" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
+                <GroupBox Height="32" Header="" Width="90" Canvas.Top="61" Canvas.Left="869" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
                 <Canvas>
                     <!--D.-->
-                    <Label Content="D) Nauseas: " Canvas.Left="1104" Canvas.Top="89" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <RadioButton x:Name="BtnNauseas" Content="SI" Canvas.Left="1190" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <RadioButton x:Name="BtnNoSeisN" Content="NO" Canvas.Left="1230" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <Label Content="Nauseas: " Canvas.Left="1104" Canvas.Top="104" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNauseas" Content="SI" Canvas.Left="1190" Canvas.Top="109" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
+                    <RadioButton x:Name="BtnNoSeisN" Content="NO" Canvas.Left="1230" Canvas.Top="109" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                 </Canvas>
 
 
@@ -258,7 +258,7 @@
                 </Canvas>
 
                 <!--Guardar datos-->
-                <Button x:Name="BtnGuardar" Content="¡Guardar Datos!" Canvas.Left="1310" Canvas.Top="589" Height="30" Width="120" Click="BtnGuardar_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Background="#FFFFAB40"/>
+                <Button x:Name="BtnGuardar" Content="¡Guardar Datos!" Canvas.Left="1310" Canvas.Top="589" Height="30" Width="120" Click="BtnGuardar_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Background="#FFFFAB40" BorderBrush="{x:Null}"/>
 
                 <Border Height="2" Background="#FFEAEAEA" Width="260" Canvas.Top="625" Canvas.Left="1310" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Border.RenderTransform>
@@ -272,8 +272,8 @@
                 </Border>
 
                 <!--Imprimir datos-->
-                <Button x:Name="BtnImprimir" Content="¡Imprimir planilla!" Canvas.Left="1450" Canvas.Top="589" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Click="BtnImprimir_Click" Background="#FFFFAB40"/>
-                <Border Height="2" Background="Gray" Width="1122" Canvas.Top="199" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button x:Name="BtnImprimir" Content="¡Imprimir planilla!" Canvas.Left="1450" Canvas.Top="589" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Click="BtnImprimir_Click" Background="#FFFFAB40" BorderBrush="{x:Null}"/>
+                <Border Height="2" Background="Gray" Width="1119" Canvas.Top="199" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -283,7 +283,7 @@
                         </TransformGroup>
                     </Border.RenderTransform>
                 </Border>
-                <Border Height="2" Background="Gray" Width="1122" Canvas.Top="279" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border Height="2" Background="Gray" Width="1119" Canvas.Top="279" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -294,7 +294,7 @@
                     </Border.RenderTransform>
                 </Border>
 
-                <Border Height="2" Background="Gray" Width="1120" Canvas.Top="357" Canvas.Left="776" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border Height="2" Background="Gray" Width="1117" Canvas.Top="357" Canvas.Left="776" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -342,7 +342,7 @@
                         </TransformGroup>
                     </Border.RenderTransform>
                 </Border>
-                <Border Height="1" Background="#FFEAEAEA" Width="26" Canvas.Top="603" Canvas.Left="1427" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="1" Background="White" Width="26" Canvas.Top="603" Canvas.Left="1427" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>

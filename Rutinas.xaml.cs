@@ -30,7 +30,6 @@ namespace GymApp
         public ObservableCollection<Ejercicio> EjerciciosTrapecio { get; set; }
         public ObservableCollection<Ejercicio> EjerciciosGemelos { get; set; }
 
-
         public ObservableCollection<Ejercicio> EjerciciosSeleccionados { get; set; }
         public ICommand ComandoAgregarEjercicios { get; set; }
 
