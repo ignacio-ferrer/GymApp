@@ -309,16 +309,16 @@
                     <Canvas Margin="2,-5,-2,-1">
                         <!--TARJETA-->
                         <Label Content="N° Tarjeta:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="9" Foreground="#FFECEFF4"/>
-                        <TextBox x:Name="BoxTarjeta" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="41" Width="140" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
+                        <TextBox x:Name="BoxTarjeta" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="41" Width="140" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="16"/>
 
                         <!--CADUCIDAD-->
                         <Label Content="Caducidad:"  Canvas.Top="75" RenderTransformOrigin="-0.378,-0.699" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Canvas.Left="10" Foreground="#FFECEFF4"/>
-                        <TextBox x:Name="BoxCaducidadUno" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
-                        <TextBox x:Name="BoxCaducidadDos" Canvas.Left="75" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
+                        <TextBox x:Name="BoxCaducidadUno" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="2"/>
+                        <TextBox x:Name="BoxCaducidadDos" Canvas.Left="75" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="2"/>
 
                         <!--CODIGO SEGURIDAD-->
                         <Label Content="Cod. Seguridad:"  Canvas.Top="160" Grid.Column="1" Canvas.Left="9" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
-                        <PasswordBox x:Name="BoxCodigoSeguridad" Canvas.Left="15" Canvas.Top="201" Width="60" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
+                        <PasswordBox x:Name="BoxCodigoSeguridad" Canvas.Left="15" Canvas.Top="201" Width="60" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"  MaxLength="3"/>
 
                         <!--EFECTIVO-->
                         <Label Content="Efectivo: " Canvas.Left="251" Canvas.Top="5" Foreground="#FFECEFF4"/>
