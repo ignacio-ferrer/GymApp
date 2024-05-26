@@ -15,27 +15,27 @@ using System.Windows.Shapes;
 
 namespace GymApp
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private Clientes _clientesPage;
+        private Inscripciones _inscripcionesPage;
+
         public MainWindow()
         {
             InitializeComponent();
-            //DatosPersonales datosPersonales = new DatosPersonales();
+            _clientesPage = new Clientes();
+            _inscripcionesPage = new Inscripciones();
+            _inscripcionesPage.SetClientesCollection(_clientesPage.ClientesCollection);
         }
-
 
         private void BtnInscripciones_Click(object sender, RoutedEventArgs e)
         {
-            frameInscripciones.Navigate(new Uri("Inscripciones.xaml", UriKind.Relative));
+            frameInscripciones.Navigate(_inscripcionesPage);
         }
 
         private void BtnClientes_Click(object sender, RoutedEventArgs e)
         {
-            frameInscripciones.Navigate(new Uri("Clientes.xaml", UriKind.Relative));
-
+            frameInscripciones.Navigate(_clientesPage);
         }
 
         private void BtnRutinas_Click(object sender, RoutedEventArgs e)

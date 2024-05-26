@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace GymApp
 {
     public partial class Inscripciones : Page
     {
-
+        private ObservableCollection<Clientes.InformacionCliente> _clientesCollection;
         DatosPersonales datosPersonales = new DatosPersonales();
         DatosMedicos datosMedicos = new DatosMedicos();
 
@@ -26,10 +27,28 @@ namespace GymApp
             InitializeComponent();
         }
 
+        public Inscripciones(ObservableCollection<Clientes.InformacionCliente> clientesCollection)
+        {
+            InitializeComponent();
+            _clientesCollection = clientesCollection ?? new ObservableCollection<Clientes.InformacionCliente>();
+        }
+
+        public void SetClientesCollection(ObservableCollection<Clientes.InformacionCliente> clientesCollection)
+        {
+            _clientesCollection = clientesCollection;
+        }
+
         private void BtnGuardar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+
+                if (_clientesCollection == null)
+                {
+                    MessageBox.Show("La colección de clientes no está inicializada.");
+                    return;
+                }
+
                 // Verificar que ningún campo de texto esté vacío
                 if (string.IsNullOrWhiteSpace(BoxNombre.Text) ||
                     string.IsNullOrWhiteSpace(BoxApellido.Text) ||
@@ -69,6 +88,17 @@ namespace GymApp
                     MessageBox.Show("Por favor, selecciona una fecha de inscripción válida.");
                     return;
                 }
+
+                // Guardar datos en la colección observable
+                var nuevoCliente = new Clientes.InformacionCliente
+                {
+                    nombre = BoxNombre.Text,
+                    apellido = BoxApellido.Text,
+                    dni = BoxDeDni,
+                    fechaInscripcion = FechaInscripcion
+                };
+
+                _clientesCollection.Add(nuevoCliente);
 
                 // Guardando todas las variables de la ficha: Datos Personales
                 datosPersonales.nombre = BoxNombre.Text;
@@ -115,6 +145,22 @@ namespace GymApp
 
                 // Confirmación de que los datos han sido guardados correctamente
                 MessageBox.Show("Datos personales guardados correctamente.");
+
+                // Limpiar los TextBox después de guardar los datos
+                BoxNombre.Clear();
+                BoxApellido.Clear();
+                BoxEdad.Clear();
+                BoxDni.Clear();
+                BoxDirec.Clear();
+                BoxLocalidad.Clear();
+                BoxCodigoPostal.Clear();
+                BoxTel.Clear();
+                BoxContactoEmergencia.Clear();
+                BoxMail.Clear();
+                BoxMedicoUno.Clear();
+                BoxMedicoDos.Clear();
+                BoxMedicoTres.Clear();
+                DateInscripcion.SelectedDate = null;
             }
             catch (Exception ex)
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,8 @@ namespace GymApp
         DatosPersonales datosPersonales = new DatosPersonales();
         DatosMedicos datosMedicos = new DatosMedicos();
 
+        public ObservableCollection<InformacionCliente> ClientesCollection { get; set; }
+
         public Clientes()
         {
             InitializeComponent();
@@ -36,12 +39,8 @@ namespace GymApp
 
         private void LoadData()
         {
-            List<InformacionCliente> clientes = new List<InformacionCliente>
-            {
-                new InformacionCliente {nombre="",apellido="",dni=0,fechaInscripcion=null}
-            };
-            
-            dataGrid.ItemsSource = clientes;
+            ClientesCollection = new ObservableCollection<InformacionCliente>();
+            dataGrid.ItemsSource = ClientesCollection;
         }
     }
 }
