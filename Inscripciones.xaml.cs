@@ -142,8 +142,6 @@ namespace GymApp
                 datosMedicos.preguntaOcho = BtnSiOcho.IsChecked == true;
                 datosMedicos.preguntaNueve = BtnSiNueve.IsChecked == true;
 
-
-                // Confirmación de que los datos han sido guardados correctamente
                 MessageBox.Show("Datos personales guardados correctamente.");
 
                 // Limpiar los TextBox después de guardar los datos
@@ -175,7 +173,7 @@ namespace GymApp
             {
                 MessageBox.Show("Por favor, introduce solo letras en el nombre.");
                 BoxNombre.Text = new string(BoxNombre.Text.Where(char.IsLetter).ToArray());
-                BoxNombre.CaretIndex = BoxNombre.Text.Length; // Mover el cursor al final
+                BoxNombre.CaretIndex = BoxNombre.Text.Length; 
             }
         }
 
@@ -185,7 +183,7 @@ namespace GymApp
             {
                 MessageBox.Show("Por favor, introduce solo letras en el apellido.");
                 BoxApellido.Text = new string(BoxApellido.Text.Where(char.IsLetter).ToArray());
-                BoxApellido.CaretIndex = BoxApellido.Text.Length; // Mover el cursor al final
+                BoxApellido.CaretIndex = BoxApellido.Text.Length;
             }
         }
 
@@ -195,7 +193,7 @@ namespace GymApp
             {
                 MessageBox.Show("Por favor, introduce solo letras en la localidad.");
                 BoxLocalidad.Text = new string(BoxLocalidad.Text.Where(char.IsLetter).ToArray());
-                BoxLocalidad.CaretIndex = BoxLocalidad.Text.Length; // Mover el cursor al final
+                BoxLocalidad.CaretIndex = BoxLocalidad.Text.Length; 
             }
         }
 
@@ -227,10 +225,10 @@ namespace GymApp
         {
             PrintDialog printDialog = new PrintDialog();
 
-            // Mostrar el diálogo de impresión
+            //muestra el cuadro predeterminado 
             if (printDialog.ShowDialog() == true)
             {
-                // Obtener el contenido visual del formulario
+                //obtiene visualmente el formulario
                 var visual = new DrawingVisual();
                 using (var context = visual.RenderOpen())
                 {
@@ -238,7 +236,7 @@ namespace GymApp
                     context.DrawRectangle(brush, null, new Rect(new Point(0, 0), new Size(this.ActualWidth, this.ActualHeight)));
                 }
 
-                // Ajustar el contenido al tamaño de la página
+                //para ajustar tamaño
                 double scale = Math.Min(printDialog.PrintableAreaWidth / this.ActualWidth, printDialog.PrintableAreaHeight / this.ActualHeight);
                 visual.Transform = new ScaleTransform(scale, scale);
 

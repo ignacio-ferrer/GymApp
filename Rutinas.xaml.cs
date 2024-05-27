@@ -113,6 +113,30 @@ namespace GymApp
                 EjerciciosSeleccionados.Add(exercise);
             }
         }
+
+        private void BtnImprimirRutina_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            //muestra el cuadro predeterminado 
+            if (printDialog.ShowDialog() == true)
+            {
+                //obtiene visualmente el formulario
+                var visual = new DrawingVisual();
+                using (var context = visual.RenderOpen())
+                {
+                    var brush = new VisualBrush(this);
+                    context.DrawRectangle(brush, null, new Rect(new Point(0, 0), new Size(this.ActualWidth, this.ActualHeight)));
+                }
+
+                //para ajustar tamaño
+                double scale = Math.Min(printDialog.PrintableAreaWidth / this.ActualWidth, printDialog.PrintableAreaHeight / this.ActualHeight);
+                visual.Transform = new ScaleTransform(scale, scale);
+
+                // Imprimir el contenido visual ajustado
+                printDialog.PrintVisual(visual, "Rutina Personalizada.");
+            }
+        }
     }
 
     public class Ejercicio

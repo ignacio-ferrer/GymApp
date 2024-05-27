@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymApp"
         mc:Ignorable="d"
-        Title="Menu Principal" Height="1080" Width="1920" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize">
+        Title="Menu Principal" Height="1080" Width="1920" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize" Icon="/IconoAppGym.png" >
     <Grid Background="#FFB3B3B3">
         <!-- Define las columnas para el menú lateral y el contenido principal // Height="621" Width="1179" -->
 
@@ -32,7 +32,6 @@
                 <!-- Opción Rutinas -->
                 <Button x:Name="BtnRutinas" Content="Rutinas" Margin="5" FontSize="25" Click="BtnRutinas_Click" Background="#FFFFAB40"/>
                 <Separator Margin="45"/>
-
             </StackPanel>
         </Border>
 
