@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GymApp.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,35 +13,35 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace GymApp
 {
     public partial class MainWindow : Window
     {
-        private Clientes _clientesPage;
-        private Inscripciones _inscripcionesPage;
-
         public MainWindow()
         {
             InitializeComponent();
-            _clientesPage = new Clientes();
-            _inscripcionesPage = new Inscripciones();
-            _inscripcionesPage.SetClientesCollection(_clientesPage.ClientesCollection);
         }
 
         private void BtnInscripciones_Click(object sender, RoutedEventArgs e)
         {
-            frameInscripciones.Navigate(_inscripcionesPage);
+            frameInscripciones.Navigate(new Uri("Inscripciones.xaml", UriKind.Relative));
         }
 
         private void BtnClientes_Click(object sender, RoutedEventArgs e)
         {
-            frameInscripciones.Navigate(_clientesPage);
+            frameInscripciones.Navigate(new Uri("Clientes.xaml", UriKind.Relative));
         }
 
         private void BtnRutinas_Click(object sender, RoutedEventArgs e)
         {
             frameInscripciones.Navigate(new Uri("Rutinas.xaml", UriKind.Relative));
+        }
+
+         private void BtnContadorCalorias_Click(object sender, RoutedEventArgs e)
+        {
+            frameInscripciones.Navigate(new Uri("ContadorCalorias.xaml", UriKind.Relative));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GymApp.Data;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -12,43 +13,26 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Shapes;    
 
 namespace GymApp
 {
     public partial class Inscripciones : Page
     {
-        private ObservableCollection<Clientes.InformacionCliente> _clientesCollection;
         DatosPersonales datosPersonales = new DatosPersonales();
         DatosMedicos datosMedicos = new DatosMedicos();
+        RepositorioCliente repositorioCliente = new RepositorioCliente();
 
         public Inscripciones()
         {
             InitializeComponent();
+            repositorioCliente.ObtenerClientes();
         }
-
-        public Inscripciones(ObservableCollection<Clientes.InformacionCliente> clientesCollection)
-        {
-            InitializeComponent();
-            _clientesCollection = clientesCollection ?? new ObservableCollection<Clientes.InformacionCliente>();
-        }
-
-        public void SetClientesCollection(ObservableCollection<Clientes.InformacionCliente> clientesCollection)
-        {
-            _clientesCollection = clientesCollection;
-        }
-
+      
         private void BtnGuardar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-
-                if (_clientesCollection == null)
-                {
-                    MessageBox.Show("La colección de clientes no está inicializada.");
-                    return;
-                }
-
                 // Verificar que ningún campo de texto esté vacío
                 if (string.IsNullOrWhiteSpace(BoxNombre.Text) ||
                     string.IsNullOrWhiteSpace(BoxApellido.Text) ||
@@ -63,43 +47,32 @@ namespace GymApp
                     string.IsNullOrWhiteSpace(BoxMedicoUno.Text) ||
                     string.IsNullOrWhiteSpace(BoxMedicoDos.Text) ||
                     string.IsNullOrWhiteSpace(BoxMedicoTres.Text))
-
                 {
                     MessageBox.Show("Todos los campos son obligatorios.");
                     return;
                 }
 
-                // Convertir y asignar las entradas válidas
                 int BoxDeEdad = int.Parse(BoxEdad.Text);
                 int BoxDeDni = int.Parse(BoxDni.Text);
-                bool BoxDeSexo = BtnHombre.IsChecked == true; // True si es masculino, false si es femenino
+                bool BoxDeSexo = BtnHombre.IsChecked == true;                
+                int BoxDeCP = int.Parse(BoxCodigoPostal.Text);
+                int BoxDeTelefono = int.Parse(BoxTel.Text);
+                int BoxDeTelefonoEmergencia = int.Parse(BoxContactoEmergencia.Text);
+
                 DateTime? FechaCumple = DateCumple.SelectedDate;
                 if (FechaCumple == null)
                 {
                     MessageBox.Show("Por favor, selecciona una fecha de nacimiento válida.");
                     return;
                 }
-                int BoxDeCP = int.Parse(BoxCodigoPostal.Text);
-                int BoxDeTelefono = int.Parse(BoxTel.Text);
-                int BoxDeTelefonoEmergencia = int.Parse(BoxContactoEmergencia.Text);
+
                 DateTime? FechaInscripcion = DateInscripcion.SelectedDate;
                 if (FechaInscripcion == null)
                 {
                     MessageBox.Show("Por favor, selecciona una fecha de inscripción válida.");
                     return;
                 }
-
-                // Guardar datos en la colección observable
-                var nuevoCliente = new Clientes.InformacionCliente
-                {
-                    nombre = BoxNombre.Text,
-                    apellido = BoxApellido.Text,
-                    dni = BoxDeDni,
-                    fechaInscripcion = FechaInscripcion
-                };
-
-                _clientesCollection.Add(nuevoCliente);
-
+              
                 // Guardando todas las variables de la ficha: Datos Personales
                 datosPersonales.nombre = BoxNombre.Text;
                 datosPersonales.apellido = BoxApellido.Text;
@@ -165,7 +138,7 @@ namespace GymApp
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }        
-
+       
         // Evento para validar entradas solo con letras
         private void BoxNombre_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -223,10 +196,10 @@ namespace GymApp
         //funcionalidad imprimir
         private void BtnImprimir_Click(object sender, RoutedEventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
+            PrintDialog imprimir = new PrintDialog();
 
             //muestra el cuadro predeterminado 
-            if (printDialog.ShowDialog() == true)
+            if (imprimir.ShowDialog() == true)
             {
                 //obtiene visualmente el formulario
                 var visual = new DrawingVisual();
@@ -237,11 +210,11 @@ namespace GymApp
                 }
 
                 //para ajustar tamaño
-                double scale = Math.Min(printDialog.PrintableAreaWidth / this.ActualWidth, printDialog.PrintableAreaHeight / this.ActualHeight);
+                double scale = Math.Min(imprimir.PrintableAreaWidth / this.ActualWidth, imprimir.PrintableAreaHeight / this.ActualHeight);
                 visual.Transform = new ScaleTransform(scale, scale);
 
                 // Imprimir el contenido visual ajustado
-                printDialog.PrintVisual(visual, "Formulario Inscripcion.");
+                imprimir.PrintVisual(visual, "Formulario Inscripcion.");
             }
         }
     }

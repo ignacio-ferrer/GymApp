@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GymApp.Data;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -19,28 +20,40 @@ namespace GymApp
     public partial class Clientes : Page
     {
         DatosPersonales datosPersonales = new DatosPersonales();
-        DatosMedicos datosMedicos = new DatosMedicos();
-
-        public ObservableCollection<InformacionCliente> ClientesCollection { get; set; }
+        RepositorioCliente repositorioCliente = new RepositorioCliente();
 
         public Clientes()
         {
             InitializeComponent();
-            LoadData();
+            LoadCliente();
         }
 
         public class InformacionCliente
         {
             public string nombre { get; set; }
             public string apellido { get; set; }
+            public int edad { get; set; }
             public int dni { get; set; }
+            public bool sexo { get; set; }
+            public DateTime? fechaNacimiento { get; set; }
+            public string direccion { get; set; }
+            public string localidad { get; set; }
+            public int codigoPostal { get; set; }
+            public int telefono { get; set; }
+            public int telefonoEmergencia { get; set; }
+            public string correo { get; set; }
             public DateTime? fechaInscripcion { get; set; }
         }
 
-        private void LoadData()
+        public void LoadCliente()
         {
-            ClientesCollection = new ObservableCollection<InformacionCliente>();
-            dataGrid.ItemsSource = ClientesCollection;
+            if (ClientesDataGrid == null)
+            {
+                throw new NullReferenceException("La grid no esta inicializada.");
+            }
+
+            var datosPersonales = repositorioCliente.ObtenerClientes();
+            ClientesDataGrid.ItemsSource = datosPersonales;
         }
     }
 }

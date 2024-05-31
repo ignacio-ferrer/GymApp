@@ -9,7 +9,7 @@
       Title="Clientes">
 
     <Grid>
-        <DataGrid Name="dataGrid" AutoGenerateColumns="True" Background="#FF2B2B2B" BorderBrush="#FF2B2B2B" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" IsReadOnly="True" >
+        <DataGrid Name="ClientesDataGrid" AutoGenerateColumns="True" Background="#FF2B2B2B" BorderBrush="#FF2B2B2B" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" IsReadOnly="True" >
             <DataGrid.CellStyle>
                 <Style/>
             </DataGrid.CellStyle>

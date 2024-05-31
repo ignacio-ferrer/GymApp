@@ -1,0 +1,66 @@
+﻿<Page x:Class="GymApp.ContadorCalorias"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GymApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ContadorCalorias">
+
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Foreground="White" Grid.Column="1" Content="Ingresa tus datos para obtener un estimado de las calorias que tu cuerpo necesita para mantener un peso ideal:" Margin="0,0,0,798" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"/>
+
+        <GroupBox Grid.Column="1" Margin="30,90,1482,640" FontSize="15">
+            <Canvas>
+
+                <Label Foreground="White" Canvas.Left="-4" Canvas.Top="-3" HorizontalAlignment="Center" VerticalAlignment="Center">Edad</Label>
+                <ComboBox Name="edadComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Canvas.Left="63" Canvas.Top="9" Height="25" BorderBrush="{x:Null}"/>
+
+                <Label Foreground="White" Canvas.Top="77" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-2">Altura</Label>
+                <TextBox Canvas.Left="72" Canvas.Top="75" HorizontalAlignment="Left" VerticalAlignment="Center" Width="115" MaxLength="3" BorderBrush="{x:Null}"/>
+                <Label Canvas.Left="182" Canvas.Top="76" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top">CM</Label>
+
+
+                <Label Foreground="White" Canvas.Top="157" Canvas.Left="-6">Sexo</Label>
+                <ComboBox Canvas.Left="63" Canvas.Top="159" HorizontalAlignment="Center" VerticalAlignment="Top" Width="118" Height="25" BorderBrush="{x:Null}" >
+                    <ComboBoxItem Content="Masculino"/>
+                    <ComboBoxItem Content="Femenino"/>
+                </ComboBox>
+
+                <Label Foreground="White" Canvas.Top="237" Canvas.Left="-4" HorizontalAlignment="Left" VerticalAlignment="Top">Peso</Label>
+                <TextBox Canvas.Left="63" Canvas.Top="234" HorizontalAlignment="Left" VerticalAlignment="Center" Width="123" MaxLength="3" BorderBrush="{x:Null}"/>
+                <Label Canvas.Left="181" Canvas.Top="237" Foreground="White">KG</Label>
+
+            </Canvas>
+        </GroupBox>
+
+        <GroupBox  Grid.Column="1" Background="Red" Margin="21,467,803,122" Header="Nivel de actividad:" FontSize="15px" Foreground="White">
+            <Canvas HorizontalAlignment="Left" VerticalAlignment="Top">
+                <RadioButton Canvas.Left="8" Canvas.Top="54" HorizontalAlignment="Left" VerticalAlignment="Top">Poco o ningun ejercicio</RadioButton>
+                <RadioButton HorizontalAlignment="Left" Canvas.Top="129" VerticalAlignment="Top" Canvas.Left="8">Ejercicio ligero (1-3 dias a la semana)</RadioButton>
+                <RadioButton Canvas.Left="8" Canvas.Top="209">Ejercicio moderado(3-5 dias a la semana)</RadioButton>
+                <RadioButton Canvas.Left="8" Canvas.Top="290" HorizontalAlignment="Center" VerticalAlignment="Top">Ejercicio Fuerte(6-7 dias a la semana)</RadioButton>
+                <RadioButton Canvas.Left="8" Canvas.Top="371">Ejercicio muy fuerte(dos veces al dia, entrenamientos exigentes)</RadioButton>
+
+                <Separator Background="White" Height="45" Canvas.Top="188" Width="388" Canvas.Left="354" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="90.018"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+
+            </Canvas>
+        </GroupBox>
+
+    </Grid>
+</Page>
