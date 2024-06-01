@@ -40,8 +40,8 @@ namespace GymApp
         }
 
          private void BtnContadorCalorias_Click(object sender, RoutedEventArgs e)
-        {
+         {
             frameInscripciones.Navigate(new Uri("ContadorCalorias.xaml", UriKind.Relative));
-        }
+         }
     }
 }
