@@ -30,5 +30,18 @@ namespace GymApp
                 edadComboBox.Items.Add(i);
             }
         }
+
+        private void BtnCalcularCalorias_Click(object sender, RoutedEventArgs e)
+        {
+            if(RadioPocoEjercicio.IsChecked.Value)
+            {
+
+            }
+            
+            
+            
+            
+            BoxResultadoCalorias.Text = BtnCalcularCalorias.ToString();
+        }
     }
 }

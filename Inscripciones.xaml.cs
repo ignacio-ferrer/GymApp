@@ -33,7 +33,6 @@ namespace GymApp
         {
             try
             {
-                // Verificar que ningún campo de texto esté vacío
                 if (string.IsNullOrWhiteSpace(BoxNombre.Text) ||
                     string.IsNullOrWhiteSpace(BoxApellido.Text) ||
                     string.IsNullOrWhiteSpace(BoxEdad.Text) ||
@@ -139,7 +138,6 @@ namespace GymApp
             }
         }        
        
-        // Evento para validar entradas solo con letras
         private void BoxNombre_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!IsAllLetters(BoxNombre.Text))
@@ -170,7 +168,6 @@ namespace GymApp
             }
         }
 
-        // Método para verificar si una cadena contiene solo letras
         private bool IsAllLetters(string str)
         {
             foreach (char c in str)
@@ -183,7 +180,6 @@ namespace GymApp
             return true;
         }
 
-        // Evento para validar entradas solo con números
         private void BoxNumerico_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             if (!char.IsDigit(e.Text, e.Text.Length - 1))
@@ -193,7 +189,6 @@ namespace GymApp
             }
         }
 
-        //funcionalidad imprimir
         private void BtnImprimir_Click(object sender, RoutedEventArgs e)
         {
             PrintDialog imprimir = new PrintDialog();

@@ -19,8 +19,8 @@
         <GroupBox Grid.Column="1" Margin="30,90,1482,640" FontSize="15" BorderBrush="#FFFFAB40" Foreground="#FFF2F2F7" >
             <Canvas>
 
-                <Label Foreground="#FFF2F2F7" Canvas.Left="-4" Canvas.Top="-3" HorizontalAlignment="Center" VerticalAlignment="Center">Edad</Label>
-                <ComboBox Name="edadComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Canvas.Left="63" Canvas.Top="9" Height="25" BorderBrush="{x:Null}">
+                <Label Foreground="#FFF2F2F7" Canvas.Left="4" Canvas.Top="9" HorizontalAlignment="Left" VerticalAlignment="Top">Edad</Label>
+                <ComboBox Name="edadComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Canvas.Left="58" Canvas.Top="14" Height="25" BorderBrush="{x:Null}">
                     <ComboBox.Background>
                         <LinearGradientBrush EndPoint="0,1">
                             <GradientStop Color="#FFF0F0F0"/>
@@ -29,13 +29,13 @@
                     </ComboBox.Background>
                 </ComboBox>
 
-                <Label Foreground="#FFF2F2F7" Canvas.Top="77" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-2">Altura</Label>
-                <TextBox Canvas.Left="68" Canvas.Top="81" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7"/>
-                <Label Canvas.Left="183" Canvas.Top="77" Foreground="#FFF2F2F7" HorizontalAlignment="Left" VerticalAlignment="Top">CM</Label>
+                <Label Foreground="#FFF2F2F7" Canvas.Top="77" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="4">Altura</Label>
+                <TextBox x:Name="BoxAltura" Canvas.Left="63" Canvas.Top="81" HorizontalAlignment="Left" VerticalAlignment="Center" Width="115" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7"/>
+                <Label Canvas.Left="178" Canvas.Top="77" Foreground="#FFF2F2F7" HorizontalAlignment="Left" VerticalAlignment="Center">CM</Label>
 
 
-                <Label Foreground="#FFF2F2F7" Canvas.Top="157" HorizontalAlignment="Left" VerticalAlignment="Center">Sexo</Label>
-                <ComboBox Canvas.Left="68" Canvas.Top="157" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Height="25" BorderBrush="{x:Null}" >
+                <Label Foreground="#FFF2F2F7" Canvas.Top="155" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10">Sexo</Label>
+                <ComboBox x:Name="sexoComboBox" Canvas.Left="63" Canvas.Top="157" HorizontalAlignment="Left" VerticalAlignment="Center" Width="118" Height="25" BorderBrush="{x:Null}" >
                     <ComboBox.Background>
                         <LinearGradientBrush EndPoint="0,1">
                             <GradientStop Color="#FFF0F0F0"/>
@@ -46,22 +46,22 @@
                     <ComboBoxItem Content="Femenino"/>
                 </ComboBox>
 
-                <Label Foreground="#FFF2F2F7" Canvas.Top="226" Canvas.Left="2" HorizontalAlignment="Left" VerticalAlignment="Top">Peso</Label>
-                <TextBox Canvas.Left="63" Canvas.Top="231" HorizontalAlignment="Center" VerticalAlignment="Top" Width="123" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7"/>
-                <Label Canvas.Left="186" Canvas.Top="226" Foreground="#FFF2F2F7">KG</Label>
+                <Label Foreground="#FFF2F2F7" Canvas.Top="226" Canvas.Left="10" HorizontalAlignment="Left" VerticalAlignment="Center">Peso</Label>
+                <TextBox x:Name="BoxPeso" Canvas.Left="63" Canvas.Top="230" HorizontalAlignment="Center" VerticalAlignment="Top" Width="123" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7"/>
+                <Label Canvas.Left="186" Canvas.Top="226" Foreground="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Center">KG</Label>
 
             </Canvas>
         </GroupBox>
 
-        <GroupBox  Grid.Column="1" Margin="21,467,1037,195" Header="Nivel de actividad:" FontSize="15px" Foreground="#FFF2F2F7" BorderBrush="#FFFFAB40">
+        <GroupBox  Grid.Column="1" Margin="21,467,1037,179" Header="Nivel de actividad:" FontSize="15px" Foreground="#FFF2F2F7" BorderBrush="#FFFFAB40">
             <Canvas HorizontalAlignment="Left" VerticalAlignment="Stretch">
-                <RadioButton Canvas.Left="12" Canvas.Top="22" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF2F2F7">Poco o ningun ejercicio</RadioButton>
-                <RadioButton HorizontalAlignment="Center" Canvas.Top="90" VerticalAlignment="Top" Canvas.Left="12" Foreground="#FFF2F2F7">Ejercicio ligero (1-3 dias a la semana)</RadioButton>
-                <RadioButton Canvas.Left="12" Canvas.Top="154" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Ejercicio moderado(3-5 dias a la semana)</RadioButton>
-                <RadioButton Canvas.Left="12" Canvas.Top="227" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Ejercicio Fuerte(6-7 dias a la semana)</RadioButton>
-                <RadioButton Canvas.Top="287" Canvas.Left="12" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Ejercicio muy fuerte(dos veces al dia, entrenamientos exigentes)</RadioButton>
+                <RadioButton x:Name="RadioPocoEjercicio" Canvas.Left="12" Canvas.Top="22" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF2F2F7">Poco o ningun ejercicio</RadioButton>
+                <RadioButton x:Name="RadioEjercicioLigero" HorizontalAlignment="Center" Canvas.Top="83" VerticalAlignment="Top" Canvas.Left="12" Foreground="#FFFFAB40" Height="22" VerticalContentAlignment="Center">Ejercicio ligero (1-3 dias a la semana)</RadioButton>
+                <RadioButton x:Name="RadioEjercicioModerado" Canvas.Left="12" Canvas.Top="154" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Ejercicio moderado(3-5 dias a la semana)</RadioButton>
+                <RadioButton x:Name="RadioEjercicioFuerte" Canvas.Left="12" Canvas.Top="227" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFFFAB40">Ejercicio Fuerte(6-7 dias a la semana)</RadioButton>
+                <RadioButton x:Name="RadioEjercicioMuyFuerte" Canvas.Top="287" Canvas.Left="12" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Ejercicio muy fuerte(dos veces al dia, entrenamientos exigentes)</RadioButton>
 
-                <Separator Background="#FFFFAB40" Height="44" Canvas.Top="137" Width="334" Canvas.Left="287" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Separator Background="#FFFFAB40" Height="45" Canvas.Top="145" Width="350" Canvas.Left="289" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
                     <Separator.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -117,14 +117,15 @@
                 </Separator>
 
                 <Label Canvas.Left="479" Canvas.Top="16" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Sentado</Label>
-                <Label Canvas.Left="480" Canvas.Top="79" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Jardineria</Label>
+                <Label Canvas.Left="480" Canvas.Top="79" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFFFAB40">Jardineria</Label>
                 <Label Canvas.Left="480" Canvas.Top="148" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Trotar</Label>
-                <Label Canvas.Left="477" Canvas.Top="216" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF2F2F7">Correr</Label>
-                <Label Canvas.Left="477" Canvas.Top="276" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF2F2F7">1 hora de natacion</Label>
+                <Label Canvas.Left="477" Canvas.Top="216" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFFAB40">Correr</Label>
+                <Label Canvas.Left="475" Canvas.Top="276" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF2F2F7">1 hora de natacion</Label>
 
             </Canvas>
         </GroupBox>
-        <Button Grid.Column="1" Content=" Calcular las calorias que necesitas -> " HorizontalAlignment="Left" Margin="208,913,0,0" VerticalAlignment="Top" Height="33" Width="215"/>
+        <Button x:Name="BtnCalcularCalorias" Grid.Column="1" Content=" Calcular las calorias que necesitas -> " HorizontalAlignment="Left" Margin="207,853,0,0" VerticalAlignment="Top" Height="33" Width="257" Background="#FFFFAB40" BorderBrush="{x:Null}" FontSize="15" Click="BtnCalcularCalorias_Click"/>
+        <TextBox x:Name="BoxResultadoCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="485,853,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Height="33" IsReadOnly="True" Background="#FFF1F1F1" SelectionBrush="#FFFFAB40" SelectionTextBrush="#FFFFAB40" BorderBrush="#FFFFAB40" FontSize="15"/>
 
     </Grid>
 </Page>
