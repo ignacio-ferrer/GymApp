@@ -26,22 +26,22 @@ namespace GymApp
 
         private void BtnInscripciones_Click(object sender, RoutedEventArgs e)
         {
-            frameInscripciones.Navigate(new Uri("Inscripciones.xaml", UriKind.Relative));
+            MainFrame.Navigate(new Uri("Inscripciones.xaml", UriKind.Relative));
         }
 
         private void BtnClientes_Click(object sender, RoutedEventArgs e)
         {
-            frameInscripciones.Navigate(new Uri("Clientes.xaml", UriKind.Relative));
+            MainFrame.Navigate(new Uri("Clientes.xaml", UriKind.Relative));
         }
 
         private void BtnRutinas_Click(object sender, RoutedEventArgs e)
         {
-            frameInscripciones.Navigate(new Uri("Rutinas.xaml", UriKind.Relative));
+            MainFrame.Navigate(new Uri("Rutinas.xaml", UriKind.Relative));
         }
 
          private void BtnContadorCalorias_Click(object sender, RoutedEventArgs e)
          {
-            frameInscripciones.Navigate(new Uri("ContadorCalorias.xaml", UriKind.Relative));
+            MainFrame.Navigate(new Uri("ContadorCalorias.xaml", UriKind.Relative));
          }
     }
 }

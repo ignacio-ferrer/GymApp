@@ -5,15 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymApp"
         mc:Ignorable="d"
-        Title="Menu Principal" Height="1080" Width="1920" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" Icon="/IconoAppGym.png" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" >
+        Title="Menu Principal" Height="1080" Width="1920" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" Icon="/IconoAppGym.png" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
     <Grid Background="#FFB3B3B3">
-        <!-- Define las columnas para el menú lateral y el contenido principal // Height="621" Width="1179" -->
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <!-- Ancho automático para el menú lateral -->
             <ColumnDefinition Width="Auto"/>
-            <!-- El resto del ancho para el contenido principal -->
         </Grid.ColumnDefinitions>
 
         <!-- Menú lateral -->
@@ -36,8 +32,6 @@
                 <!-- Opción Rutinas -->
                 <Button x:Name="BtnCalorias" Content="Calorias" Margin="5" FontSize="25" Click="BtnContadorCalorias_Click" Background="#FFFFAB40"/>
                 <Separator Margin="45"/>
-                
-                
             </StackPanel>
         </Border>
 
@@ -49,7 +43,7 @@
                     <GradientStop Color="#FF1B1B1B" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <Frame x:Name="frameInscripciones" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1763px">
+            <Frame x:Name="MainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1763px" NavigationUIVisibility="Hidden">
                 <Frame.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>

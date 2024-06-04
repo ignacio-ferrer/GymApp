@@ -75,7 +75,7 @@ namespace GymApp
 
                 caloriasFinales =+ resultado;
 
-                MessageBox.Show($"calorias diarias por dia: {caloriasFinales:F2}");
+                BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
 
             //2
@@ -110,7 +110,7 @@ namespace GymApp
 
                 caloriasFinales = +resultado;
 
-                MessageBox.Show($"calorias diarias por dia: {caloriasFinales:F2}");
+                BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
             
             //3
@@ -145,9 +145,9 @@ namespace GymApp
 
                 caloriasFinales = +resultado;
 
-                MessageBox.Show($"calorias diarias por dia: {caloriasFinales:F2}");
+                BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
-            
+
             //4
             if (RadioEjercicioFuerte.IsChecked.HasValue && RadioEjercicioFuerte.IsChecked.Value)
             {
@@ -180,9 +180,9 @@ namespace GymApp
 
                 caloriasFinales = +resultado;
 
-                MessageBox.Show($"calorias diarias por dia: {caloriasFinales:F2}");
+                BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
-            
+
             //5
             if (RadioEjercicioMuyFuerte.IsChecked.HasValue && RadioEjercicioMuyFuerte.IsChecked.Value)
             {
@@ -215,10 +215,8 @@ namespace GymApp
                 
                 caloriasFinales = +resultado;
 
-                MessageBox.Show($"calorias diarias por dia: {caloriasFinales:F2}");
+                BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
-
-            BoxResultadoCalorias.Text = BtnCalcularCalorias.ToString();
         }
     }
 }

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GymApp"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Title="Inscripciones">
+      Title="Inscripciones" ShowsNavigationUI="False">
 
     <Grid RenderTransformOrigin="0.499,0.469" Background="#2E3440">
         <Grid.ColumnDefinitions>
@@ -73,7 +73,7 @@
         </GroupBox>
 
         <!--FICHA MEDICA-->
-        <GroupBox Header="Ficha Medica" Margin="3,354,11,0" Background="#3A3A3C" VerticalAlignment="Top" Height="695" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
+        <GroupBox Header="Ficha Medica" Margin="1,342,13,0" Background="#3A3A3C" VerticalAlignment="Top" Height="695" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
             <Canvas Height="670" RenderTransformOrigin="0.393,-0.048" Margin="0,0,-1,0">
                 <!--GROUP BOX 1-->
                 <GroupBox Height="37" Header="" Width="94"  HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="101" Canvas.Left="466" BorderBrush="#3A3A3C" Foreground="#FF3A3A3C" Opacity="0"/>

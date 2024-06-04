@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GymApp"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Title="Clientes">
+      Title="Clientes" ShowsNavigationUI="False">
 
     <Grid>
         <DataGrid Name="ClientesDataGrid" AutoGenerateColumns="True" Background="#FF2B2B2B" BorderBrush="#FF2B2B2B" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" IsReadOnly="True" >
