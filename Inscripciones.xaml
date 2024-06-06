@@ -27,7 +27,7 @@
 
                 <!--Seccion Edad-->
                 <Label Content="Edad: " Canvas.Left="706.599" Canvas.Top="32.583" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxEdad" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="751.433" Canvas.Top="35.333" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="19" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxEdad" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="751.433" Canvas.Top="35.333" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7"/>
 
                 <!--Seccion DNI-->
                 <Label Content="DNI: " Canvas.Left="1026.1" Canvas.Top="33.083" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
@@ -52,19 +52,19 @@
 
                 <!--Seccion C.P-->
                 <Label Content="Codigo Postal: " Canvas.Left="1027" Canvas.Top="113" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxCodigoPostal" TextWrapping="Wrap" Text="" Width="141" Canvas.Left="1130" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="19" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxCodigoPostal" TextWrapping="Wrap" Text="" Width="141" Canvas.Left="1130" Canvas.Top="115" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7"/>
 
                 <!--Seccion Tel-->
                 <Label Content="Telefono: " Canvas.Left="3" Canvas.Top="193" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxTel" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="70" Canvas.Top="194" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="21" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxTel" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="70" Canvas.Top="194" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7"/>
 
                 <!--Seccion Contacto-Emergencia-->
-                <Label Content="Contacto de emergencia: " Canvas.Left="387" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxContactoEmergencia" TextWrapping="Wrap" Text="" Width="125" Canvas.Left="560" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="22" Background="#FFF2F2F7"/>
+                <Label Content="Telefono de emergencia: " Canvas.Left="382" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
+                <TextBox x:Name="BoxContactoEmergencia" TextWrapping="Wrap" Text="" Width="140" Canvas.Left="552" Canvas.Top="197" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7"/>
 
                 <!--Seccion Mail-->
                 <Label Content="Correo Electronico: " Canvas.Left="707" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="151" Canvas.Left="841" Canvas.Top="195" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="19" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="155" Canvas.Left="841" Canvas.Top="195" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="22" Background="#FFF2F2F7"/>
 
                 <!--Seccion Fecha Inscripcion-->
                 <Label Canvas.Left="1026" Canvas.Top="193" Content="Fecha de inscripcion: " HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />

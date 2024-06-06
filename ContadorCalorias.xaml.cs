@@ -25,7 +25,7 @@ namespace GymApp
 
         private void Edades()
         {
-            for(int i = 5; i < 101; i++)
+            for (int i = 5; i < 101; i++)
             {
                 edadComboBox.Items.Add(i);
             }
@@ -33,6 +33,22 @@ namespace GymApp
 
         private void BtnCalcularCalorias_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(edadComboBox.Text) ||
+                    string.IsNullOrWhiteSpace(BoxAltura.Text) ||
+                    string.IsNullOrWhiteSpace(sexoComboBox.Text) ||
+                    string.IsNullOrWhiteSpace(BoxPeso.Text))
+                {
+                    MessageBox.Show("Todos los campos son obligatorios.");
+                    return;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+
             double TMBHombre, TMBMujer;
 
             int altura = int.Parse(BoxAltura.Text);
@@ -40,13 +56,13 @@ namespace GymApp
             int edad = int.Parse(edadComboBox.Text);
             string sexo = sexoComboBox.Text;
 
-            double pocoEjercicio = 1.2 , ejercicioLigero = 1.375 , ejercicioModerado = 1.55 , ejercicioFuerte = 1.725 , ejercicioMuyFuerte = 1.9;
-            double caloriasFinales , resultado, primeraSuma , segundaSuma , primeraResta; 
+            double pocoEjercicio = 1.2, ejercicioLigero = 1.375, ejercicioModerado = 1.55, ejercicioFuerte = 1.725, ejercicioMuyFuerte = 1.9;
+            double caloriasFinales, resultado, primeraSuma, segundaSuma, primeraResta;
 
             //1
             if (RadioPocoEjercicio.IsChecked.HasValue && RadioPocoEjercicio.IsChecked.Value)
             {
-                if(sexo == "Masculino")
+                if (sexo == "Masculino")
                 {
                     //HOMBRE
                     primeraSuma = 13.397 * peso;
@@ -55,7 +71,7 @@ namespace GymApp
 
                     //HOMBRE
                     TMBHombre = 88.362 + primeraSuma + segundaSuma - primeraResta;
-                
+
                     //HOMBRE
                     resultado = TMBHombre * pocoEjercicio;
                 }
@@ -71,9 +87,9 @@ namespace GymApp
 
                     //MUJER
                     resultado = TMBMujer * pocoEjercicio;
-                }                    
+                }
 
-                caloriasFinales =+ resultado;
+                caloriasFinales = +resultado;
 
                 BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
@@ -112,7 +128,7 @@ namespace GymApp
 
                 BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
-            
+
             //3
             if (RadioEjercicioModerado.IsChecked.HasValue && RadioEjercicioModerado.IsChecked.Value)
             {
@@ -212,11 +228,28 @@ namespace GymApp
                     //MUJER
                     resultado = TMBMujer * ejercicioMuyFuerte;
                 }
-                
+
                 caloriasFinales = +resultado;
 
                 BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
+        }
+
+        private void BoxNumerico_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!char.IsDigit(e.Text, e.Text.Length - 1))
+            {
+                MessageBox.Show("Por favor, introduce solo números.");
+                e.Handled = true;
+            }
+        }
+
+        private void BtnLimpiarDatos_Click(object sender, RoutedEventArgs e)
+        {
+            BoxAltura.Clear();
+            BoxPeso.Clear();
+            edadComboBox.SelectedItem = null;
+            sexoComboBox.SelectedItem = null;
         }
     }
 }

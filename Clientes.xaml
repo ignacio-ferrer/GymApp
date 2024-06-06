@@ -8,14 +8,20 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Clientes" ShowsNavigationUI="False">
 
-    <Grid Background="#2E3440">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+    <Grid Background="#FF2B2B2B">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1007*"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-        <DataGrid Name="ClientesDataGrid" AutoGenerateColumns="True" Background="#FF2B2B2B"
+        <DataGrid Name="ClientesDataGrid" AutoGenerateColumns="True" Background="AliceBlue"
                   CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False"
-                  IsReadOnly="True" SelectionMode="Single" SelectionUnit="Cell" MaxWidth="1600" HorizontalAlignment="Left" Width="1590" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True" MaxColumnWidth="200" MinColumnWidth="121"/>
+                  IsReadOnly="True" SelectionMode="Single" SelectionUnit="Cell" MaxWidth="1915" HorizontalAlignment="Left" Width="1915" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True" MaxColumnWidth="200" MinColumnWidth="134.4" Margin="0,0,0,0
+                  "/>
 
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
+            <Button Content="Editar"  Margin="5" FontSize="20" Width="100" Height="50" Background="#FFFFAB40" BorderBrush="{x:Null}"/>
+            <Button Content="Borrar"  Margin="5" FontSize="20" Width="100" Background="#FFFFAB40" BorderBrush="{x:Null}"/>
+        </StackPanel>
     </Grid>
 </Page>

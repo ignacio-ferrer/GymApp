@@ -30,7 +30,7 @@
                 </ComboBox>
 
                 <Label Foreground="#FFFFAB40" Canvas.Top="128" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="9">Altura</Label>
-                <TextBox x:Name="BoxAltura" Canvas.Left="62" Canvas.Top="130" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxAltura" Canvas.Left="62" Canvas.Top="130" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
                 <Label Canvas.Left="172" Canvas.Top="128" Foreground="#FFFFAB40" HorizontalAlignment="Left" VerticalAlignment="Top">CM</Label>
 
 
@@ -47,8 +47,10 @@
                 </ComboBox>
 
                 <Label Foreground="#FFFFAB40" Canvas.Top="288" Canvas.Left="9" HorizontalAlignment="Left" VerticalAlignment="Top">Peso</Label>
-                <TextBox x:Name="BoxPeso" Canvas.Left="54" Canvas.Top="288" HorizontalAlignment="Left" VerticalAlignment="Top" Width="124" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxPeso" Canvas.Left="54" Canvas.Top="288" HorizontalAlignment="Left" VerticalAlignment="Top" Width="124" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
                 <Label Canvas.Left="174" Canvas.Top="288" Foreground="#FFFFAB40" HorizontalAlignment="Left" VerticalAlignment="Top">KG</Label>
+
+                <Button x:Name="BtnLimpiarDatos" Canvas.Left="65" Canvas.Top="332" Background="#FFFFAB40" BorderBrush="{x:Null}" Click="BtnLimpiarDatos_Click">¡Limpiar Datos!</Button>
 
             </Canvas>
         </GroupBox>
