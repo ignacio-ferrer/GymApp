@@ -15,9 +15,9 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <DataGrid Name="ClientesDataGrid" AutoGenerateColumns="True" Background="AliceBlue"
+        <DataGrid Name="ClientesDataGrid" AutoGenerateColumns="True" Background="#FF2B2B2B"
                   CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False"
-                  IsReadOnly="True" SelectionMode="Single" SelectionUnit="Cell" MaxWidth="1915" HorizontalAlignment="Left" Width="1915" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True" MaxColumnWidth="200" MinColumnWidth="116.5" Margin="0,0,0,0" FontSize="15">
+                  IsReadOnly="True" SelectionMode="Single" SelectionUnit="Cell" MaxWidth="1915" HorizontalAlignment="Left" Width="1915" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True" MaxColumnWidth="200" MinColumnWidth="131.4" Margin="0,0,0,0" FontSize="15" BorderBrush="#FF464646">
         </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">

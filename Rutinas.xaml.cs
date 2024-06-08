@@ -137,6 +137,11 @@ namespace GymApp
                 printDialog.PrintVisual(visual, "Rutina Personalizada.");
             }
         }
+
+        private void BtnLimpiarRutina_Click(object sender, RoutedEventArgs e)
+        {
+            EjerciciosSeleccionados.Clear();
+        }
     }
 
     public class Ejercicio

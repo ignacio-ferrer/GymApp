@@ -166,11 +166,18 @@
             </ListBox>
         </StackPanel>
 
-        <Canvas Margin="792,-5,1,1">
-            <Button x:Name="BtnImprimirRutina" Width="130" BorderBrush="Black" Foreground="Black" Background="#FFFFAB40" FontWeight="Bold" HorizontalAlignment="Left" Height="40" FontSize="14" Click="BtnImprimirRutina_Click" Grid.Column="1" Canvas.Left="801" Canvas.Top="10" VerticalAlignment="Center">
+        <Canvas Margin="500,0,120,1036" Grid.Column="1">
+            <Button x:Name="BtnImprimirRutina" Width="130" BorderBrush="Black" Foreground="Black" Background="#FFFFAB40" HorizontalAlignment="Center" Height="34" FontSize="14" Click="BtnImprimirRutina_Click" Grid.Column="1" Canvas.Left="145" Canvas.Top="4" VerticalAlignment="Top">
                 <StackPanel Orientation="Horizontal">
                     <fa:ImageAwesome Icon="Print" Foreground="Black" MaxWidth="40" Height="14" Width="14"/>
-                    <TextBlock Text="Imprimir Rutina" VerticalAlignment="Center"/>
+                    <TextBlock Text=" Imprimir Rutina" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="BtnLimpiarRutina" Width="130" BorderBrush="Black" Foreground="Black" Background="#FFFFAB40"  HorizontalAlignment="Center" Height="35" FontSize="14" Grid.Column="1" Canvas.Left="5" Canvas.Top="4" VerticalAlignment="Top" Click="BtnLimpiarRutina_Click">
+                <StackPanel Orientation="Horizontal">
+                    <fa:ImageAwesome Icon="TrashOutline" Foreground="Black" MaxWidth="40" Height="14" Width="14"/>
+                    <TextBlock Text=" Limpiar Datos" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
         </Canvas>

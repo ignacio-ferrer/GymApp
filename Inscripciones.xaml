@@ -86,7 +86,7 @@
                     <TextBox x:Name="BoxMedicoUno" Canvas.Left="51" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFF2F2F7" Grid.Column="1" Height="19"/>
                     <RadioButton x:Name="BtnSiUno" Content="SI" Canvas.Left="470" Canvas.Top="119" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFECEFF4" />
                     <RadioButton x:Name="BtnNoUno" Content="NO" Canvas.Left="510" Canvas.Top="119" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
-                    <Border Height="2" Background="Gray" Width="1896" Canvas.Top="139" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="-3"/>
+                    <Border Height="2" Background="Gray" Width="1720" Canvas.Top="139" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="-3"/>
                 </Canvas>
 
                 <!--GROUP BOX 2-->
@@ -284,7 +284,7 @@
                         <TextBlock Text="Imprimir planilla" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
-                <Border Height="2" Background="Gray" Width="1119" Canvas.Top="199" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border Height="2" Background="Gray" Width="940" Canvas.Top="199" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -294,7 +294,7 @@
                         </TransformGroup>
                     </Border.RenderTransform>
                 </Border>
-                <Border Height="2" Background="Gray" Width="1119" Canvas.Top="279" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border Height="2" Background="Gray" Width="940" Canvas.Top="279" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -305,7 +305,7 @@
                     </Border.RenderTransform>
                 </Border>
 
-                <Border Height="2" Background="Gray" Width="1117" Canvas.Top="357" Canvas.Left="776" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border Height="2" Background="Gray" Width="940" Canvas.Top="357" Canvas.Left="776" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>

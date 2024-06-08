@@ -138,12 +138,12 @@
             </Canvas>
         </GroupBox>
 
-        <Button x:Name="BtnCalcularCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="150,910,0,0" VerticalAlignment="Top" Height="32" Width="256" Background="#FFFFAB40" BorderBrush="{x:Null}" FontSize="15" Click="BtnCalcularCalorias_Click">
+        <Button x:Name="BtnCalcularCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="220,910,0,0" VerticalAlignment="Top" Height="32" Width="150" Background="#FFFFAB40" BorderBrush="{x:Null}" FontSize="15" Click="BtnCalcularCalorias_Click">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Calcular las calorias que necesitas " VerticalAlignment="Center"/>
-                <fa:ImageAwesome Icon="ArrowCircleRight" Foreground="Black" MaxWidth="40" Height="15" Width="15"/>
+                <TextBlock Text="Calorias por dia " VerticalAlignment="Center"/>
+                <fa:ImageAwesome Icon="ArrowCircleRight" Foreground="Black" MaxWidth="40" Height="17" Width="17"/>
             </StackPanel>
         </Button>
-        <TextBox x:Name="BoxResultadoCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="420,911,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="30" IsReadOnly="True" Background="#FFF1F1F1" SelectionBrush="#FFFFAB40" SelectionTextBrush="#FFFFAB40" BorderBrush="#FFFFAB40" FontSize="20"/>
+        <TextBox x:Name="BoxResultadoCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="390,911,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="30" IsReadOnly="True" Background="#FFF1F1F1" SelectionBrush="#FFFFAB40" SelectionTextBrush="#FFFFAB40" FontSize="19"/>
     </Grid>
 </Page>
