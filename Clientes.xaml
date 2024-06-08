@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
       xmlns:local="clr-namespace:GymApp"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
@@ -16,12 +17,23 @@
 
         <DataGrid Name="ClientesDataGrid" AutoGenerateColumns="True" Background="AliceBlue"
                   CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False"
-                  IsReadOnly="True" SelectionMode="Single" SelectionUnit="Cell" MaxWidth="1915" HorizontalAlignment="Left" Width="1915" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True" MaxColumnWidth="200" MinColumnWidth="134.4" Margin="0,0,0,0
-                  "/>
+                  IsReadOnly="True" SelectionMode="Single" SelectionUnit="Cell" MaxWidth="1915" HorizontalAlignment="Left" Width="1915" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True" MaxColumnWidth="200" MinColumnWidth="116.5" Margin="0,0,0,0" FontSize="15">
+        </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
-            <Button Content="Editar"  Margin="5" FontSize="20" Width="100" Height="50" Background="#FFFFAB40" BorderBrush="{x:Null}"/>
-            <Button Content="Borrar"  Margin="5" FontSize="20" Width="100" Background="#FFFFAB40" BorderBrush="{x:Null}"/>
+            <Button Margin="5" FontSize="20" Width="100" Height="50" Background="#FFFFAB40" BorderBrush="{x:Null}">
+                <StackPanel Orientation="Horizontal">
+                    <fa:ImageAwesome Icon="Pencil" Foreground="Black" MaxWidth="40" Height="32" Width="20" Margin="5"/>
+                    <TextBlock Text="Editar" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Margin="5" FontSize="20" Width="100" Background="#FFFFAB40" BorderBrush="{x:Null}">
+                <StackPanel Orientation="Horizontal">
+                    <fa:ImageAwesome Icon="Trash" Foreground="Black" MaxWidth="40" Height="32" Width="20" Margin="5"/>
+                    <TextBlock Text="Borrar" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

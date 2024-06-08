@@ -3,7 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:GymApp"
+      xmlns:local="clr-namespace:GymApp" 
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="ContadorCalorias" ShowsNavigationUI="False">
@@ -18,9 +19,8 @@
 
         <GroupBox Grid.Column="1" Margin="13,44,1478,582" FontSize="15" BorderBrush="#FFFFAB40" Foreground="#FFF2F2F7" Header="Ficha Personal" >
             <Canvas>
-
-                <Label Foreground="#FFF2F2F7" Canvas.Left="10" Canvas.Top="48" VerticalAlignment="Top" HorizontalAlignment="Left">Edad</Label>
-                <ComboBox Name="edadComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Canvas.Left="56" Canvas.Top="48" Height="25" BorderBrush="{x:Null}">
+                <Label Foreground="#FFF2F2F7" Canvas.Left="10" Canvas.Top="28" VerticalAlignment="Top" HorizontalAlignment="Left">Edad</Label>
+                <ComboBox Name="edadComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Canvas.Left="56" Canvas.Top="28" Height="25" BorderBrush="{x:Null}">
                     <ComboBox.Background>
                         <LinearGradientBrush EndPoint="0,1">
                             <GradientStop Color="#FFF0F0F0"/>
@@ -29,13 +29,12 @@
                     </ComboBox.Background>
                 </ComboBox>
 
-                <Label Foreground="#FFFFAB40" Canvas.Top="128" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="9">Altura</Label>
-                <TextBox x:Name="BoxAltura" Canvas.Left="62" Canvas.Top="130" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
-                <Label Canvas.Left="172" Canvas.Top="128" Foreground="#FFFFAB40" HorizontalAlignment="Left" VerticalAlignment="Top">CM</Label>
+                <Label Foreground="#FFFFAB40" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10">Altura</Label>
+                <TextBox x:Name="BoxAltura" Canvas.Left="60" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+                <Label Canvas.Left="172" Canvas.Top="105" Foreground="#FFFFAB40" HorizontalAlignment="Left" VerticalAlignment="Top">CM</Label>
 
-
-                <Label Foreground="#FFF2F2F7" Canvas.Top="204" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="14">Sexo</Label>
-                <ComboBox x:Name="sexoComboBox" Canvas.Left="60" Canvas.Top="204" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Height="25" BorderBrush="{x:Null}" >
+                <Label Foreground="#FFF2F2F7" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10">Sexo</Label>
+                <ComboBox x:Name="sexoComboBox" Canvas.Left="54" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Height="25" BorderBrush="{x:Null}" >
                     <ComboBox.Background>
                         <LinearGradientBrush EndPoint="0,1">
                             <GradientStop Color="#FFF0F0F0"/>
@@ -46,12 +45,16 @@
                     <ComboBoxItem Content="Femenino"/>
                 </ComboBox>
 
-                <Label Foreground="#FFFFAB40" Canvas.Top="288" Canvas.Left="9" HorizontalAlignment="Left" VerticalAlignment="Top">Peso</Label>
-                <TextBox x:Name="BoxPeso" Canvas.Left="54" Canvas.Top="288" HorizontalAlignment="Left" VerticalAlignment="Top" Width="124" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
-                <Label Canvas.Left="174" Canvas.Top="288" Foreground="#FFFFAB40" HorizontalAlignment="Left" VerticalAlignment="Top">KG</Label>
+                <Label Foreground="#FFFFAB40" Canvas.Top="270" Canvas.Left="10" HorizontalAlignment="Left" VerticalAlignment="Top">Peso</Label>
+                <TextBox x:Name="BoxPeso" Canvas.Left="54" Canvas.Top="270" HorizontalAlignment="Left" VerticalAlignment="Top" Width="124" MaxLength="3" BorderBrush="{x:Null}" Background="#FFF2F2F7" PreviewTextInput="BoxNumerico_PreviewTextInput"/>
+                <Label Canvas.Left="174" Canvas.Top="265" Foreground="#FFFFAB40" HorizontalAlignment="Left" VerticalAlignment="Top">KG</Label>
 
-                <Button x:Name="BtnLimpiarDatos" Canvas.Left="65" Canvas.Top="332" Background="#FFFFAB40" BorderBrush="{x:Null}" Click="BtnLimpiarDatos_Click">¡Limpiar Datos!</Button>
-
+                <Button x:Name="BtnLimpiarDatos" Canvas.Left="57" Height="30" Canvas.Top="320" Background="#FFFFAB40" BorderBrush="{x:Null}" Click="BtnLimpiarDatos_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="TrashOutline" Foreground="Black" MaxWidth="40" Height="20" Width="15"/>
+                        <TextBlock Text=" Limpiar Datos" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
             </Canvas>
         </GroupBox>
 
@@ -60,7 +63,7 @@
                 <RadioButton x:Name="RadioPocoEjercicio" Canvas.Left="12" Canvas.Top="22" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF2F2F7">Poco o ningun ejercicio</RadioButton>
                 <RadioButton x:Name="RadioEjercicioLigero" HorizontalAlignment="Center" Canvas.Top="83" VerticalAlignment="Top" Canvas.Left="12" Foreground="#FFFFAB40" Height="22" VerticalContentAlignment="Center">Ejercicio ligero (1-3 dias a la semana)</RadioButton>
                 <RadioButton x:Name="RadioEjercicioModerado" Canvas.Left="12" Canvas.Top="154" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Ejercicio moderado(3-5 dias a la semana)</RadioButton>
-                <RadioButton x:Name="RadioEjercicioFuerte" Canvas.Left="12" Canvas.Top="227" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFFFAB40">Ejercicio Fuerte(6-7 dias a la semana)</RadioButton>
+                <RadioButton x:Name="RadioEjercicioFuerte" Canvas.Left="12" Canvas.Top="225" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFFFAB40">Ejercicio Fuerte(6-7 dias a la semana)</RadioButton>
                 <RadioButton x:Name="RadioEjercicioMuyFuerte" Canvas.Top="287" Canvas.Left="12" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Ejercicio muy fuerte(dos veces al dia, entrenamientos exigentes)</RadioButton>
 
                 <Separator Background="#FFFFAB40" Height="45" Canvas.Top="145" Width="350" Canvas.Left="289" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
@@ -118,16 +121,29 @@
                     </Separator.RenderTransform>
                 </Separator>
 
-                <Label Canvas.Left="479" Canvas.Top="16" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Sentado</Label>
-                <Label Canvas.Left="480" Canvas.Top="79" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFFFAB40">Jardineria</Label>
-                <Label Canvas.Left="480" Canvas.Top="148" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Trotar</Label>
-                <Label Canvas.Left="477" Canvas.Top="216" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFFAB40">Correr</Label>
-                <Label Canvas.Left="475" Canvas.Top="276" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF2F2F7">1 hora de natacion</Label>
+                <Label Canvas.Left="490" Canvas.Top="16" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Sentado</Label>
+                <fa:ImageAwesome Icon="Battery0" Width="20" Height="16" Canvas.Left="468" Canvas.Top="23" Foreground="#FFD0D0D0"/>
 
+                <Label Canvas.Left="490" Canvas.Top="79" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFFFAB40">Jardineria</Label>
+                <fa:ImageAwesome Icon="Battery1" Width="20" Height="16" Canvas.Left="468" Canvas.Top="90" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFD0D0D0"/>
+
+                <Label Canvas.Left="490" Canvas.Top="148" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF2F2F7">Trotar</Label>
+                <fa:ImageAwesome Icon="Battery2" Width="20" Height="16" Canvas.Left="468" Canvas.Top="159" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD0D0D0"/>
+
+                <Label Canvas.Left="490" Canvas.Top="216" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFFFAB40" Width="60">Correr</Label>
+                <fa:ImageAwesome Icon="Battery3" Width="20" Height="16" Canvas.Left="468" Canvas.Top="226" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFD0D0D0"/>
+
+                <Label Canvas.Left="488" Canvas.Top="276" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFF2F2F7" Width="140">1 hora de natacion</Label>
+                <fa:ImageAwesome Icon="Battery4" Width="20" Height="16" Canvas.Left="468" Canvas.Top="287" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFD0D0D0"/>
             </Canvas>
         </GroupBox>
-        <Button x:Name="BtnCalcularCalorias" Grid.Column="1" Content=" Calcular las calorias que necesitas -> " HorizontalAlignment="Left" Margin="186,893,0,0" VerticalAlignment="Top" Height="32" Width="256" Background="#FFFFAB40" BorderBrush="{x:Null}" FontSize="15" Click="BtnCalcularCalorias_Click"/>
-        <TextBox x:Name="BoxResultadoCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="464,895,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="28" IsReadOnly="True" Background="#FFF1F1F1" SelectionBrush="#FFFFAB40" SelectionTextBrush="#FFFFAB40" BorderBrush="#FFFFAB40" FontSize="20"/>
 
+        <Button x:Name="BtnCalcularCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="150,910,0,0" VerticalAlignment="Top" Height="32" Width="256" Background="#FFFFAB40" BorderBrush="{x:Null}" FontSize="15" Click="BtnCalcularCalorias_Click">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Calcular las calorias que necesitas " VerticalAlignment="Center"/>
+                <fa:ImageAwesome Icon="ArrowCircleRight" Foreground="Black" MaxWidth="40" Height="15" Width="15"/>
+            </StackPanel>
+        </Button>
+        <TextBox x:Name="BoxResultadoCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="420,911,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="30" IsReadOnly="True" Background="#FFF1F1F1" SelectionBrush="#FFFFAB40" SelectionTextBrush="#FFFFAB40" BorderBrush="#FFFFAB40" FontSize="20"/>
     </Grid>
 </Page>

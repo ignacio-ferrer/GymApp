@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
       xmlns:local="clr-namespace:GymApp"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
@@ -15,7 +16,7 @@
         </Grid.ColumnDefinitions>
 
         <!--DATOS PERSONALES-->
-        <GroupBox Header="Datos Personales" Margin="1,1,11,0" Background="#3A3A3C" VerticalAlignment="Top" Height="336" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
+        <GroupBox Header="Datos Personales" Margin="1,1,40,0" Background="#3A3A3C" VerticalAlignment="Top" Height="336" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
             <Canvas Height="316">
                 <!--Seccion Nombre-->
                 <Label Content="Nombre: " Canvas.Left="5.766" Canvas.Top="33" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4"/>
@@ -64,7 +65,7 @@
 
                 <!--Seccion Mail-->
                 <Label Content="Correo Electronico: " Canvas.Left="707" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="155" Canvas.Left="841" Canvas.Top="195" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="22" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="175" Canvas.Left="841" Canvas.Top="195" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="22" Background="#FFF2F2F7"/>
 
                 <!--Seccion Fecha Inscripcion-->
                 <Label Canvas.Left="1026" Canvas.Top="193" Content="Fecha de inscripcion: " HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
@@ -73,7 +74,7 @@
         </GroupBox>
 
         <!--FICHA MEDICA-->
-        <GroupBox Header="Ficha Medica" Margin="1,342,13,0" Background="#3A3A3C" VerticalAlignment="Top" Height="695" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
+        <GroupBox Header="Ficha Medica" Margin="1,340,40,0" Background="#3A3A3C" VerticalAlignment="Top" Height="695" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
             <Canvas Height="670" RenderTransformOrigin="0.393,-0.048" Margin="0,0,-1,0">
                 <!--GROUP BOX 1-->
                 <GroupBox Height="37" Header="" Width="94"  HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="101" Canvas.Left="466" BorderBrush="#3A3A3C" Foreground="#FF3A3A3C" Opacity="0"/>
@@ -258,21 +259,31 @@
                 </Canvas>
 
                 <!--Guardar datos-->
-                <Button x:Name="BtnGuardar" Content="¡Guardar Datos!" Canvas.Left="1310" Canvas.Top="589" Height="30" Width="120" Click="BtnGuardar_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Background="#FFFFAB40" BorderBrush="{x:Null}"/>
+                <Button x:Name="BtnGuardar" Canvas.Left="1310" Canvas.Top="589" Height="30" Width="120" Click="BtnGuardar_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Background="#FFFFAB40" BorderBrush="{x:Null}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="DataBase" Foreground="Black" MaxWidth="40" Height="15"  Width="15"/>
+                        <TextBlock Text="Guardar Datos" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
 
-                <Border Height="2" Background="#FFEAEAEA" Width="260" Canvas.Top="625" Canvas.Left="1310" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Border.RenderTransform>
-                </Border>
+               <Border Height="2" Background="#FFEAEAEA" Width="268" Canvas.Top="625" Canvas.Left="1310" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border.RenderTransform>
+                   <TransformGroup>
+                       <ScaleTransform/>
+                       <SkewTransform/>
+                       <RotateTransform Angle="180"/>
+                       <TranslateTransform/>
+                   </TransformGroup>
+                </Border.RenderTransform>
+               </Border>
 
                 <!--Imprimir datos-->
-                <Button x:Name="BtnImprimir" Content="¡Imprimir planilla!" Canvas.Left="1450" Canvas.Top="589" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Click="BtnImprimir_Click" Background="#FFFFAB40" BorderBrush="{x:Null}"/>
+                <Button x:Name="BtnImprimir" Canvas.Left="1450" Canvas.Top="589" Height="30" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Click="BtnImprimir_Click" Background="#FFFFAB40" BorderBrush="{x:Null}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Print" Foreground="Black" MaxWidth="40" Height="15"  Width="15"/>
+                        <TextBlock Text="Imprimir planilla" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
                 <Border Height="2" Background="Gray" Width="1119" Canvas.Top="199" Canvas.Left="774" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.RenderTransform>
                         <TransformGroup>
@@ -310,7 +321,7 @@
                         <!--TARJETA-->
                         <Label Content="N° Tarjeta:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="9" Foreground="#FFECEFF4"/>
                         <TextBox x:Name="BoxTarjeta" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="41" Width="140" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="16"/>
-
+                            
                         <!--CADUCIDAD-->
                         <Label Content="Caducidad:"  Canvas.Top="75" RenderTransformOrigin="-0.378,-0.699" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Canvas.Left="10" Foreground="#FFECEFF4"/>
                         <TextBox x:Name="BoxCaducidadUno" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="2"/>

@@ -3,9 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:local="clr-namespace:GymApp"
         mc:Ignorable="d"
-        Title="Menu Principal" Height="1080" Width="1920" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" Icon="/IconoAppGym.png" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+        Title="Mi Gimnasio" Height="1080" Width="1920" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" Icon="/IconoAppGym.png" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+    
     <Grid Background="#FFB3B3B3">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -16,21 +18,41 @@
         <Border Padding="0,180,0,0" Background="#1C1C1E">
             <StackPanel VerticalAlignment="Top">
                 <Separator Margin="45"/>
-
+            
                 <!-- Opción Inscripciones -->
-                <Button x:Name="BtnInscripciones" Content="Inscripciones" Margin="5" FontSize="25" Click="BtnInscripciones_Click" Background="#FFFFAB40"/>
+                <Button x:Name="BtnInscripciones" Margin="5" FontSize="25" Click="BtnInscripciones_Click" Background="#FFFFAB40">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="File" Foreground="Black" Height="20" Width="20" Margin="5"/>
+                        <TextBlock Text="Inscripciones" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
                 <Separator Margin="45"/>
-
+                        
                 <!-- Opción Clientes -->
-                <Button x:Name="BtnClientes" Content="Clientes" Margin="5" FontSize="25" Click="BtnClientes_Click" Background="#FFFFAB40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="BtnClientes" Margin="5" FontSize="25" Click="BtnClientes_Click" Background="#FFFFAB40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Users" Foreground="Black" Height="20" Width="20" Margin="5"/>
+                        <TextBlock Text="Clientes" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
                 <Separator Margin="45"/>
 
                 <!-- Opción Rutinas -->
-                <Button x:Name="BtnRutinas" Content="Rutinas" Margin="5" FontSize="25" Click="BtnRutinas_Click" Background="#FFFFAB40"/>
+                <Button x:Name="BtnRutinas" Margin="5" FontSize="25" Click="BtnRutinas_Click" Background="#FFFFAB40">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="ClockOutline" Foreground="Black" Height="20" Width="20" Margin="5"/>
+                        <TextBlock Text="Rutinas" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
                 <Separator Margin="45"/>
                 
                 <!-- Opción Rutinas -->
-                <Button x:Name="BtnCalorias" Content="Calorias" Margin="5" FontSize="25" Click="BtnContadorCalorias_Click" Background="#FFFFAB40"/>
+                <Button x:Name="BtnCalorias" Margin="5" FontSize="25" Click="BtnContadorCalorias_Click" Background="#FFFFAB40">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Heartbeat" Foreground="Black" Height="20" Width="20" Margin="5"/>
+                        <TextBlock Text="Calorias" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
                 <Separator Margin="45"/>
             </StackPanel>
         </Border>
