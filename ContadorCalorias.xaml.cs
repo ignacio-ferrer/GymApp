@@ -76,6 +76,29 @@ namespace GymApp
             }
         }
 
+        private void BoxNombre_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!IsAllLetters(FoodTextBox.Text))
+            {
+                MessageBox.Show("Por favor, introduce solo letras en el nombre.");
+                FoodTextBox.Text = new string(FoodTextBox.Text.Where(char.IsLetter).ToArray());
+                FoodTextBox.CaretIndex = FoodTextBox.Text.Length;
+            }
+        }
+
+        private bool IsAllLetters(string str)
+        {
+            foreach (char c in str)
+            {
+                if (!char.IsLetter(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
         private void BtnCalcularCalorias_Click(object sender, RoutedEventArgs e)
         {
             try
