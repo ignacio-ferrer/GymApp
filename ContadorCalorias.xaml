@@ -145,5 +145,14 @@
             </StackPanel>
         </Button>
         <TextBox x:Name="BoxResultadoCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="390,911,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="30" IsReadOnly="True" Background="#FFF1F1F1" SelectionBrush="#FFFFAB40" SelectionTextBrush="#FFFFAB40" FontSize="19"/>
+
+        <StackPanel Grid.Column="1" Margin="1320,45,110,15" Background="#3A3A3C">
+            <Label FontSize="25" Foreground="#FFF2F2F7">Check de nutrientes:</Label>
+            <Label Foreground="#FFCECECE" HorizontalAlignment="Left">¡Ingresa un alimento y mira sus propiedades!</Label>
+
+            <TextBox x:Name="FoodTextBox" Height="25" Background="#FFF1F1F1" Width="100" Text="Pollo" BorderBrush="{x:Null}" HorizontalAlignment="Left" Margin="5,5,0,20" FontSize="15"/>
+            <Button x:Name="FetchButton" Content="¡Obtener informacion!" Click="FetchButton_Click" Background="#FFFFAB40" Width="160" Height="30" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" FontSize="15"/>
+            <TextBlock x:Name="ResultTextBlock" Text="" Margin="10" TextWrapping="Wrap" Height="826" Foreground="White" Background="#3A3A3C" FontSize="12"/>
+        </StackPanel>
     </Grid>
 </Page>

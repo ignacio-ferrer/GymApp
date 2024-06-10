@@ -12,22 +12,67 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GymApp.API;
+using Newtonsoft.Json.Linq;
 
 namespace GymApp
 {
     public partial class ContadorCalorias : Page
     {
+        private ConsumirApi _apiClient;
         public ContadorCalorias()
         {
             InitializeComponent();
             Edades();
+
+            //api
+            _apiClient = new ConsumirApi();
         }
 
-        private void Edades()
+        private async void FetchButton_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 5; i < 101; i++)
+            string foodItem = FoodTextBox.Text;
+            if (!string.IsNullOrEmpty(foodItem))
             {
-                edadComboBox.Items.Add(i);
+                try
+                {
+                    ResultTextBlock.Text = "Obteniendo Informacion...";
+                    string result = await _apiClient.SearchByKeywordAsync(foodItem);
+
+                    // Parse the JSON result to extract and format the nutrients
+                    var items = JArray.Parse(result);
+                    if (items.Count > 0)
+                    {
+                        var item = items[0]; // Tomar solo el primer resultado
+                        var name = item["brand_name"]?.ToString() ?? item["description"]?.ToString() ?? "Desconocido";
+                        var calories = item["nutritional_contents"]?["energy"]?["value"]?.ToString() ?? "Desconocido";
+                        var protein = item["nutritional_contents"]?["protein"]?.ToString() ?? "Desconocido";
+                        var carbohydrates = item["nutritional_contents"]?["carbohydrates"]?.ToString() ?? "Desconocido";
+                        var fat = item["nutritional_contents"]?["fat"]?.ToString() ?? "Desconocido";
+                        var fiber = item["nutritional_contents"]?["fiber"]?.ToString() ?? "Desconocido";
+
+                        var formattedResult = $"Nombre: {name}\n" +
+                                              $"Calorías: {calories}\n" +
+                                              $"Proteína: {protein}\n" +
+                                              $"Carbohidratos: {carbohydrates}\n" +
+                                              $"Grasa: {fat}\n" +
+                                              $"Fibra: {fiber}";
+
+                        ResultTextBlock.Text = formattedResult;
+                    }
+                    else
+                    {
+                        ResultTextBlock.Text = "No se encontraron resultados.";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ResultTextBlock.Text = $"Error: {ex.Message}";
+                }
+            }
+            else
+            {
+                ResultTextBlock.Text = "Por favor, ingresa un alimento.";
             }
         }
 
@@ -44,7 +89,7 @@ namespace GymApp
                     return;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
@@ -250,6 +295,16 @@ namespace GymApp
             BoxPeso.Clear();
             edadComboBox.SelectedItem = null;
             sexoComboBox.SelectedItem = null;
+        }
+
+
+        //para que las edades vayan del 5 al 100
+        private void Edades()
+        {
+            for (int i = 5; i < 101; i++)
+            {
+                edadComboBox.Items.Add(i);
+            }
         }
     }
 }

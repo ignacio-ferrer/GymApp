@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:GymApp"
         mc:Ignorable="d"
         Title="Mi Gimnasio" Height="1080" Width="1920" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" Icon="/IconoAppGym.png" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
-    
+
     <Grid Background="#FFB3B3B3">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -18,7 +18,7 @@
         <Border Padding="0,180,0,0" Background="#1C1C1E">
             <StackPanel VerticalAlignment="Top">
                 <Separator Margin="45"/>
-            
+
                 <!-- Opción Inscripciones -->
                 <Button x:Name="BtnInscripciones" Margin="5" FontSize="25" Click="BtnInscripciones_Click" Background="#FFFFAB40">
                     <StackPanel Orientation="Horizontal">
@@ -27,7 +27,7 @@
                     </StackPanel>
                 </Button>
                 <Separator Margin="45"/>
-                        
+
                 <!-- Opción Clientes -->
                 <Button x:Name="BtnClientes" Margin="5" FontSize="25" Click="BtnClientes_Click" Background="#FFFFAB40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                     <StackPanel Orientation="Horizontal">
@@ -45,7 +45,7 @@
                     </StackPanel>
                 </Button>
                 <Separator Margin="45"/>
-                
+
                 <!-- Opción Rutinas -->
                 <Button x:Name="BtnCalorias" Margin="5" FontSize="25" Click="BtnContadorCalorias_Click" Background="#FFFFAB40">
                     <StackPanel Orientation="Horizontal">
@@ -65,12 +65,18 @@
                     <GradientStop Color="#FF1B1B1B" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <Frame x:Name="MainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1763px" NavigationUIVisibility="Hidden">
+            <Frame x:Name="MainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1763px" NavigationUIVisibility="Hidden" RenderTransformOrigin="0.5,0.5">
                 <Frame.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="#FF151515" Offset="1"/>
-                    </LinearGradientBrush>
+                    <ImageBrush ImageSource="/backgroundImage.png" TileMode="None" Stretch="None" ViewboxUnits="RelativeToBoundingBox" ViewportUnits="RelativeToBoundingBox" AlignmentX="Center" AlignmentY="Center">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5" Angle="0"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
                 </Frame.Background>
             </Frame>
         </Border>

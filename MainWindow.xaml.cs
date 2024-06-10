@@ -14,14 +14,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+using GymApp.API;
 
 namespace GymApp
 {
     public partial class MainWindow : Window
     {
+        private ConsumirApi _apiClient;
+
         public MainWindow()
         {
             InitializeComponent();
+            _apiClient = new ConsumirApi();
         }
 
         private void BtnInscripciones_Click(object sender, RoutedEventArgs e)
