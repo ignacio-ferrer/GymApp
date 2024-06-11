@@ -22,11 +22,34 @@
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Nombre}" Margin="10"/>
+                        <ComboBox x:Name="NumeroDeSeries" Height="35" BorderBrush="{x:Null}">
+                            <ComboBoxItem Content="Series" IsEnabled="False"/>
+                            <ComboBoxItem Content="5"/>
+                            <ComboBoxItem Content="4"/>
+                            <ComboBoxItem Content="3"/>
+                            <ComboBoxItem Content="2"/>
+                            <ComboBoxItem Content="1"/>
+                        </ComboBox>
+
+                        <ComboBox Name="NumeroDeRepeticiones" Height="35" BorderBrush="{x:Null}">
+                            <ComboBoxItem Content="Repeticiones" IsEnabled="False"></ComboBoxItem>
+                            <ComboBoxItem Content="10"></ComboBoxItem>
+                            <ComboBoxItem Content="9"></ComboBoxItem>
+                            <ComboBoxItem Content="8"></ComboBoxItem>
+                            <ComboBoxItem Content="7"></ComboBoxItem>
+                            <ComboBoxItem Content="6"></ComboBoxItem>
+                            <ComboBoxItem Content="5"></ComboBoxItem>
+                            <ComboBoxItem Content="4"></ComboBoxItem>
+                            <ComboBoxItem Content="3"></ComboBoxItem>
+                            <ComboBoxItem Content="2"></ComboBoxItem>
+                            <ComboBoxItem Content="1"></ComboBoxItem>
+                        </ComboBox>
+                        
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
+        
         <!-- GRUPO MUSCULARES GRANDES-->
 
         <!-- Ejercicios de Pecho -->

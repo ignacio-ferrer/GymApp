@@ -21,7 +21,6 @@ namespace GymApp
         public bool preguntaEpileptico { get; set; }
         public bool preguntaFumador { get; set; }
         
-
         //Segunda fila
         public bool preguntaMareos { get; set; }
         public bool preguntaDesmayos { get; set; }

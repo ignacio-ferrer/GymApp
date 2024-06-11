@@ -37,6 +37,7 @@ namespace GymApp
                     string.IsNullOrWhiteSpace(BoxApellido.Text) ||
                     string.IsNullOrWhiteSpace(BoxEdad.Text) ||
                     string.IsNullOrWhiteSpace(BoxDni.Text) ||
+                    string.IsNullOrWhiteSpace(BoxSexo.Text) ||
                     string.IsNullOrWhiteSpace(BoxDirec.Text) ||
                     string.IsNullOrWhiteSpace(BoxLocalidad.Text) ||
                     string.IsNullOrWhiteSpace(BoxCodigoPostal.Text) ||
@@ -53,7 +54,6 @@ namespace GymApp
 
                 int BoxDeEdad = int.Parse(BoxEdad.Text);
                 int BoxDeDni = int.Parse(BoxDni.Text);
-                bool BoxDeSexo = BtnHombre.IsChecked == true;                
                 int BoxDeCP = int.Parse(BoxCodigoPostal.Text);
                 int BoxDeTelefono = int.Parse(BoxTel.Text);
                 int BoxDeTelefonoEmergencia = int.Parse(BoxContactoEmergencia.Text);
@@ -77,7 +77,7 @@ namespace GymApp
                 datosPersonales.apellido = BoxApellido.Text;
                 datosPersonales.edad = BoxDeEdad;
                 datosPersonales.dni = BoxDeDni;
-                datosPersonales.sexo = BoxDeSexo;
+                datosPersonales.sexo = BoxSexo.Text;
                 datosPersonales.fechaNacimiento = FechaCumple;
                 datosPersonales.direccion = BoxDirec.Text;
                 datosPersonales.localidad = BoxLocalidad.Text;

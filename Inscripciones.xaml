@@ -35,9 +35,17 @@
                 <TextBox x:Name="BoxDni" TextWrapping="Wrap" Text="" Width="190" Canvas.Left="1063.35" Canvas.Top="33.333" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
 
                 <!--Seccion Sexo-->
-                <Label Content="Sexo: " Canvas.Left="1346.305" Canvas.Top="32.81" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
-                <RadioButton x:Name="BtnHombre" Content="Hombre" Canvas.Left="1391.721" Canvas.Top="39.163" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" Foreground="#FFECEFF4" Background="#FFF2F2F7" />
-                <RadioButton x:Name="BtnMujer" Content="Mujer" Canvas.Left="1471.887" Canvas.Top="39.244" HorizontalAlignment="Center" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" GroupName="Sexo" Foreground="#FFECEFF4" Background="#FFF2F2F7"/>
+                <Label Content="Sexo: " Canvas.Left="1348.15" Canvas.Top="35.333" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
+                <ComboBox x:Name="BoxSexo" Canvas.Left="1397" Canvas.Top="32" HorizontalAlignment="Left" VerticalAlignment="Center" Width="105" >
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF0F0F0"/>
+                            <GradientStop Color="#FFF2F2F7" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                    <ComboBoxItem Content="Masculino"/>
+                    <ComboBoxItem Content="Femenino"/>
+                </ComboBox>
 
                 <!--Seccion Fecha-->
                 <Label Content="Fecha de nacimiento: " Canvas.Left="5" Canvas.Top="113" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
@@ -266,16 +274,16 @@
                     </StackPanel>
                 </Button>
 
-               <Border Height="2" Background="#FFEAEAEA" Width="268" Canvas.Top="625" Canvas.Left="1310" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Border.RenderTransform>
-                   <TransformGroup>
-                       <ScaleTransform/>
-                       <SkewTransform/>
-                       <RotateTransform Angle="180"/>
-                       <TranslateTransform/>
-                   </TransformGroup>
-                </Border.RenderTransform>
-               </Border>
+                <Border Height="2" Background="#FFEAEAEA" Width="268" Canvas.Top="625" Canvas.Left="1310" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                </Border>
 
                 <!--Imprimir datos-->
                 <Button x:Name="BtnImprimir" Canvas.Left="1450" Canvas.Top="589" Height="30" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Click="BtnImprimir_Click" Background="#FFFFAB40" BorderBrush="{x:Null}">
@@ -321,7 +329,7 @@
                         <!--TARJETA-->
                         <Label Content="N° Tarjeta:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="9" Foreground="#FFECEFF4"/>
                         <TextBox x:Name="BoxTarjeta" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="41" Width="140" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="16"/>
-                            
+
                         <!--CADUCIDAD-->
                         <Label Content="Caducidad:"  Canvas.Top="75" RenderTransformOrigin="-0.378,-0.699" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Canvas.Left="10" Foreground="#FFECEFF4"/>
                         <TextBox x:Name="BoxCaducidadUno" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="2"/>

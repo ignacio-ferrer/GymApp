@@ -34,7 +34,7 @@ namespace GymApp
             public string apellido { get; set; }
             public int edad { get; set; }
             public int dni { get; set; }
-            public bool sexo { get; set; }
+            public string sexo { get; set; }
             public DateTime? fechaNacimiento { get; set; }
             public string direccion { get; set; }
             public string localidad { get; set; }

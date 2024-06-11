@@ -20,7 +20,7 @@
         <GroupBox Grid.Column="1" Margin="13,44,1478,582" FontSize="15" BorderBrush="#FFFFAB40" Foreground="#FFF2F2F7" Header="Ficha Personal" >
             <Canvas>
                 <Label Foreground="#FFF2F2F7" Canvas.Left="10" Canvas.Top="28" VerticalAlignment="Top" HorizontalAlignment="Left">Edad</Label>
-                <ComboBox Name="edadComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Canvas.Left="56" Canvas.Top="28" Height="25" BorderBrush="{x:Null}">
+                <ComboBox Name="edadComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Canvas.Left="56" Canvas.Top="28" Height="25" BorderBrush="{x:Null}" >
                     <ComboBox.Background>
                         <LinearGradientBrush EndPoint="0,1">
                             <GradientStop Color="#FFF0F0F0"/>

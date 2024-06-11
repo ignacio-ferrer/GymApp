@@ -98,7 +98,6 @@ namespace GymApp
             return true;
         }
 
-
         private void BtnCalcularCalorias_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -319,7 +318,6 @@ namespace GymApp
             edadComboBox.SelectedItem = null;
             sexoComboBox.SelectedItem = null;
         }
-
 
         //para que las edades vayan del 5 al 100
         private void Edades()

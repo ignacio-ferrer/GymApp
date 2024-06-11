@@ -30,6 +30,7 @@ namespace GymApp
         public ObservableCollection<Ejercicio> EjerciciosTrapecio { get; set; }
         public ObservableCollection<Ejercicio> EjerciciosGemelos { get; set; }
 
+        //el ejercicio seleccionado
         public ObservableCollection<Ejercicio> EjerciciosSeleccionados { get; set; }
         public ICommand ComandoAgregarEjercicios { get; set; }
 
@@ -141,7 +142,7 @@ namespace GymApp
         private void BtnLimpiarRutina_Click(object sender, RoutedEventArgs e)
         {
             EjerciciosSeleccionados.Clear();
-        }
+        }           
     }
 
     public class Ejercicio
