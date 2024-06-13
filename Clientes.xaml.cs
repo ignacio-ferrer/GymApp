@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,6 @@ namespace GymApp
 {
     public partial class Clientes : Page
     {
-        DatosPersonales datosPersonales = new DatosPersonales();
         RepositorioCliente repositorioCliente = new RepositorioCliente();
 
         public Clientes()
@@ -54,6 +54,46 @@ namespace GymApp
 
             var datosPersonales = repositorioCliente.ObtenerClientes();
             ClientesDataGrid.ItemsSource = datosPersonales;
+        }
+
+        private void BtnBorrarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            if (ClientesDataGrid.SelectedItem is DatosPersonales selectedClient)
+            {
+                repositorioCliente.BorrarUsuario(selectedClient.ClienteId);
+                LoadCliente();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un cliente para eliminar.");
+            }
+        } 
+
+        private void BtnEditarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            if (ClientesDataGrid.SelectedItem is DatosPersonales selectedClient)
+            {
+                selectedClient.nombre = "";
+                selectedClient.apellido = "";
+                selectedClient.edad = 0;
+                selectedClient.dni = 0;
+                selectedClient.sexo = "";
+                selectedClient.fechaNacimiento = new DateTime();
+                selectedClient.direccion = "";
+                selectedClient.localidad = "";
+                selectedClient.codigoPostal = 0;
+                selectedClient.telefono = 0;
+                selectedClient.telefonoEmergencia = 0;
+                selectedClient.correo = "";
+                selectedClient.fechaInscripcion = DateTime.Now; 
+
+                repositorioCliente.EditarUsuario(selectedClient);
+                LoadCliente();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un cliente para editar.");
+            }
         }
     }
 }

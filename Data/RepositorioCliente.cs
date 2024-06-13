@@ -21,8 +21,8 @@ namespace GymApp.Data
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "SELECT nombre, apellido, edad, dni, sexo, fechaNacimiento, direccion, localidad, codigoPostal, telefono, telefonoEmergencia, correo, fechaInscripcion FROM Cliente";
-                var datosPersonales = connection.Query<DatosPersonales>(sql).ToList();
+                var sql = "SELECT ClienteId, nombre, apellido, edad, dni, sexo, fechaNacimiento, direccion, localidad, codigoPostal, telefono, telefonoEmergencia, correo, fechaInscripcion FROM Cliente";
+                //var datosPersonales = connection.Query<DatosPersonales>(sql).ToList();
                 return connection.Query<DatosPersonales>(sql).ToList();
             }
         }
@@ -33,6 +33,24 @@ namespace GymApp.Data
             {
                 var sql = "INSERT INTO Cliente (nombre, apellido , edad, dni, sexo, fechaNacimiento, direccion, localidad, codigoPostal, telefono, telefonoEmergencia, correo, fechaInscripcion) VALUES (@nombre, @apellido , @edad, @dni, @sexo, @fechaNacimiento, @direccion, @localidad, @codigoPostal, @telefono, @telefonoEmergencia, @correo, @fechaInscripcion)";
                 connection.Execute(sql, datosPersonales);
+            }
+        }
+
+        public void EditarUsuario(DatosPersonales cliente)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var sql = "UPDATE Cliente SET nombre = @nombre, apellido = @apellido, edad = @edad, dni = @dni , fechaNacimiento = @fechaNacimiento , direccion = @direccion , localidad = @localidad , codigoPostal = @codigoPostal , telefono = @telefono , telefonoEmergencia = @telefonoEmergencia , correo = @correo , fechaInscripcion = @fechaInscripcion WHERE ClienteId = @ClienteId";
+                connection.Execute(sql, cliente);
+            }
+        }
+
+        public void BorrarUsuario(int clienteId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var sql = "DELETE FROM Cliente WHERE ClienteId = @ClienteId";
+                connection.Execute(sql, new { ClienteId = clienteId });
             }
         }
     }

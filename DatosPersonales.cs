@@ -11,35 +11,37 @@ namespace GymApp
 {
     internal class DatosPersonales
     {
+        public int ClienteId { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public int edad { get; set; }
         public int dni { get; set; }
         public string sexo { get; set; }
-        public DateTime? fechaNacimiento { get; set; }
+        public DateTime? fechaNacimiento { get; set; } = DateTime.MinValue;
         public string direccion { get; set; }
         public string localidad { get; set; }
         public int codigoPostal { get; set; }
         public int telefono { get; set; }
         public int telefonoEmergencia { get; set; }
         public string correo { get; set; }
-        public DateTime? fechaInscripcion { get; set; }
+        public DateTime? fechaInscripcion { get; set; } = DateTime.MinValue;
 
-        public DatosPersonales(string nombre = "", string apellido = "", int edad = 0, int dni = 0, string sexo = "", DateTime? fechaNacimiento=null, string direccion = "", string localidad = "", int codigoPostal = 0, int telefono = 0, int telefonoEmergencia = 0, string correo = "", DateTime? fechaInscripcion = null)
+        public DatosPersonales(int ClienteId=0,string nombre = "", string apellido = "", int edad = 0, int dni = 0, string sexo = "", DateTime? fechaNacimiento=null, string direccion = "", string localidad = "", int codigoPostal = 0, int telefono = 0, int telefonoEmergencia = 0, string correo = "", DateTime? fechaInscripcion = null)
         {
+            this.ClienteId = ClienteId;
             this.nombre = nombre;
             this.apellido = apellido;
             this.edad = edad;
             this.dni = dni;
             this.sexo = sexo;
-            this.fechaNacimiento = fechaNacimiento;
+            this.fechaNacimiento = fechaNacimiento ?? DateTime.MinValue;
             this.direccion = direccion;
             this.localidad = localidad;
             this.codigoPostal = codigoPostal;
             this.telefono = telefono;
             this.telefonoEmergencia = telefonoEmergencia;
             this.correo = correo;
-            this.fechaInscripcion = fechaInscripcion;
+            this.fechaInscripcion = fechaInscripcion ?? DateTime.MinValue;
         }        
     }
 }

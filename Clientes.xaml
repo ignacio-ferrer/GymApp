@@ -16,19 +16,21 @@
         </Grid.RowDefinitions>
 
         <DataGrid Name="ClientesDataGrid" AutoGenerateColumns="True" Background="#FF2B2B2B"
-                  CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False"
-                  IsReadOnly="True" SelectionMode="Single" SelectionUnit="Cell" MaxWidth="1915" HorizontalAlignment="Left" Width="1915" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True" MaxColumnWidth="200" MinColumnWidth="131.4" Margin="0,0,0,0" FontSize="15" BorderBrush="#FF464646">
+          CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False"
+          IsReadOnly="False" SelectionMode="Single" SelectionUnit="FullRow" MaxWidth="1915" HorizontalAlignment="Left" Width="1915"
+          HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True"
+          MaxColumnWidth="200" MinColumnWidth="112" Margin="0,0,0,0" FontSize="14" BorderBrush="#FF464646">
         </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
-            <Button Margin="5" FontSize="20" Width="100" Height="50" Background="#FFFFAB40" BorderBrush="{x:Null}">
+            <Button x:Name="BtnEditarCliente" Margin="5" FontSize="20" Width="100" Height="50" Background="#FFFFAB40" BorderBrush="{x:Null}" Click="BtnEditarCliente_Click">
                 <StackPanel Orientation="Horizontal">
                     <fa:ImageAwesome Icon="Pencil" Foreground="Black" MaxWidth="40" Height="32" Width="20" Margin="5"/>
                     <TextBlock Text="Editar" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
             
-            <Button Margin="5" FontSize="20" Width="100" Background="#FFFFAB40" BorderBrush="{x:Null}">
+            <Button x:Name="BtnBorrarCliente" Margin="5" FontSize="20" Width="100" Background="#FFFFAB40" BorderBrush="{x:Null}" Click="BtnBorrarCliente_Click">
                 <StackPanel Orientation="Horizontal">
                     <fa:ImageAwesome Icon="Trash" Foreground="Black" MaxWidth="40" Height="32" Width="20" Margin="5"/>
                     <TextBlock Text="Borrar" VerticalAlignment="Center"/>

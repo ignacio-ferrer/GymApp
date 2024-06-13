@@ -26,7 +26,6 @@ namespace GymApp
         public Inscripciones()
         {
             InitializeComponent();
-            repositorioCliente.ObtenerClientes();
         }
       
         private void BtnGuardar_Click(object sender, RoutedEventArgs e)
@@ -71,7 +70,7 @@ namespace GymApp
                     MessageBox.Show("Por favor, selecciona una fecha de inscripción válida.");
                     return;
                 }
-              
+
                 // Guardando todas las variables de la ficha: Datos Personales
                 datosPersonales.nombre = BoxNombre.Text;
                 datosPersonales.apellido = BoxApellido.Text;
@@ -86,6 +85,8 @@ namespace GymApp
                 datosPersonales.telefonoEmergencia = BoxDeTelefonoEmergencia;
                 datosPersonales.correo = BoxMail.Text;
                 datosPersonales.fechaInscripcion = FechaInscripcion;
+
+                repositorioCliente.AgregarCliente(datosPersonales);
 
                 // Guardando todas las variables de la ficha: Datos Medicos
                 datosMedicos.lesionOsea = BoxMedicoUno.Text;
