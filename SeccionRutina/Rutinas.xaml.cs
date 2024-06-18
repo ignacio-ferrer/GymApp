@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GymApp
+namespace GymApp.SeccionRutina
 {
     public partial class Rutinas : Page
     {
@@ -119,10 +119,8 @@ namespace GymApp
         {
             PrintDialog printDialog = new PrintDialog();
 
-            //muestra el cuadro predeterminado 
             if (printDialog.ShowDialog() == true)
             {
-                //obtiene visualmente el formulario
                 var visual = new DrawingVisual();
                 using (var context = visual.RenderOpen())
                 {
@@ -130,11 +128,9 @@ namespace GymApp
                     context.DrawRectangle(brush, null, new Rect(new Point(0, 0), new Size(this.ActualWidth, this.ActualHeight)));
                 }
 
-                //para ajustar tamaño
                 double scale = Math.Min(printDialog.PrintableAreaWidth / this.ActualWidth, printDialog.PrintableAreaHeight / this.ActualHeight);
                 visual.Transform = new ScaleTransform(scale, scale);
 
-                // Imprimir el contenido visual ajustado
                 printDialog.PrintVisual(visual, "Rutina Personalizada.");
             }
         }

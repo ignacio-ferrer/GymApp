@@ -6,7 +6,7 @@
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:local="clr-namespace:GymApp"
         mc:Ignorable="d"
-        Title="Mi Gimnasio" Height="1080" Width="1920" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" Icon="/IconoAppGym.png" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+        Title="Mi Gimnasio" Height="1080" Width="1920" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" Icon="/IconoAppGym.png">
 
     <Grid Background="#FFB3B3B3">
         <Grid.ColumnDefinitions>
@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Menú lateral -->
-        <Border Padding="0,180,0,0" Background="#1C1C1E">
+        <Border Padding="0,140,0,0" Background="#1C1C1E">
             <StackPanel VerticalAlignment="Top">
                 <Separator Margin="45"/>
 
@@ -54,6 +54,17 @@
                     </StackPanel>
                 </Button>
                 <Separator Margin="45"/>
+                
+                
+                <!-- Opción Salir -->
+                <Button x:Name="BtnSalir" FontSize="25" Background="#FFFFAB40" Click="BtnSalir_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="SignOut" Foreground="Black" Height="20" Width="20" Margin="5"/>
+                        <TextBlock Text="Salir" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Separator Margin="45"/>
+                
             </StackPanel>
         </Border>
 
@@ -67,7 +78,7 @@
             </Border.Background>
             <Frame x:Name="MainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1763px" NavigationUIVisibility="Hidden" RenderTransformOrigin="0.5,0.5">
                 <Frame.Background>
-                    <ImageBrush ImageSource="/backgroundImage.png" TileMode="None" Stretch="None" ViewboxUnits="RelativeToBoundingBox" ViewportUnits="RelativeToBoundingBox" AlignmentX="Center" AlignmentY="Center">
+                    <ImageBrush TileMode="None" Stretch="None" ViewboxUnits="RelativeToBoundingBox" ViewportUnits="RelativeToBoundingBox" AlignmentX="Center" AlignmentY="Center" ImageSource="/ImagenDeFondo.png">
                         <ImageBrush.RelativeTransform>
                             <TransformGroup>
                                 <ScaleTransform CenterY="0.5" CenterX="0.5"/>

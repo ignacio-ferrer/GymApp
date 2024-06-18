@@ -14,18 +14,20 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GymApp.API;
 using Newtonsoft.Json.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
-namespace GymApp
+namespace GymApp.SeccionCalorias
 {
     public partial class ContadorCalorias : Page
     {
         private ConsumirApi _apiClient;
+
         public ContadorCalorias()
         {
             InitializeComponent();
             Edades();
 
-            //api
             _apiClient = new ConsumirApi();
         }
 
@@ -39,30 +41,25 @@ namespace GymApp
                     ResultTextBlock.Text = "Obteniendo Informacion...";
                     string result = await _apiClient.SearchByKeywordAsync(foodItem);
 
-                    // Parse the JSON result to extract and format the nutrients
-                    var items = JArray.Parse(result);
-                    if (items.Count > 0)
+                    // Intenta parsear la respuesta como array
+                    try
                     {
-                        var item = items[0]; // Tomar solo el primer resultado
-                        var name = item["brand_name"]?.ToString() ?? item["description"]?.ToString() ?? "Desconocido";
-                        var calories = item["nutritional_contents"]?["energy"]?["value"]?.ToString() ?? "Desconocido";
-                        var protein = item["nutritional_contents"]?["protein"]?.ToString() ?? "Desconocido";
-                        var carbohydrates = item["nutritional_contents"]?["carbohydrates"]?.ToString() ?? "Desconocido";
-                        var fat = item["nutritional_contents"]?["fat"]?.ToString() ?? "Desconocido";
-                        var fiber = item["nutritional_contents"]?["fiber"]?.ToString() ?? "Desconocido";
-
-                        var formattedResult = $"Nombre: {name}\n" +
-                                              $"Calorías: {calories}\n" +
-                                              $"Proteína: {protein}\n" +
-                                              $"Carbohidratos: {carbohydrates}\n" +
-                                              $"Grasa: {fat}\n" +
-                                              $"Fibra: {fiber}";
-
-                        ResultTextBlock.Text = formattedResult;
+                        var items = JArray.Parse(result);
+                        if (items.Count > 0)
+                        {
+                            var item = items[0]; // Tomar solo el primer resultado
+                            MostrarNutrientes(item);
+                        }
+                        else
+                        {
+                            ResultTextBlock.Text = "No se encontraron resultados.";
+                        }
                     }
-                    else
+                    catch (Exception)
                     {
-                        ResultTextBlock.Text = "No se encontraron resultados.";
+                        // Si no es un array, intenta parsear como objeto
+                        var item = JObject.Parse(result);
+                        MostrarNutrientes(item);
                     }
                 }
                 catch (Exception ex)
@@ -74,6 +71,25 @@ namespace GymApp
             {
                 ResultTextBlock.Text = "Por favor, ingresa un alimento.";
             }
+        }
+
+        private void MostrarNutrientes(JToken item)
+        {
+            var name = item["brand_name"]?.ToString() ?? item["description"]?.ToString() ?? "Desconocido";
+            var calories = item["nutritional_contents"]?["energy"]?["value"]?.ToString() ?? "Desconocido";
+            var protein = item["nutritional_contents"]?["protein"]?.ToString() ?? "Desconocido";
+            var carbohydrates = item["nutritional_contents"]?["carbohydrates"]?.ToString() ?? "Desconocido";
+            var fat = item["nutritional_contents"]?["fat"]?.ToString() ?? "Desconocido";
+            var fiber = item["nutritional_contents"]?["fiber"]?.ToString() ?? "Desconocido";
+
+            var formattedResult = $"Nombre: {name}\n" +
+                                  $"Calorías: {calories}\n" +
+                                  $"Proteína: {protein}\n" +
+                                  $"Carbohidratos: {carbohydrates}\n" +
+                                  $"Grasa: {fat}\n" +
+                                  $"Fibra: {fiber}";
+
+            ResultTextBlock.Text = formattedResult;
         }
 
         private void BoxNombre_TextChanged(object sender, TextChangedEventArgs e)
@@ -131,28 +147,22 @@ namespace GymApp
             {
                 if (sexo == "Masculino")
                 {
-                    //HOMBRE
                     primeraSuma = 13.397 * peso;
                     segundaSuma = 4.799 * altura;
                     primeraResta = 5.677 * edad;
 
-                    //HOMBRE
                     TMBHombre = 88.362 + primeraSuma + segundaSuma - primeraResta;
 
-                    //HOMBRE
                     resultado = TMBHombre * pocoEjercicio;
                 }
                 else
                 {
-                    //MUJER
                     primeraSuma = 9.247 * peso;
                     segundaSuma = 3.098 * altura;
                     primeraResta = 4.330 * edad;
 
-                    //MUJER
                     TMBMujer = 447.593 + primeraSuma + segundaSuma - primeraResta;
 
-                    //MUJER
                     resultado = TMBMujer * pocoEjercicio;
                 }
 
@@ -166,28 +176,22 @@ namespace GymApp
             {
                 if (sexo == "Masculino")
                 {
-                    //HOMBRE
                     primeraSuma = 13.397 * peso;
                     segundaSuma = 4.799 * altura;
                     primeraResta = 5.677 * edad;
 
-                    //HOMBRE
                     TMBHombre = 88.362 + primeraSuma + segundaSuma - primeraResta;
 
-                    //HOMBRE
                     resultado = TMBHombre * ejercicioLigero;
                 }
                 else
                 {
-                    //MUJER
                     primeraSuma = 9.247 * peso;
                     segundaSuma = 3.098 * altura;
                     primeraResta = 4.330 * edad;
 
-                    //MUJER
                     TMBMujer = 447.593 + primeraSuma + segundaSuma - primeraResta;
 
-                    //MUJER
                     resultado = TMBMujer * ejercicioLigero;
                 }
 
@@ -201,28 +205,22 @@ namespace GymApp
             {
                 if (sexo == "Masculino")
                 {
-                    //HOMBRE
                     primeraSuma = 13.397 * peso;
                     segundaSuma = 4.799 * altura;
                     primeraResta = 5.677 * edad;
 
-                    //HOMBRE
                     TMBHombre = 88.362 + primeraSuma + segundaSuma - primeraResta;
 
-                    //HOMBRE
                     resultado = TMBHombre * ejercicioModerado;
                 }
                 else
                 {
-                    //MUJER
                     primeraSuma = 9.247 * peso;
                     segundaSuma = 3.098 * altura;
                     primeraResta = 4.330 * edad;
 
-                    //MUJER
                     TMBMujer = 447.593 + primeraSuma + segundaSuma - primeraResta;
 
-                    //MUJER
                     resultado = TMBMujer * ejercicioModerado;
                 }
 
@@ -236,28 +234,22 @@ namespace GymApp
             {
                 if (sexo == "Masculino")
                 {
-                    //HOMBRE
                     primeraSuma = 13.397 * peso;
                     segundaSuma = 4.799 * altura;
                     primeraResta = 5.677 * edad;
 
-                    //HOMBRE
                     TMBHombre = 88.362 + primeraSuma + segundaSuma - primeraResta;
 
-                    //HOMBRE
                     resultado = TMBHombre * ejercicioFuerte;
                 }
                 else
                 {
-                    //MUJER
                     primeraSuma = 9.247 * peso;
                     segundaSuma = 3.098 * altura;
                     primeraResta = 4.330 * edad;
 
-                    //MUJER
                     TMBMujer = 447.593 + primeraSuma + segundaSuma - primeraResta;
 
-                    //MUJER
                     resultado = TMBMujer * ejercicioFuerte;
                 }
 
@@ -271,28 +263,22 @@ namespace GymApp
             {
                 if (sexo == "Masculino")
                 {
-                    //HOMBRE
                     primeraSuma = 13.397 * peso;
                     segundaSuma = 4.799 * altura;
                     primeraResta = 5.677 * edad;
 
-                    //HOMBRE
                     TMBHombre = 88.362 + primeraSuma + segundaSuma - primeraResta;
 
-                    //HOMBRE
                     resultado = TMBHombre * ejercicioMuyFuerte;
                 }
                 else
                 {
-                    //MUJER
                     primeraSuma = 9.247 * peso;
                     segundaSuma = 3.098 * altura;
                     primeraResta = 4.330 * edad;
 
-                    //MUJER
                     TMBMujer = 447.593 + primeraSuma + segundaSuma - primeraResta;
 
-                    //MUJER
                     resultado = TMBMujer * ejercicioMuyFuerte;
                 }
 
@@ -319,7 +305,6 @@ namespace GymApp
             sexoComboBox.SelectedItem = null;
         }
 
-        //para que las edades vayan del 5 al 100
         private void Edades()
         {
             for (int i = 5; i < 101; i++)

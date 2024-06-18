@@ -21,12 +21,13 @@ namespace GymApp
         public string direccion { get; set; }
         public string localidad { get; set; }
         public int codigoPostal { get; set; }
+        public string grupoSanguineo { get; set; }
         public int telefono { get; set; }
         public int telefonoEmergencia { get; set; }
         public string correo { get; set; }
         public DateTime? fechaInscripcion { get; set; } = DateTime.MinValue;
 
-        public DatosPersonales(int ClienteId=0,string nombre = "", string apellido = "", int edad = 0, int dni = 0, string sexo = "", DateTime? fechaNacimiento=null, string direccion = "", string localidad = "", int codigoPostal = 0, int telefono = 0, int telefonoEmergencia = 0, string correo = "", DateTime? fechaInscripcion = null)
+        public DatosPersonales(int ClienteId=0 , string nombre = "", string apellido = "", int edad = 0, int dni = 0, string sexo = "", DateTime? fechaNacimiento=null, string direccion = "", string localidad = "", int codigoPostal = 0, string grupoSanguineo = "" ,int telefono = 0, int telefonoEmergencia = 0, string correo = "", DateTime? fechaInscripcion = null)
         {
             this.ClienteId = ClienteId;
             this.nombre = nombre;
@@ -38,6 +39,7 @@ namespace GymApp
             this.direccion = direccion;
             this.localidad = localidad;
             this.codigoPostal = codigoPostal;
+            this.grupoSanguineo = grupoSanguineo;
             this.telefono = telefono;
             this.telefonoEmergencia = telefonoEmergencia;
             this.correo = correo;

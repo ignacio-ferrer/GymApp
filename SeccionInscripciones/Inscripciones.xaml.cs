@@ -10,12 +10,13 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;    
 
-namespace GymApp
+namespace GymApp.SeccionInscripciones
 {
     public partial class Inscripciones : Page
     {
@@ -40,6 +41,7 @@ namespace GymApp
                     string.IsNullOrWhiteSpace(BoxDirec.Text) ||
                     string.IsNullOrWhiteSpace(BoxLocalidad.Text) ||
                     string.IsNullOrWhiteSpace(BoxCodigoPostal.Text) ||
+                    string.IsNullOrWhiteSpace(BoxGrupoSanguineo.Text) ||
                     string.IsNullOrWhiteSpace(BoxTel.Text) ||
                     string.IsNullOrWhiteSpace(BoxContactoEmergencia.Text) ||
                     string.IsNullOrWhiteSpace(BoxMail.Text) ||
@@ -71,7 +73,6 @@ namespace GymApp
                     return;
                 }
 
-                // Guardando todas las variables de la ficha: Datos Personales
                 datosPersonales.nombre = BoxNombre.Text;
                 datosPersonales.apellido = BoxApellido.Text;
                 datosPersonales.edad = BoxDeEdad;
@@ -81,6 +82,7 @@ namespace GymApp
                 datosPersonales.direccion = BoxDirec.Text;
                 datosPersonales.localidad = BoxLocalidad.Text;
                 datosPersonales.codigoPostal = BoxDeCP;
+                datosPersonales.grupoSanguineo = BoxGrupoSanguineo.Text;
                 datosPersonales.telefono = BoxDeTelefono;
                 datosPersonales.telefonoEmergencia = BoxDeTelefonoEmergencia;
                 datosPersonales.correo = BoxMail.Text;
@@ -88,24 +90,20 @@ namespace GymApp
 
                 repositorioCliente.AgregarCliente(datosPersonales);
 
-                // Guardando todas las variables de la ficha: Datos Medicos
                 datosMedicos.lesionOsea = BoxMedicoUno.Text;
                 datosMedicos.lesionMuscular = BoxMedicoDos.Text;
                 datosMedicos.enfermedadCardio = BoxMedicoTres.Text;
 
-                //bools
                 datosMedicos.preguntaUno = BtnSiUno.IsChecked == true;
                 datosMedicos.preguntaDos = BtnSiDos.IsChecked == true;
                 datosMedicos.preguntaTres = BtnSiTres.IsChecked == true;
                 datosMedicos.preguntaCuatro = BtnSiCuatro.IsChecked == true;
                 
-                //bool 5:
                 datosMedicos.preguntaAsmatico = BtnAsmatico.IsChecked == true;
                 datosMedicos.preguntaEpileptico = BtnEpileptico.IsChecked == true;
                 datosMedicos.preguntaDiabetico = BtnDiabetico.IsChecked == true;
                 datosMedicos.preguntaFumador = BtnFumador.IsChecked == true;
 
-                //bool 6
                 datosMedicos.preguntaMareos = BtnMareos.IsChecked == true;
                 datosMedicos.preguntaDesmayos = BtnDesmayos.IsChecked == true;  
                 datosMedicos.preguntaRespirar = BtnRespirar.IsChecked == true;
@@ -117,7 +115,6 @@ namespace GymApp
 
                 MessageBox.Show("Datos personales guardados correctamente.");
 
-                // Limpiar los TextBox después de guardar los datos
                 BoxNombre.Clear();
                 BoxApellido.Clear();
                 BoxEdad.Clear();
@@ -194,23 +191,52 @@ namespace GymApp
         {
             PrintDialog imprimir = new PrintDialog();
 
-            //muestra el cuadro predeterminado 
             if (imprimir.ShowDialog() == true)
             {
-                //obtiene visualmente el formulario
-                var visual = new DrawingVisual();
-                using (var context = visual.RenderOpen())
+                // Crear un contenedor para el documento fijo
+                FixedDocument fixedDoc = new FixedDocument();
+                PageContent pageContent = new PageContent();
+                FixedPage fixedPage = new FixedPage();
+
+                // Crear una copia visual del control
+                Grid grid = new Grid
                 {
-                    var brush = new VisualBrush(this);
-                    context.DrawRectangle(brush, null, new Rect(new Point(0, 0), new Size(this.ActualWidth, this.ActualHeight)));
+                    Width = this.ActualWidth,
+                    Height = this.ActualHeight
+                };
+
+                var brush = new VisualBrush(this);
+                var rect = new Rectangle
+                {
+                    Width = grid.Width,
+                    Height = grid.Height,
+                    Fill = brush
+                };
+
+                grid.Children.Add(rect);
+                fixedPage.Children.Add(grid);
+
+                // Configurar el tamaño de la página
+                fixedPage.Width = imprimir.PrintableAreaWidth;
+                fixedPage.Height = imprimir.PrintableAreaHeight;
+
+                // Ajustar el contenido a la página imprimible
+                grid.Measure(new Size(imprimir.PrintableAreaWidth, imprimir.PrintableAreaHeight));
+                grid.Arrange(new Rect(new Point(0, 0), new Size(imprimir.PrintableAreaWidth, imprimir.PrintableAreaHeight)));
+                grid.UpdateLayout();
+
+                ((IAddChild)pageContent).AddChild(fixedPage);
+                fixedDoc.Pages.Add(pageContent);
+
+                // Imprimir el documento fijo
+                try
+                {
+                    imprimir.PrintDocument(((IDocumentPaginatorSource)fixedDoc).DocumentPaginator, "Formulario Inscripcion");
                 }
-
-                //para ajustar tamaño
-                double scale = Math.Min(imprimir.PrintableAreaWidth / this.ActualWidth, imprimir.PrintableAreaHeight / this.ActualHeight);
-                visual.Transform = new ScaleTransform(scale, scale);
-
-                // Imprimir el contenido visual ajustado
-                imprimir.PrintVisual(visual, "Formulario Inscripcion.");
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al imprimir documento: {ex.Message}", "Error de impresión", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
     }

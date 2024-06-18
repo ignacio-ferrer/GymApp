@@ -119,23 +119,23 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="API\ConsumirApi.cs" />
-    <Compile Include="ContadorCalorias.xaml.cs">
+    <Compile Include="SeccionCalorias\ContadorCalorias.xaml.cs">
       <DependentUpon>ContadorCalorias.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\RepositorioCliente.cs" />
     <Compile Include="API\InformacionNutrientes.cs" />
-    <Compile Include="Rutinas.xaml.cs">
+    <Compile Include="SeccionRutina\Rutinas.xaml.cs">
       <DependentUpon>Rutinas.xaml</DependentUpon>
     </Compile>
-    <Page Include="Clientes.xaml">
+    <Page Include="SeccionClientes\Clientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ContadorCalorias.xaml">
+    <Page Include="SeccionCalorias\ContadorCalorias.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Inscripciones.xaml">
+    <Page Include="SeccionInscripciones\Inscripciones.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,19 +147,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Clientes.xaml.cs">
+    <Compile Include="SeccionClientes\Clientes.xaml.cs">
       <DependentUpon>Clientes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DatosMedicos.cs" />
-    <Compile Include="DatosPersonales.cs" />
-    <Compile Include="Inscripciones.xaml.cs">
+    <Compile Include="SeccionInscripciones\DatosMedicos.cs" />
+    <Compile Include="SeccionInscripciones\DatosPersonales.cs" />
+    <Compile Include="SeccionInscripciones\Inscripciones.xaml.cs">
       <DependentUpon>Inscripciones.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Rutinas.xaml">
+    <Page Include="SeccionRutina\Rutinas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -204,10 +204,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Imagenes\IconoAppGym.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\ImagenDeFondo.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="IconoAppGym.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="backgroundImage.png" />
+    <Resource Include="ImagenDeFondo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

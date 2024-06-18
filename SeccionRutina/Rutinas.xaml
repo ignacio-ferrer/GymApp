@@ -1,4 +1,4 @@
-﻿<Page x:Name="PaginaRutinas" x:Class="GymApp.Rutinas"
+﻿<Page x:Name="PaginaRutinas" x:Class="GymApp.SeccionRutina.Rutinas"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 

@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GymApp
+namespace GymApp.SeccionClientes
 {
     public partial class Clientes : Page
     {
@@ -39,6 +39,7 @@ namespace GymApp
             public string direccion { get; set; }
             public string localidad { get; set; }
             public int codigoPostal { get; set; }
+            public string grupoSanguineo { get; set; }
             public int telefono { get; set; }
             public int telefonoEmergencia { get; set; }
             public string correo { get; set; }
@@ -82,6 +83,7 @@ namespace GymApp
                 selectedClient.direccion = "";
                 selectedClient.localidad = "";
                 selectedClient.codigoPostal = 0;
+                selectedClient.grupoSanguineo = "";
                 selectedClient.telefono = 0;
                 selectedClient.telefonoEmergencia = 0;
                 selectedClient.correo = "";

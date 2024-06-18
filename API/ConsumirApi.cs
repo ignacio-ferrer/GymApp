@@ -8,6 +8,7 @@ using System.Net.Http.Json;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json.Linq;
+using System.Net.Http.Headers;
 
 namespace GymApp.API
 {
@@ -17,11 +18,10 @@ namespace GymApp.API
 
         public ConsumirApi()
         {
-            _client = new HttpClient();
+            _client = new HttpClient();            
         }
 
-        // APIClient
-        public async Task<string> SearchByKeywordAsync(string keyword)
+        public async Task<string>SearchByKeywordAsync(string keyword)
         {
             var request = new HttpRequestMessage
             {
@@ -29,7 +29,7 @@ namespace GymApp.API
                 RequestUri = new Uri($"https://myfitnesspal2.p.rapidapi.com/searchByKeyword?keyword={Uri.EscapeDataString(keyword)}"),
                 Headers =
         {
-            { "x-rapidapi-key", "4956fa3c03mshd0c06373eaa519ep137377jsn3c8b806c53ea" },
+            { "x-rapidapi-key", "bdf63d6013mshfe9be74e9fc3e72p1947eajsn012e70aff920" },
             { "x-rapidapi-host", "myfitnesspal2.p.rapidapi.com" },
         },
             };
@@ -46,4 +46,4 @@ namespace GymApp.API
             }
         }
     }
-}
+} 

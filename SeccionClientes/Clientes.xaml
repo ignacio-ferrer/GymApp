@@ -1,4 +1,4 @@
-﻿<Page x:Name="PaginaClientes" x:Class="GymApp.Clientes"
+﻿<Page x:Name="PaginaClientes" x:Class="GymApp.SeccionClientes.Clientes"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -19,7 +19,7 @@
           CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False"
           IsReadOnly="False" SelectionMode="Single" SelectionUnit="FullRow" MaxWidth="1915" HorizontalAlignment="Left" Width="1915"
           HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True"
-          MaxColumnWidth="200" MinColumnWidth="112" Margin="0,0,0,0" FontSize="14" BorderBrush="#FF464646">
+          MaxColumnWidth="200" MinColumnWidth="99" Margin="0,0,0,0" FontSize="14" BorderBrush="#FF464646">
         </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
