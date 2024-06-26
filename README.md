@@ -36,4 +36,32 @@ la aplicacion cuenta con 4 opciones:
 	¿Por qué el proyecto es útil?
 
  Para todas aquellas personas que entrenan y quieren cuidar de su alimentacion , dentro de una sola aplicacion , contiene un creador de rutina totalmente personalizado , un contador de calorias y un check de nutrientes para saber la informacion nutricional del alimento buscado por el usuario.
+
+ 	[MENU PRINCIPAL]
  
+![Menu Principal](https://github.com/ignacio-ferrer/GymApp/assets/109931660/d9ab4623-a358-40ae-aa43-289a3a8d7821)
+
+
+	[SECCION INSCRIPCIONES]
+
+![Inscripciones](https://github.com/ignacio-ferrer/GymApp/assets/109931660/6f518896-9f72-4540-9d43-382d704c2215)
+
+
+	[SECCION CLIENTES]
+ ![Clientes](https://github.com/ignacio-ferrer/GymApp/assets/109931660/f3ae0458-2018-463c-ab62-cb4cce6e4025)
+
+
+ 	[SECCION RUTINA]
+![Rutina Vacio](https://github.com/ignacio-ferrer/GymApp/assets/109931660/2f60d2c7-89d9-4ed6-b8f2-6b60e55a2047)
+
+![Rutina Lleno](https://github.com/ignacio-ferrer/GymApp/assets/109931660/8f0870b9-865a-4a66-af72-f09a75501461)
+
+
+	[SECCION CALORIAS]
+![Calorias](https://github.com/ignacio-ferrer/GymApp/assets/109931660/46319c33-1787-4ecd-92f7-4bd4676a2e46)
+
+	[CALORIAS TOTALES A CONSUMIR]
+![Calorias Primera parte](https://github.com/ignacio-ferrer/GymApp/assets/109931660/c4e3eb4a-52d2-4351-b389-87756a6ba257)
+
+	[API EN FUNCIONAMIENTO]
+![Calorias Segunda parte](https://github.com/ignacio-ferrer/GymApp/assets/109931660/a5b41e9a-7ff3-48e5-9f4e-8f28b98eedc2)
