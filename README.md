@@ -35,5 +35,5 @@ la aplicacion cuenta con 4 opciones:
 
 	¿Por qué el proyecto es útil?
 
- Dentro de una sola aplicacion , contiene un creador de rutina totalmente personalizado , un contador de calorias y un check de nutrientes para saber la informacion nutricional del alimento buscado por el usuario.
+ Para todas aquellas personas que entrenan y quieren cuidar de su alimentacion , dentro de una sola aplicacion , contiene un creador de rutina totalmente personalizado , un contador de calorias y un check de nutrientes para saber la informacion nutricional del alimento buscado por el usuario.
  
