@@ -1,12 +1,12 @@
 	¿Qué hace el proyecto?
 
-.La aplicacion es ideal para un gimnasio , facilita la inscripcion de un cliente , se puede hacer mediante la aplicacion o tambien con la funcionalidad de imprimri la planilla y asi cada cliente lo puede llenar.
+•La aplicacion es ideal para un gimnasio , facilita la inscripcion de un cliente , se puede hacer mediante la aplicacion o tambien con la funcionalidad de imprimri la planilla y asi cada cliente lo puede llenar.
 
-.La informacion de cada cliente es guardada , esto facilita al usuario hacerle un correcto seguimiento a cada cliente.
+•La informacion de cada cliente es guardada , esto facilita al usuario hacerle un correcto seguimiento a cada cliente.
 
-.Con el creador de rutinas , es posible crear una totalmente personalizada , depediendo lo que busque el cliente , contiene todos los grupos musculares importantes para la hora de entrenar
+•Con el creador de rutinas , es posible crear una totalmente personalizada , depediendo lo que busque el cliente , contiene todos los grupos musculares importantes para la hora de entrenar
 
-.Para sumarle un extra al creador de rutinas , podes facilitarle al cliente su dieta calorica , va a saber cuantas calorias consumir depediendo de su contextura fisica y dependiendo de su nivel de actividad fisica + saber con facilidad que alimentos consumir para llegar a ese resultado esperado.
+•Para sumarle un extra al creador de rutinas , podes facilitarle al cliente su dieta calorica , va a saber cuantas calorias consumir depediendo de su contextura fisica y dependiendo de su nivel de actividad fisica + saber con facilidad que alimentos consumir para llegar a ese resultado esperado.
 
 	
  	DESCRIPCION:
@@ -22,15 +22,15 @@ la aplicacion cuenta con 4 opciones:
 4. [Calorias]: Ideal para saber cuantas calorias consumir dependiendo de tu nivel de actividad fisica y mediante la: edad, altura, sexo y peso. Tambien cuenta con un 'check de nutrientes' , en donde el usuario ingresa un alimento y este le regresa los nutrientes de dicho alimento.
 
 
--Lenguaje utilizado: C#
+•Lenguaje utilizado: C#
 
--Diseño de la app: XAML
+•Diseño de la app: XAML
 
--Base de datos: SQL
+•Base de datos: SQL
 
--Prueba de la API: POSTMAN
+•Prueba de la API: POSTMAN
 
--Patron de diseño aplicado: MVVM
+•Patron de diseño aplicado: MVVM
 	
 
 	¿Por qué el proyecto es útil?
