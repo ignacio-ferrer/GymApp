@@ -24,7 +24,7 @@ la aplicacion cuenta con 4 opciones:
 
 •Lenguaje utilizado: C#
 
-•Diseño de la app: XAML
+•Interfaz de usuario: XAML
 
 •Base de datos: SQL
 
