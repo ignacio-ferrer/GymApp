@@ -45,9 +45,8 @@ namespace GymApp.SeccionInscripciones
                     string.IsNullOrWhiteSpace(BoxTel.Text) ||
                     string.IsNullOrWhiteSpace(BoxContactoEmergencia.Text) ||
                     string.IsNullOrWhiteSpace(BoxMail.Text) ||
-                    string.IsNullOrWhiteSpace(BoxMedicoUno.Text) ||
-                    string.IsNullOrWhiteSpace(BoxMedicoDos.Text) ||
-                    string.IsNullOrWhiteSpace(BoxMedicoTres.Text))
+                    string.IsNullOrWhiteSpace(BoxMetodoPago.Text)||
+                    string.IsNullOrWhiteSpace(BoxValorCuota.Text))
                 {
                     MessageBox.Show("Todos los campos son obligatorios.");
                     return;
@@ -58,6 +57,7 @@ namespace GymApp.SeccionInscripciones
                 int BoxDeCP = int.Parse(BoxCodigoPostal.Text);
                 int BoxDeTelefono = int.Parse(BoxTel.Text);
                 int BoxDeTelefonoEmergencia = int.Parse(BoxContactoEmergencia.Text);
+                int BoxDeValorCuota = int.Parse(BoxValorCuota.Text);
 
                 DateTime? FechaCumple = DateCumple.SelectedDate;
                 if (FechaCumple == null)
@@ -87,8 +87,11 @@ namespace GymApp.SeccionInscripciones
                 datosPersonales.telefonoEmergencia = BoxDeTelefonoEmergencia;
                 datosPersonales.correo = BoxMail.Text;
                 datosPersonales.fechaInscripcion = FechaInscripcion;
+                datosPersonales.metodoDePago = BoxMetodoPago.Text;
+                datosPersonales.valorDeCuota = BoxDeValorCuota;
 
                 repositorioCliente.AgregarCliente(datosPersonales);
+
 
                 datosMedicos.lesionOsea = BoxMedicoUno.Text;
                 datosMedicos.lesionMuscular = BoxMedicoDos.Text;
@@ -129,6 +132,10 @@ namespace GymApp.SeccionInscripciones
                 BoxMedicoDos.Clear();
                 BoxMedicoTres.Clear();
                 DateInscripcion.SelectedDate = null;
+                BoxValorCuota.Clear();
+                BoxGrupoSanguineo.SelectedItem = null;
+                BoxMetodoPago.SelectedItem = null;
+                BoxSexo.SelectedItem = null;
             }
             catch (Exception ex)
             {

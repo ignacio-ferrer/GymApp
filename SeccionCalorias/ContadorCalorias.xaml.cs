@@ -41,13 +41,12 @@ namespace GymApp.SeccionCalorias
                     ResultTextBlock.Text = "Obteniendo Informacion...";
                     string result = await _apiClient.SearchByKeywordAsync(foodItem);
 
-                    // Intenta parsear la respuesta como array
                     try
                     {
                         var items = JArray.Parse(result);
                         if (items.Count > 0)
                         {
-                            var item = items[0]; // Tomar solo el primer resultado
+                            var item = items[0];
                             MostrarNutrientes(item);
                         }
                         else
@@ -57,7 +56,6 @@ namespace GymApp.SeccionCalorias
                     }
                     catch (Exception)
                     {
-                        // Si no es un array, intenta parsear como objeto
                         var item = JObject.Parse(result);
                         MostrarNutrientes(item);
                     }

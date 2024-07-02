@@ -1,0 +1,51 @@
+﻿<Window x:Class="GymApp.SeccionClientes.FichaMedica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GymApp.SeccionClientes"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Title="Ficha Medica" Height="550" Width="1350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF2B2B2B" >
+        <StackPanel Margin="20,50,10,20" >
+            <StackPanel Orientation="Horizontal" Margin="20" >
+                <Label Content="Nombre del cliente:" FontSize="16" Foreground="#FFECEFF4"/>
+                <TextBox x:Name="TextBoxNombre" Width="120" Height="20" TextChanged="TextBoxNombre_TextChanged"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Label Content="ID del cliente:" FontSize="16" Foreground="#FFECEFF4"/>
+                <TextBox x:Name="TextBoxID" Width="50" Height="20" MaxLength="3" PreviewTextInput="TextBoxID_PreviewTextInput"/>
+            </StackPanel>
+
+            <StackPanel Height="261">
+                <Label Content="Cliente Encontrado:" Foreground="#FFECEFF4" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"></Label>
+
+                <DataGrid ItemsSource="{Binding}" Height="220" HorizontalAlignment="Center" Width="1236" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" IsReadOnly="False" SelectionMode="Single" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Lesion Osea" Binding="{Binding FirstName}" />
+                        <DataGridTextColumn Header="Lesion Muscular" Binding="{Binding LastName}" />
+                        <DataGridTextColumn Header="Enfermedad Cardiovascular" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Afixia al hacer actividad" Binding="{Binding Email}" Width="134"/>
+                        <DataGridTextColumn Header="Asmatico/a" Binding="{Binding Email}" Width="70"/>
+                        <DataGridTextColumn Header="Diabetico/a" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Epileptico/a" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Fumador/a" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Mareos" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Dificultad para respirar" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Desmayos/Lipotomias" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Nauseas" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Anemia" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Embarazada" Binding="{Binding Email}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Width="150" Margin="0,84,50,0" Height="96" VerticalAlignment="Top" HorizontalAlignment="Right" >
+            <Button x:Name="BtnAplicar" Background="#FFFFAB40" Width="100" Height="30" Content="Aplicar" Margin="10" BorderBrush="{x:Null}" Click="BtnAplicar_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
+            <Button x:Name="BtnSalir" Background="#FFFFAB40" Width="100" Height="30" Content="Salir" BorderBrush="{x:Null}" Click="BtnSalir_Click" FontSize="16"/>
+        </StackPanel>
+    </Grid>
+</Window>

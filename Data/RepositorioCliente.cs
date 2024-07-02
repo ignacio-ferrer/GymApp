@@ -4,6 +4,8 @@ using System.Linq;
 using Dapper;
 using System.Configuration;
 using System.Windows;
+using System.Data;
+using System;
 
 namespace GymApp.Data
 {
@@ -21,7 +23,7 @@ namespace GymApp.Data
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "SELECT ClienteId, nombre, apellido, edad, dni, sexo, fechaNacimiento, direccion, localidad, codigoPostal, grupoSanguineo , telefono, telefonoEmergencia, correo, fechaInscripcion FROM Cliente";
+                var sql = "SELECT ClienteId, nombre, apellido, edad, dni, sexo, fechaNacimiento, direccion, localidad, codigoPostal, grupoSanguineo , telefono, telefonoEmergencia, correo, fechaInscripcion , metodoDePago , valorDeCuota FROM Cliente";
                 return connection.Query<DatosPersonales>(sql).ToList();
             }
         }
@@ -30,8 +32,28 @@ namespace GymApp.Data
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "INSERT INTO Cliente (nombre, apellido , edad, dni, sexo, fechaNacimiento, direccion, localidad, codigoPostal, grupoSanguineo, telefono, telefonoEmergencia, correo, fechaInscripcion) VALUES (@nombre, @apellido , @edad, @dni, @sexo, @fechaNacimiento, @direccion, @localidad, @codigoPostal, @grupoSanguineo, @telefono, @telefonoEmergencia, @correo, @fechaInscripcion)";
-                connection.Execute(sql, datosPersonales);
+                var command = new SqlCommand("AgregarAlCliente", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@nombre", datosPersonales.nombre);
+                command.Parameters.AddWithValue("@apellido", datosPersonales.apellido);
+                command.Parameters.AddWithValue("@edad", datosPersonales.edad);
+                command.Parameters.AddWithValue("@dni", datosPersonales.dni);
+                command.Parameters.AddWithValue("@sexo", datosPersonales.sexo);
+                command.Parameters.AddWithValue("@fechaNacimiento", datosPersonales.fechaNacimiento);
+                command.Parameters.AddWithValue("@direccion", datosPersonales.direccion);
+                command.Parameters.AddWithValue("@localidad", datosPersonales.localidad);
+                command.Parameters.AddWithValue("@codigoPostal", datosPersonales.codigoPostal);
+                command.Parameters.AddWithValue("@grupoSanguineo", datosPersonales.grupoSanguineo);
+                command.Parameters.AddWithValue("@telefono", datosPersonales.telefono);
+                command.Parameters.AddWithValue("@telefonoEmergencia", datosPersonales.telefonoEmergencia);
+                command.Parameters.AddWithValue("@correo", datosPersonales.correo);
+                command.Parameters.AddWithValue("@fechaInscripcion", datosPersonales.fechaInscripcion);
+                command.Parameters.AddWithValue("@metodoDePago", datosPersonales.metodoDePago);
+                command.Parameters.AddWithValue("@valorDeCuota", datosPersonales.valorDeCuota);
+
+                connection.Open();
+                command.ExecuteNonQuery();
             }
         }
 
@@ -39,9 +61,39 @@ namespace GymApp.Data
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "UPDATE Cliente SET nombre = @nombre, apellido = @apellido, edad = @edad, dni = @dni , fechaNacimiento = @fechaNacimiento , direccion = @direccion , localidad = @localidad , codigoPostal = @codigoPostal , grupoSanguineo = @grupoSanguineo ,telefono = @telefono , telefonoEmergencia = @telefonoEmergencia , correo = @correo , fechaInscripcion = @fechaInscripcion WHERE ClienteId = @ClienteId";
-                connection.Execute(sql, cliente);
+                var sql = "EXEC EditarAlCliente @ClienteId, @nombre, @apellido, @edad, @dni, @sexo, @fechaNacimiento, @direccion, @localidad, @codigoPostal, @grupoSanguineo, @telefono, @telefonoEmergencia, @correo, @fechaInscripcion, @metodoDePago, @valorDeCuota";
+
+                var parameters = new
+                {
+                    ClienteId = datosPersonales.ClienteId,
+                    nombre = datosPersonales.nombre,
+                    apellido = datosPersonales.apellido,
+                    edad = datosPersonales.edad,
+                    dni = datosPersonales.dni,
+                    sexo = datosPersonales.sexo,
+                    fechaNacimiento =datosPersonales.fechaNacimiento,
+                    direccion = datosPersonales.direccion,
+                    localidad = datosPersonales.localidad,
+                    codigoPostal = datosPersonales.codigoPostal,
+                    grupoSanguineo = datosPersonales.grupoSanguineo,
+                    telefono = datosPersonales.telefono,
+                    telefonoEmergencia = datosPersonales.telefonoEmergencia,
+                    correo = datosPersonales.correo,
+                    fechaInscripcion = datosPersonales.fechaInscripcion,
+                    metodoDePago = datosPersonales.metodoDePago,
+                    valorDeCuota = datosPersonales.valorDeCuota
+                };
+
+                connection.Execute(sql, parameters);
             }
+        }
+
+        private DateTime EnsureValidSqlDateTime(DateTime dateTime)
+        {
+            if (dateTime < (DateTime)System.Data.SqlTypes.SqlDateTime.MinValue)
+                return (DateTime)System.Data.SqlTypes.SqlDateTime.MinValue;
+
+            return dateTime;
         }
 
         public void BorrarUsuario(int clienteId)

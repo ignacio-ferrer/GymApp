@@ -26,8 +26,10 @@ namespace GymApp
         public int telefonoEmergencia { get; set; }
         public string correo { get; set; }
         public DateTime? fechaInscripcion { get; set; } = DateTime.MinValue;
+        public string metodoDePago { get; set; }
+        public int valorDeCuota { get; set; }
 
-        public DatosPersonales(int ClienteId=0 , string nombre = "", string apellido = "", int edad = 0, int dni = 0, string sexo = "", DateTime? fechaNacimiento=null, string direccion = "", string localidad = "", int codigoPostal = 0, string grupoSanguineo = "" ,int telefono = 0, int telefonoEmergencia = 0, string correo = "", DateTime? fechaInscripcion = null)
+        public DatosPersonales(int ClienteId = 0, string nombre = "", string apellido = "", int edad = 0, int dni = 0, string sexo = "", DateTime? fechaNacimiento = null, string direccion = "", string localidad = "", int codigoPostal = 0, string grupoSanguineo = "", int telefono = 0, int telefonoEmergencia = 0, string correo = "", DateTime? fechaInscripcion = null, string metodoDePago = "", int valorDeCuota = 0)
         {
             this.ClienteId = ClienteId;
             this.nombre = nombre;
@@ -44,6 +46,8 @@ namespace GymApp
             this.telefonoEmergencia = telefonoEmergencia;
             this.correo = correo;
             this.fechaInscripcion = fechaInscripcion ?? DateTime.MinValue;
+            this.metodoDePago = metodoDePago;
+            this.valorDeCuota = valorDeCuota;
         }        
     }
 }

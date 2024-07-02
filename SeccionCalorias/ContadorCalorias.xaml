@@ -144,7 +144,7 @@
                 <fa:ImageAwesome Icon="ArrowCircleRight" Foreground="Black" MaxWidth="40" Height="17" Width="17"/>
             </StackPanel>
         </Button>
-        <TextBox x:Name="BoxResultadoCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="390,911,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="30" IsReadOnly="True" Background="#FFF1F1F1" FontSize="19"/>
+        <TextBox x:Name="BoxResultadoCalorias" Grid.Column="1" HorizontalAlignment="Left" Margin="390,910,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="30" IsReadOnly="True" Background="#FFF1F1F1" FontSize="19"/>
 
         <StackPanel Grid.Column="1" Margin="1320,45,110,15" Background="#3A3A3C">
             <Label FontSize="25" Foreground="#FFF2F2F7">Check de nutrientes:</Label>

@@ -124,6 +124,9 @@
     </Compile>
     <Compile Include="Data\RepositorioCliente.cs" />
     <Compile Include="API\InformacionNutrientes.cs" />
+    <Compile Include="SeccionClientes\FichaMedica.xaml.cs">
+      <DependentUpon>FichaMedica.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SeccionRutina\Rutinas.xaml.cs">
       <DependentUpon>Rutinas.xaml</DependentUpon>
     </Compile>
@@ -132,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SeccionCalorias\ContadorCalorias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SeccionClientes\FichaMedica.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -214,6 +221,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ImagenDeFondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\SQLScripts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,6 +44,8 @@ namespace GymApp.SeccionClientes
             public int telefonoEmergencia { get; set; }
             public string correo { get; set; }
             public DateTime? fechaInscripcion { get; set; }
+            public string metodoDePago { get; set; }
+            public int valorDeCuota { get; set; }
         }
 
         public void LoadCliente()
@@ -87,7 +89,9 @@ namespace GymApp.SeccionClientes
                 selectedClient.telefono = 0;
                 selectedClient.telefonoEmergencia = 0;
                 selectedClient.correo = "";
-                selectedClient.fechaInscripcion = DateTime.Now; 
+                selectedClient.fechaInscripcion = DateTime.Now;
+                selectedClient.metodoDePago = "";
+                selectedClient.valorDeCuota = 0;
 
                 repositorioCliente.EditarUsuario(selectedClient);
                 LoadCliente();
@@ -96,6 +100,12 @@ namespace GymApp.SeccionClientes
             {
                 MessageBox.Show("Selecciona un cliente para editar.");
             }
+        }
+
+        private void BtnFichaMedica_Click(object sender, RoutedEventArgs e)
+        {
+            FichaMedica fichaMedica = new FichaMedica();
+            fichaMedica.Show();
         }
     }
 }
