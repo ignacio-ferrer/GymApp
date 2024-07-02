@@ -8,48 +8,40 @@ namespace GymApp
 {
     internal class DatosMedicos
     {
-        //primera fila
-        public string  lesionOsea{ get; set; }
-        public bool  preguntaUno{ get; set; }
-        public string  lesionMuscular{ get; set; }
-        public bool preguntaDos { get; set; }
-        public string  enfermedadCardio{ get; set; }
-        public bool preguntaTres { get; set; }
-        public bool preguntaCuatro { get; set; }
-        public bool  preguntaAsmatico{ get; set; }
-        public bool preguntaDiabetico { get; set; }
-        public bool preguntaEpileptico { get; set; }
-        public bool preguntaFumador { get; set; }
+        //Primera fila
+        public string lesionOsea{ get; set; }
+        public string lesionMuscular{ get; set; }
+        public string enfermedadCardio{ get; set; }
+        public string afixia { get; set; }
+        public string asmatico { get; set; }
+        public string diabetico { get; set; }
+        public string epileptico { get; set; }
+        public string fumador { get; set; }
         
         //Segunda fila
-        public bool preguntaMareos { get; set; }
-        public bool preguntaDesmayos { get; set; }
-        public bool preguntaRespirar { get; set; }
-        public bool preguntaNauseas { get; set; }
-        public bool preguntaSiete { get; set; }
-        public bool preguntaOcho{ get; set; }
-        public bool preguntaNueve { get; set; }
+        public string mareos { get; set; }
+        public string desmayos { get; set; }
+        public string respirar { get; set; }
+        public string nauseas { get; set; }
+        public string anemia { get; set; }
+        public string embarazada { get; set; }
 
-        public DatosMedicos(string lesionOsea = "", bool preguntaUno = false, string lesionMuscular = "", bool preguntaDos = false, string enfermedadCardio="", bool preguntaTres = false, bool preguntaCuatro = false, bool preguntaAsmatico = false, bool preguntaDiabetico = false, bool preguntaEpileptico = false, bool preguntaFumador = false, bool preguntaMareos = false, bool preguntaDesmayos = false, bool preguntaRespirar = false, bool preguntaNauseas = false, bool preguntaSiete = false, bool preguntaOcho = false, bool preguntaNueve = false)
+        public DatosMedicos()
         {
             this.lesionOsea = lesionOsea;
-            this.preguntaUno = preguntaUno;
             this.lesionMuscular = lesionMuscular;
-            this.preguntaDos = preguntaDos;
             this.enfermedadCardio = enfermedadCardio;
-            this.preguntaTres = preguntaTres;
-            this.preguntaCuatro = preguntaCuatro;
-            this.preguntaAsmatico = preguntaAsmatico;
-            this.preguntaDiabetico = preguntaDiabetico;
-            this.preguntaEpileptico = preguntaEpileptico;
-            this.preguntaFumador = preguntaFumador;
-            this.preguntaMareos = preguntaMareos;
-            this.preguntaDesmayos = preguntaDesmayos;
-            this.preguntaRespirar = preguntaRespirar;
-            this.preguntaNauseas = preguntaNauseas;
-            this.preguntaSiete = preguntaSiete;
-            this.preguntaOcho = preguntaOcho;
-            this.preguntaNueve = preguntaNueve;
+            this.afixia = afixia;
+            this.asmatico = asmatico;
+            this.diabetico = diabetico;
+            this.epileptico = epileptico;
+            this.fumador = fumador;
+            this.mareos = mareos;
+            this.desmayos = desmayos;
+            this.respirar = respirar;
+            this.nauseas = nauseas;
+            this.anemia = anemia;
+            this.embarazada = embarazada;
         }
     }
 }

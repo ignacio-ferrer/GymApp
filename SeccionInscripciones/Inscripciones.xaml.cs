@@ -46,7 +46,21 @@ namespace GymApp.SeccionInscripciones
                     string.IsNullOrWhiteSpace(BoxContactoEmergencia.Text) ||
                     string.IsNullOrWhiteSpace(BoxMail.Text) ||
                     string.IsNullOrWhiteSpace(BoxMetodoPago.Text)||
-                    string.IsNullOrWhiteSpace(BoxValorCuota.Text))
+                    string.IsNullOrWhiteSpace(BoxValorCuota.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxOsea.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxMuscular.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxCardio.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxAfixia.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxAsmatico.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxDiabetico.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxEpileptico.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxFumador.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxMareos.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxDesmayos.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxRespirar.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxNauseas.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxAnemia.Text)||
+                    string.IsNullOrWhiteSpace(ComboBoxEmbarazada.Text))
                 {
                     MessageBox.Show("Todos los campos son obligatorios.");
                     return;
@@ -73,6 +87,7 @@ namespace GymApp.SeccionInscripciones
                     return;
                 }
 
+                //DATOS PERSONALES
                 datosPersonales.nombre = BoxNombre.Text;
                 datosPersonales.apellido = BoxApellido.Text;
                 datosPersonales.edad = BoxDeEdad;
@@ -92,29 +107,21 @@ namespace GymApp.SeccionInscripciones
 
                 repositorioCliente.AgregarCliente(datosPersonales);
 
-
-                datosMedicos.lesionOsea = BoxMedicoUno.Text;
-                datosMedicos.lesionMuscular = BoxMedicoDos.Text;
-                datosMedicos.enfermedadCardio = BoxMedicoTres.Text;
-
-                datosMedicos.preguntaUno = BtnSiUno.IsChecked == true;
-                datosMedicos.preguntaDos = BtnSiDos.IsChecked == true;
-                datosMedicos.preguntaTres = BtnSiTres.IsChecked == true;
-                datosMedicos.preguntaCuatro = BtnSiCuatro.IsChecked == true;
-                
-                datosMedicos.preguntaAsmatico = BtnAsmatico.IsChecked == true;
-                datosMedicos.preguntaEpileptico = BtnEpileptico.IsChecked == true;
-                datosMedicos.preguntaDiabetico = BtnDiabetico.IsChecked == true;
-                datosMedicos.preguntaFumador = BtnFumador.IsChecked == true;
-
-                datosMedicos.preguntaMareos = BtnMareos.IsChecked == true;
-                datosMedicos.preguntaDesmayos = BtnDesmayos.IsChecked == true;  
-                datosMedicos.preguntaRespirar = BtnRespirar.IsChecked == true;
-                datosMedicos.preguntaNauseas = BtnNauseas.IsChecked == true;
-
-                datosMedicos.preguntaSiete = BtnSiSiete.IsChecked == true;
-                datosMedicos.preguntaOcho = BtnSiOcho.IsChecked == true;
-                datosMedicos.preguntaNueve = BtnSiNueve.IsChecked == true;
+                //DATOS MEDICOS
+                datosMedicos.lesionOsea = ComboBoxOsea.SelectedIndex.ToString();
+                datosMedicos.lesionMuscular = ComboBoxMuscular.SelectedIndex.ToString();
+                datosMedicos.enfermedadCardio = ComboBoxCardio.SelectedIndex.ToString();
+                datosMedicos.afixia = ComboBoxAfixia.SelectedIndex.ToString();
+                datosMedicos.asmatico = ComboBoxAsmatico.SelectedIndex.ToString();
+                datosMedicos.diabetico = ComboBoxDiabetico.SelectedIndex.ToString();
+                datosMedicos.epileptico = ComboBoxEpileptico.SelectedIndex.ToString();
+                datosMedicos.fumador = ComboBoxFumador.SelectedIndex.ToString();
+                datosMedicos.mareos = ComboBoxMareos.SelectedIndex.ToString();
+                datosMedicos.desmayos = ComboBoxDesmayos.SelectedIndex.ToString();
+                datosMedicos.respirar = ComboBoxRespirar.SelectedIndex.ToString();
+                datosMedicos.nauseas = ComboBoxNauseas.SelectedIndex.ToString();
+                datosMedicos.anemia = ComboBoxAnemia.SelectedIndex.ToString();
+                datosMedicos.embarazada = ComboBoxEmbarazada.SelectedIndex.ToString();
 
                 MessageBox.Show("Datos personales guardados correctamente.");
 
@@ -122,20 +129,35 @@ namespace GymApp.SeccionInscripciones
                 BoxApellido.Clear();
                 BoxEdad.Clear();
                 BoxDni.Clear();
+                BoxSexo.SelectedItem = null;
                 BoxDirec.Clear();
                 BoxLocalidad.Clear();
                 BoxCodigoPostal.Clear();
+                BoxGrupoSanguineo.SelectedItem = null;
                 BoxTel.Clear();
                 BoxContactoEmergencia.Clear();
                 BoxMail.Clear();
-                BoxMedicoUno.Clear();
-                BoxMedicoDos.Clear();
-                BoxMedicoTres.Clear();
                 DateInscripcion.SelectedDate = null;
+                
+                //PAGO
                 BoxValorCuota.Clear();
-                BoxGrupoSanguineo.SelectedItem = null;
                 BoxMetodoPago.SelectedItem = null;
-                BoxSexo.SelectedItem = null;
+
+                //MEDICO
+                ComboBoxOsea.SelectedItem = null;
+                ComboBoxMuscular.SelectedItem = null;
+                ComboBoxCardio.SelectedItem = null;
+                ComboBoxAfixia.SelectedItem = null;
+                ComboBoxAsmatico.SelectedItem = null;
+                ComboBoxDiabetico.SelectedItem = null;
+                ComboBoxEpileptico.SelectedItem = null;
+                ComboBoxFumador.SelectedItem = null;
+                ComboBoxMareos.SelectedItem = null;
+                ComboBoxDesmayos.SelectedItem = null;
+                ComboBoxRespirar.SelectedItem = null;
+                ComboBoxNauseas.SelectedItem = null;
+                ComboBoxAnemia.SelectedItem = null;
+                ComboBoxEmbarazada.SelectedItem = null;
             }
             catch (Exception ex)
             {
