@@ -36,7 +36,7 @@
 
                 <!--Seccion Sexo-->
                 <Label Content="Sexo: " Canvas.Left="1460" Canvas.Top="30.194" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
-                <ComboBox x:Name="BoxSexo" Canvas.Left="1505" Canvas.Top="27" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" >
+                <ComboBox x:Name="BoxSexo" Canvas.Left="1505" Canvas.Top="27" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" >
                     <ComboBox.Background>
                         <LinearGradientBrush EndPoint="0,1">
                             <GradientStop Color="#FFF0F0F0"/>
@@ -65,7 +65,7 @@
 
                 <!--Seccion G.S-->
                 <Label Content="Grupo Sanguineo:" Canvas.Left="1460" Canvas.Top="108.269" UseLayoutRounding="False" Foreground="#FFECEFF4" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <ComboBox x:Name="BoxGrupoSanguineo" Canvas.Left="1590" Canvas.Top="107" Width="105" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                <ComboBox x:Name="BoxGrupoSanguineo" Canvas.Left="1590" Canvas.Top="107" Width="55" HorizontalAlignment="Center" VerticalAlignment="Top" >
                     <ComboBox.Background>
                         <LinearGradientBrush EndPoint="0,1">
                             <GradientStop Color="#FFF0F0F0"/>
@@ -96,7 +96,7 @@
 
                 <!--Seccion Fecha Inscripcion-->
                 <Label Canvas.Left="1120" Canvas.Top="188" Content="Fecha de inscripcion: " HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
-                <DatePicker x:Name="DateInscripcion" Canvas.Left="1270" Canvas.Top="185" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="25" Width="173" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" BorderBrush="#FF617584"/>
+                <DatePicker x:Name="DateInscripcion" Canvas.Left="1270" Canvas.Top="187" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="25" Width="173" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" BorderBrush="#FF617584"/>
             </Canvas>
         </GroupBox>
 
@@ -110,7 +110,7 @@
                     <Label Content="1. ¿Ha tenido o tiene alguna lesion osea? " HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="14" Canvas.Top="18" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="45" Canvas.Top="57" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <TextBox x:Name="BoxMedicoUno" Canvas.Left="51" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFF2F2F7" Grid.Column="1" Height="21"/>
-                    <ComboBox x:Name="ComboBoxOsea" Canvas.Left="722" Canvas.Top="113" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50">
+                    <ComboBox x:Name="ComboBoxOsea" Canvas.Left="725" Canvas.Top="113" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
                     </ComboBox>
@@ -124,7 +124,7 @@
                     <Label Content="2. ¿Ha tenido o tiene alguna lesion muscular? " Canvas.Left="14" Canvas.Top="158" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="198" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <TextBox x:Name="BoxMedicoDos" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="240" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21"/>
-                    <ComboBox x:Name="ComboBoxMuscular" Canvas.Left="722" Canvas.Top="254" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
+                    <ComboBox x:Name="ComboBoxMuscular" Canvas.Left="725" Canvas.Top="254" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
                     </ComboBox>
@@ -138,7 +138,7 @@
                     <Label Content="3. ¿Padece alguna enfermedad cardiovascular? " Canvas.Left="12" Canvas.Top="293" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5" Foreground="#FFECEFF4"/>
                     <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="338" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <TextBox x:Name="BoxMedicoTres" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="380" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21"/>
-                    <ComboBox x:Name="ComboBoxCardio" Canvas.Left="723" Canvas.Top="394" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="50">
+                    <ComboBox x:Name="ComboBoxCardio" Canvas.Left="725" Canvas.Top="394" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
                     </ComboBox>
@@ -148,7 +148,7 @@
                 <Canvas>
                     <!--PREGUNTA 4-->
                     <Label Content="4. ¿Se afixia con facilidad al realizar ejercicio fisico? " Canvas.Left="13" Canvas.Top="438" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <ComboBox x:Name="ComboBoxAfixia" Canvas.Left="722" Canvas.Top="473" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
+                    <ComboBox x:Name="ComboBoxAfixia" Canvas.Left="725" Canvas.Top="473" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
                     </ComboBox>
@@ -242,7 +242,7 @@
                 <Canvas>
                     <!--D.-->
                     <Label Content="Nauseas: " Canvas.Left="1104" Canvas.Top="104" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <ComboBox x:Name="ComboBoxNauseas" Canvas.Left="1172" Canvas.Top="104" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
+                    <ComboBox x:Name="ComboBoxNauseas" Canvas.Left="1174" Canvas.Top="104" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
                     </ComboBox>
@@ -263,7 +263,7 @@
                 <Canvas>
                     <!--PREGUNTA 8-->
                     <Label Content="8. ¿Esta ud. Embarazada o sospecha estarlo?" Canvas.Left="785" Canvas.Top="198" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
-                    <ComboBox x:Name="ComboBoxEmbarazada" Canvas.Left="1077" Canvas.Top="253" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="50">
+                    <ComboBox x:Name="ComboBoxEmbarazada" Canvas.Left="1077" Canvas.Top="254" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
                     </ComboBox>
@@ -273,7 +273,7 @@
                 <Canvas>
                     <!--PREGUNTA 9-->
                     <Label Content="9. ¿Ha practicado o practica alguna actividad deportiva?" Canvas.Left="785" Canvas.Top="278" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
-                    <ComboBox Canvas.Left="1157" Canvas.Top="333" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="50">
+                    <ComboBox x:Name="ComboBoxDeporte" Canvas.Left="1157" Canvas.Top="333" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
                     </ComboBox>
@@ -358,7 +358,7 @@
                         <GridSplitter Height="21" Canvas.Left="69" Canvas.Top="121" Width="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFFFAB40"/>
                         <Label Content="Metodo de pago:" Canvas.Left="242" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFECEFF4" Canvas.Top="4"/>
 
-                        <ComboBox x:Name="BoxMetodoPago" Canvas.Left="244" Canvas.Top="39" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <ComboBox x:Name="BoxMetodoPago" Canvas.Left="244" Canvas.Top="39" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top">
                             <ComboBoxItem Content="Efectivo"></ComboBoxItem>
                             <ComboBoxItem Content="Tarjeta"></ComboBoxItem>
                         </ComboBox>

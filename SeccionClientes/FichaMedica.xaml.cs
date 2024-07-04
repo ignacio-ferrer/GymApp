@@ -1,5 +1,9 @@
-﻿using System;
+﻿using GymApp.Data;
+using GymApp.SeccionInscripciones;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +23,46 @@ namespace GymApp.SeccionClientes
     /// </summary>
     public partial class FichaMedica : Window
     {
+        RepositorioMedico repositorioMedico = new RepositorioMedico();
+        RepositorioCliente repositorioCliente = new RepositorioCliente();
+        private string connectionString = "AppGymDB"; 
+
         public FichaMedica()
         {
             InitializeComponent();
+            CargarCliente();
+        }
+
+        public class InformacionMedica
+        {
+            //Primera fila
+            public string lesionOsea { get; set; }
+            public string lesionMuscular { get; set; }
+            public string enfermedadCardiovascular { get; set; }
+            public string afixia { get; set; }
+            public string asmatico { get; set; }
+            public string diabetico { get; set; }
+            public string epileptico { get; set; }
+            public string fumador { get; set; }
+
+            //Segunda fila
+            public string mareos { get; set; }
+            public string desmayos { get; set; }
+            public string respirar { get; set; }
+            public string nauseas { get; set; }
+            public string anemia { get; set; }
+            public string embarazada { get; set; }
+        }
+
+        public void CargarCliente()
+        {
+            if (DataGridMedico == null)
+            {
+                throw new NullReferenceException("La grid no esta inicializada.");
+            }
+
+            var datosMedicos = repositorioMedico.ObtenerFichaMedica();
+            DataGridMedico.ItemsSource = datosMedicos;
         }
 
         private void BtnSalir_Click(object sender, RoutedEventArgs e)
@@ -60,12 +101,16 @@ namespace GymApp.SeccionClientes
             return true;
         }
 
+
         private void BtnAplicar_Click(object sender, RoutedEventArgs e)
         {
+            string nombre = TextBoxNombre.Text;
+
+            /*string.IsNullOrWhiteSpace(TextBoxID.Text))*/
+
             try
             {
-                if (string.IsNullOrWhiteSpace(TextBoxNombre.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxID.Text))
+                if (string.IsNullOrWhiteSpace(TextBoxNombre.Text))
                 {
                     MessageBox.Show("Todos los campos son obligatorios.");
                     return;
@@ -77,6 +122,36 @@ namespace GymApp.SeccionClientes
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
+            }
+
+            BuscarPersona(nombre);
+        }
+
+        //metodo para buscar a la persona
+        private void BuscarPersona(string nombre)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Cliente WHERE nombre = @nombre";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@nombre", nombre);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        DataGridMedico.ItemsSource = dataTable.DefaultView;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar la persona: " + ex.Message);
             }
         }
     }

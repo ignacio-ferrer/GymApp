@@ -11,7 +11,7 @@ namespace GymApp
         //Primera fila
         public string lesionOsea{ get; set; }
         public string lesionMuscular{ get; set; }
-        public string enfermedadCardio{ get; set; }
+        public string enfermedadCardiovascular{ get; set; }
         public string afixia { get; set; }
         public string asmatico { get; set; }
         public string diabetico { get; set; }
@@ -30,7 +30,7 @@ namespace GymApp
         {
             this.lesionOsea = lesionOsea;
             this.lesionMuscular = lesionMuscular;
-            this.enfermedadCardio = enfermedadCardio;
+            this.enfermedadCardiovascular = enfermedadCardiovascular;
             this.afixia = afixia;
             this.asmatico = asmatico;
             this.diabetico = diabetico;

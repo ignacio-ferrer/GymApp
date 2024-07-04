@@ -23,6 +23,7 @@ namespace GymApp.SeccionInscripciones
         DatosPersonales datosPersonales = new DatosPersonales();
         DatosMedicos datosMedicos = new DatosMedicos();
         RepositorioCliente repositorioCliente = new RepositorioCliente();
+        RepositorioMedico repositorioMedico = new RepositorioMedico();
 
         public Inscripciones()
         {
@@ -108,20 +109,22 @@ namespace GymApp.SeccionInscripciones
                 repositorioCliente.AgregarCliente(datosPersonales);
 
                 //DATOS MEDICOS
-                datosMedicos.lesionOsea = ComboBoxOsea.SelectedIndex.ToString();
-                datosMedicos.lesionMuscular = ComboBoxMuscular.SelectedIndex.ToString();
-                datosMedicos.enfermedadCardio = ComboBoxCardio.SelectedIndex.ToString();
-                datosMedicos.afixia = ComboBoxAfixia.SelectedIndex.ToString();
-                datosMedicos.asmatico = ComboBoxAsmatico.SelectedIndex.ToString();
-                datosMedicos.diabetico = ComboBoxDiabetico.SelectedIndex.ToString();
-                datosMedicos.epileptico = ComboBoxEpileptico.SelectedIndex.ToString();
-                datosMedicos.fumador = ComboBoxFumador.SelectedIndex.ToString();
-                datosMedicos.mareos = ComboBoxMareos.SelectedIndex.ToString();
-                datosMedicos.desmayos = ComboBoxDesmayos.SelectedIndex.ToString();
-                datosMedicos.respirar = ComboBoxRespirar.SelectedIndex.ToString();
-                datosMedicos.nauseas = ComboBoxNauseas.SelectedIndex.ToString();
-                datosMedicos.anemia = ComboBoxAnemia.SelectedIndex.ToString();
-                datosMedicos.embarazada = ComboBoxEmbarazada.SelectedIndex.ToString();
+                datosMedicos.lesionOsea = ComboBoxOsea.Text;
+                datosMedicos.lesionMuscular = ComboBoxMuscular.Text;
+                datosMedicos.enfermedadCardiovascular = ComboBoxCardio.Text;
+                datosMedicos.afixia = ComboBoxAfixia.Text;
+                datosMedicos.asmatico = ComboBoxAsmatico.Text;
+                datosMedicos.diabetico = ComboBoxDiabetico.Text;
+                datosMedicos.epileptico = ComboBoxEpileptico.Text;
+                datosMedicos.fumador = ComboBoxFumador.Text;
+                datosMedicos.mareos =  ComboBoxMareos.Text;
+                datosMedicos.desmayos = ComboBoxDesmayos.Text;
+                datosMedicos.respirar = ComboBoxRespirar.Text;
+                datosMedicos.nauseas =  ComboBoxNauseas.Text;
+                datosMedicos.anemia = ComboBoxAnemia.Text;
+                datosMedicos.embarazada = ComboBoxEmbarazada.Text;
+
+                repositorioMedico.AgregarFichaMedica( datosMedicos );
 
                 MessageBox.Show("Datos personales guardados correctamente.");
 
@@ -158,6 +161,7 @@ namespace GymApp.SeccionInscripciones
                 ComboBoxNauseas.SelectedItem = null;
                 ComboBoxAnemia.SelectedItem = null;
                 ComboBoxEmbarazada.SelectedItem = null;
+                ComboBoxDeporte.SelectedItem = null;
             }
             catch (Exception ex)
             {

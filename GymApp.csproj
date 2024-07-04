@@ -119,6 +119,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="API\ConsumirApi.cs" />
+    <Compile Include="Data\RepositorioMedico.cs" />
     <Compile Include="SeccionCalorias\ContadorCalorias.xaml.cs">
       <DependentUpon>ContadorCalorias.xaml</DependentUpon>
     </Compile>

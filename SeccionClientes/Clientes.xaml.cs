@@ -21,6 +21,7 @@ namespace GymApp.SeccionClientes
     public partial class Clientes : Page
     {
         RepositorioCliente repositorioCliente = new RepositorioCliente();
+        private FichaMedica _ventanaMedica;
 
         public Clientes()
         {
@@ -104,8 +105,17 @@ namespace GymApp.SeccionClientes
 
         private void BtnFichaMedica_Click(object sender, RoutedEventArgs e)
         {
-            FichaMedica fichaMedica = new FichaMedica();
-            fichaMedica.Show();
+            if (_ventanaMedica == null || !_ventanaMedica.IsVisible)
+            {
+                _ventanaMedica = new FichaMedica();
+
+                _ventanaMedica.Closed += (s, args) => _ventanaMedica = null; 
+                _ventanaMedica.Show();
+            }
+            else
+            {
+                _ventanaMedica.Focus(); 
+            }
         }
     }
 }
