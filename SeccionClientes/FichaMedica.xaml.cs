@@ -25,7 +25,7 @@ namespace GymApp.SeccionClientes
     {
         RepositorioMedico repositorioMedico = new RepositorioMedico();
         RepositorioCliente repositorioCliente = new RepositorioCliente();
-        private string connectionString = "AppGymDB"; 
+        private string connectionString = "Server=DESKTOP-E2O57T0\\MSSQLSERVER01;Database=AppGymDB;Trusted_Connection=True;";
 
         public FichaMedica()
         {
@@ -127,7 +127,6 @@ namespace GymApp.SeccionClientes
             BuscarPersona(nombre);
         }
 
-        //metodo para buscar a la persona
         private void BuscarPersona(string nombre)
         {
             try
