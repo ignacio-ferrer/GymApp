@@ -15,6 +15,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Dapper;
 
 namespace GymApp.SeccionClientes
 {
@@ -25,6 +26,7 @@ namespace GymApp.SeccionClientes
     {
         RepositorioMedico repositorioMedico = new RepositorioMedico();
         RepositorioCliente repositorioCliente = new RepositorioCliente();
+        DatosMedicos datosMedicos = new DatosMedicos();
         private string connectionString = "Server=DESKTOP-E2O57T0\\MSSQLSERVER01;Database=AppGymDB;Trusted_Connection=True;";
 
         public FichaMedica()
@@ -36,6 +38,7 @@ namespace GymApp.SeccionClientes
         public class InformacionMedica
         {
             //Primera fila
+            public int id { get; set; }
             public string lesionOsea { get; set; }
             public string lesionMuscular { get; set; }
             public string enfermedadCardiovascular { get; set; }
@@ -101,7 +104,6 @@ namespace GymApp.SeccionClientes
             return true;
         }
 
-
         private void BtnAplicar_Click(object sender, RoutedEventArgs e)
         {
             string nombre = TextBoxNombre.Text;
@@ -134,7 +136,26 @@ namespace GymApp.SeccionClientes
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT * FROM Cliente WHERE nombre = @nombre";
+                    string query = @"
+                SELECT 
+                    Cliente.nombre, 
+                    FichaMedica.LesionOsea, 
+                    FichaMedica.LesionMuscular, 
+                    FichaMedica.EnfermedadCardiovascular, 
+                    FichaMedica.Afixia, 
+                    FichaMedica.Asmatico, 
+                    FichaMedica.Diabetico, 
+                    FichaMedica.Epileptico, 
+                    FichaMedica.Fumador, 
+                    FichaMedica.Mareos, 
+                    FichaMedica.Desmayos, 
+                    FichaMedica.Respirar, 
+                    FichaMedica.Nauseas, 
+                    FichaMedica.Anemia, 
+                    FichaMedica.Embarazada
+                FROM Cliente
+                INNER JOIN FichaMedica ON Cliente.ClienteId = FichaMedica.ClienteId
+                WHERE Cliente.nombre = @nombre";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -151,6 +172,19 @@ namespace GymApp.SeccionClientes
             catch (Exception ex)
             {
                 MessageBox.Show("Error al buscar la persona: " + ex.Message);
+            }
+        }
+
+        private void BtnBorrarFichaMedica_Click(object sender, RoutedEventArgs e)
+        {
+            if (DataGridMedico.SelectedItem is DatosMedicos selectedFichaMedica)
+            {
+                repositorioMedico.BorrarFichaMedica(selectedFichaMedica.Id);
+                CargarCliente();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una ficha medica para eliminar.");
             }
         }
     }

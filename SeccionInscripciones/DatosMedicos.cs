@@ -9,6 +9,7 @@ namespace GymApp
     internal class DatosMedicos
     {
         //Primera fila
+        public int Id { get; set; }
         public string lesionOsea{ get; set; }
         public string lesionMuscular{ get; set; }
         public string enfermedadCardiovascular{ get; set; }
@@ -28,6 +29,7 @@ namespace GymApp
 
         public DatosMedicos()
         {
+            this.Id = Id;
             this.lesionOsea = lesionOsea;
             this.lesionMuscular = lesionMuscular;
             this.enfermedadCardiovascular = enfermedadCardiovascular;

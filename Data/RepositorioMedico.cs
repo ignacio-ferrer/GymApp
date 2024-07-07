@@ -24,7 +24,7 @@ namespace GymApp.Data
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "SELECT LesionOsea, LesionMuscular , EnfermedadCardiovascular, Afixia, Asmatico, Diabetico, Epileptico, Fumador, Mareos, Desmayos, Respirar , Nauseas, Anemia, Embarazada FROM FichaMedica";
+                var sql = "SELECT Id,LesionOsea, LesionMuscular , EnfermedadCardiovascular, Afixia, Asmatico, Diabetico, Epileptico, Fumador, Mareos, Desmayos, Respirar , Nauseas, Anemia, Embarazada FROM FichaMedica";
                 return connection.Query<DatosMedicos>(sql).ToList();
             }
         }
@@ -36,6 +36,7 @@ namespace GymApp.Data
                 var command = new SqlCommand("AgregarLaFichaMedica", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
+                command.Parameters.AddWithValue("@Id", datosMedicos.Id);
                 command.Parameters.AddWithValue("@LesionOsea", datosMedicos.lesionOsea);
                 command.Parameters.AddWithValue("@LesionMuscular", datosMedicos.lesionMuscular);
                 command.Parameters.AddWithValue("@EnfermedadCardiovascular", datosMedicos.enfermedadCardiovascular);
@@ -53,6 +54,15 @@ namespace GymApp.Data
 
                 connection.Open();
                 command.ExecuteNonQuery();
+            }
+        }
+
+        public void BorrarFichaMedica(int id)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var sql = "DELETE FROM FichaMedica WHERE Id = @Id";
+                connection.Execute(sql, new { Id = id });
             }
         }
     }

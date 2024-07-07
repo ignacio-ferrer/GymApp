@@ -28,14 +28,15 @@
             <StackPanel Height="261">
                 <Label Content="Cliente Encontrado:" Foreground="#FFECEFF4" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"></Label>
 
-                <DataGrid x:Name="DataGridMedico" Height="220" HorizontalAlignment="Center" Width="1235" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" IsReadOnly="True" SelectionMode="Single" FontSize="16" MinColumnWidth="70">
+                <DataGrid x:Name="DataGridMedico" Height="220" HorizontalAlignment="Center" Width="1280" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" IsReadOnly="True" SelectionMode="Single" FontSize="16" MaxColumnWidth="200" MinColumnWidth="10" Grid.IsSharedSizeScope="True" SelectionUnit="FullRow" AutoGenerateColumns="True">
                 </DataGrid>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Width="150" Margin="0,84,50,0" Height="96" VerticalAlignment="Top" HorizontalAlignment="Right" >
+        <StackPanel Orientation="Vertical" Width="160" Margin="0,74,50,0" Height="145" VerticalAlignment="Top" HorizontalAlignment="Right" >
             <Button x:Name="BtnAplicar" Background="#FFFFAB40" Width="100" Height="30" Content="Aplicar" Margin="10" BorderBrush="{x:Null}" Click="BtnAplicar_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
             <Button x:Name="BtnSalir" Background="#FFFFAB40" Width="100" Height="30" Content="Salir" BorderBrush="{x:Null}" Click="BtnSalir_Click" FontSize="16"/>
+            <Button x:Name="BtnBorrarFichaMedica" Margin="10" Content="Borrar" FontSize="16" Width="100" Height="30" Background="#FFFFAB40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="{x:Null}" Click="BtnBorrarFichaMedica_Click"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 CREATE PROCEDURE AgregarLaFichaMedica
-    @LesionOsea NVARCHAR(10),
+    @Id int,
+	@LesionOsea NVARCHAR(10),
     @LesionMuscular NVARCHAR(10),
     @EnfermedadCardiovascular NVARCHAR(10),
     @Afixia NVARCHAR(10),
@@ -15,6 +16,6 @@ CREATE PROCEDURE AgregarLaFichaMedica
     @Embarazada NVARCHAR(10)
 AS
 BEGIN
-    INSERT INTO FichaMedica(LesionOsea, LesionMuscular, EnfermedadCardiovascular, Afixia, Asmatico , Diabetico, Epileptico, Fumador, Mareos, Desmayos,Respirar,Nauseas,Anemia,Embarazada)
-    VALUES (@LesionOsea, @LesionMuscular, @EnfermedadCardiovascular, @Afixia, @Asmatico,@Diabetico, @Epileptico, @Fumador, @Mareos, @Desmayos, @Respirar, @Nauseas, @Anemia, @Embarazada);
+    INSERT INTO FichaMedica(Id ,LesionOsea, LesionMuscular, EnfermedadCardiovascular, Afixia, Asmatico , Diabetico, Epileptico, Fumador, Mareos, Desmayos,Respirar,Nauseas,Anemia,Embarazada)
+    VALUES (@Id,@LesionOsea, @LesionMuscular, @EnfermedadCardiovascular, @Afixia, @Asmatico,@Diabetico, @Epileptico, @Fumador, @Mareos, @Desmayos, @Respirar, @Nauseas, @Anemia, @Embarazada);
 END

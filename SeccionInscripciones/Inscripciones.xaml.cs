@@ -124,7 +124,7 @@ namespace GymApp.SeccionInscripciones
                 datosMedicos.anemia = ComboBoxAnemia.Text;
                 datosMedicos.embarazada = ComboBoxEmbarazada.Text;
 
-                repositorioMedico.AgregarFichaMedica( datosMedicos );
+                repositorioMedico.AgregarFichaMedica(datosMedicos);
 
                 MessageBox.Show("Datos personales guardados correctamente.");
 
@@ -133,6 +133,7 @@ namespace GymApp.SeccionInscripciones
                 BoxEdad.Clear();
                 BoxDni.Clear();
                 BoxSexo.SelectedItem = null;
+                DateCumple.SelectedDate = null;
                 BoxDirec.Clear();
                 BoxLocalidad.Clear();
                 BoxCodigoPostal.Clear();
