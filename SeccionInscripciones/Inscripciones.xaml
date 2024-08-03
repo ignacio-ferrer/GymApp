@@ -20,15 +20,15 @@
             <Canvas Height="316">
                 <!--Seccion Nombre-->
                 <Label Content="Nombre: " Canvas.Left="2.766" Canvas.Top="35" HorizontalAlignment="Center" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4"/>
-                <TextBox x:Name="BoxNombre" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="69.017" Canvas.Top="36.499" HorizontalAlignment="Center" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxNombre_TextChanged" Height="22" SelectionTextBrush="#FFF2F2F7" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxNombre" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="69.017" Canvas.Top="36.499" HorizontalAlignment="Center" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxNombre_TextChanged" Height="22" SelectionTextBrush="#FFF2F2F7" Background="#FFF2F2F7" MaxLength="15"/>
 
                 <!--Seccion Apellido-->
                 <Label Content="Apellido: " Canvas.Left="400" Canvas.Top="30.583" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxApellido" TextWrapping="Wrap" Text="" Width="177" Canvas.Left="470" Canvas.Top="32.5" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxApellido_TextChanged" Height="22" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxApellido" TextWrapping="Wrap" Text="" Width="177" Canvas.Left="470" Canvas.Top="32.5" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxApellido_TextChanged" Height="22" Background="#FFF2F2F7" MaxLength="15"/>
 
                 <!--Seccion Edad-->
                 <Label Content="Edad: " Canvas.Left="750" Canvas.Top="29.583" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxEdad" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="795" Canvas.Top="32.333" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxEdad" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="795" Canvas.Top="32.333" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7" MaxLength="3"/>
 
                 <!--Seccion DNI-->
                 <Label Content="DNI: " Canvas.Left="1120" Canvas.Top="28.033" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
@@ -53,15 +53,15 @@
 
                 <!--Seccion Direcc-->
                 <Label Content="Direccion: " Canvas.Left="400" Canvas.Top="109" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxDirec" TextWrapping="Wrap" Text="" Width="170" Canvas.Left="475" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Height="22" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxDirec" TextWrapping="Wrap" Text="" Width="170" Canvas.Left="475" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Height="22" Background="#FFF2F2F7" MaxLength="20"/>
 
                 <!--Seccion Localidad-->
                 <Label Content="Localidad: " Canvas.Left="750" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxLocalidad" TextWrapping="Wrap" Text="" Width="171" Canvas.Left="826" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" TextChanged="BoxLocalidad_TextChanged" Height="22" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxLocalidad" TextWrapping="Wrap" Text="" Width="171" Canvas.Left="826" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" TextChanged="BoxLocalidad_TextChanged" Height="22" Background="#FFF2F2F7" MaxLength="15"/>
 
                 <!--Seccion C.P-->
                 <Label Content="Codigo Postal: " Canvas.Left="1120" Canvas.Top="108" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxCodigoPostal" TextWrapping="Wrap" Text="" Width="141" Canvas.Left="1225" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxCodigoPostal" TextWrapping="Wrap" Text="" Width="141" Canvas.Left="1225" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7" MaxLength="5"/>
 
                 <!--Seccion G.S-->
                 <Label Content="Grupo Sanguineo:" Canvas.Left="1460" Canvas.Top="108.269" UseLayoutRounding="False" Foreground="#FFECEFF4" HorizontalAlignment="Left" VerticalAlignment="Top" />
@@ -92,7 +92,7 @@
 
                 <!--Seccion Mail-->
                 <Label Content="Correo Electronico: " Canvas.Left="750" Canvas.Top="189" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
-                <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="188" Canvas.Left="888" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="22" Background="#FFF2F2F7"/>
+                <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="195" Canvas.Left="883" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="22" Background="#FFF2F2F7" MaxLength="35"/>
 
                 <!--Seccion Fecha Inscripcion-->
                 <Label Canvas.Left="1120" Canvas.Top="188" Content="Fecha de inscripcion: " HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
@@ -101,7 +101,7 @@
         </GroupBox>
 
         <!--FICHA MEDICA-->
-        <GroupBox Header="Ficha Medica" Margin="1,340,40,0" Background="#3A3A3C" VerticalAlignment="Top" Height="695" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
+        <GroupBox Header="Ficha Medica" Margin="1,340,40,0" Background="#3A3A3C" VerticalAlignment="Top" Height="665" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
             <Canvas Height="670" RenderTransformOrigin="0.393,0.048" Margin="0,0,1,0">
                 <!--GROUP BOX 1-->
 
@@ -109,7 +109,7 @@
                     <!--PREGUNTA 1-->
                     <Label Content="1. ¿Ha tenido o tiene alguna lesion osea? " HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="14" Canvas.Top="18" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="45" Canvas.Top="57" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <TextBox x:Name="BoxMedicoUno" Canvas.Left="51" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFF2F2F7" Grid.Column="1" Height="21"/>
+                    <TextBox x:Name="BoxMedicoUno" Canvas.Left="51" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFF2F2F7" Grid.Column="1" Height="21" MaxLength="15"/>
                     <ComboBox x:Name="ComboBoxOsea" Canvas.Left="725" Canvas.Top="113" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
@@ -123,7 +123,7 @@
                     <!--PREGUNTA 2-->
                     <Label Content="2. ¿Ha tenido o tiene alguna lesion muscular? " Canvas.Left="14" Canvas.Top="158" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="198" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <TextBox x:Name="BoxMedicoDos" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="240" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21"/>
+                    <TextBox x:Name="BoxMedicoDos" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="240" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" MaxLength="15"/>
                     <ComboBox x:Name="ComboBoxMuscular" Canvas.Left="725" Canvas.Top="254" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
@@ -137,7 +137,7 @@
                     <!--PREGUNTA 3-->
                     <Label Content="3. ¿Padece alguna enfermedad cardiovascular? " Canvas.Left="12" Canvas.Top="293" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5" Foreground="#FFECEFF4"/>
                     <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="338" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
-                    <TextBox x:Name="BoxMedicoTres" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="380" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21"/>
+                    <TextBox x:Name="BoxMedicoTres" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="380" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" MaxLength="15"/>
                     <ComboBox x:Name="ComboBoxCardio" Canvas.Left="725" Canvas.Top="394" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
                         <ComboBoxItem Content="NO"></ComboBoxItem>
@@ -195,7 +195,7 @@
                     </ComboBox>
                 </Canvas>
 
-                <Border Height="2" Background="Gray" Width="670" Canvas.Top="334" Canvas.Left="440" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                <Border Height="2" Background="Gray" Width="637" Canvas.Top="318" Canvas.Left="456" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -354,11 +354,11 @@
 
                         <!--$ CUOTA-->
                         <Label Content="Valor de cuota:" Canvas.Left="240" Canvas.Top="120" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
-                        <TextBox x:Name="BoxValorCuota" Canvas.Left="244" TextWrapping="Wrap" Text="" Canvas.Top="150" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"/>
+                        <TextBox x:Name="BoxValorCuota" Canvas.Left="247" TextWrapping="Wrap" Text="" Canvas.Top="150" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="6"/>
                         <GridSplitter Height="21" Canvas.Left="69" Canvas.Top="121" Width="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFFFAB40"/>
-                        <Label Content="Metodo de pago:" Canvas.Left="242" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFECEFF4" Canvas.Top="4"/>
+                        <Label Content="Metodo de pago:" Canvas.Left="242" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFECEFF4" Canvas.Top="20"/>
 
-                        <ComboBox x:Name="BoxMetodoPago" Canvas.Left="244" Canvas.Top="39" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <ComboBox x:Name="BoxMetodoPago" Canvas.Left="247" Canvas.Top="50" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top">
                             <ComboBoxItem Content="Efectivo"></ComboBoxItem>
                             <ComboBoxItem Content="Tarjeta"></ComboBoxItem>
                         </ComboBox>

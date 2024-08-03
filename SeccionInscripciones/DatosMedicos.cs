@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace GymApp
 {
     internal class DatosMedicos
     {
         //Primera fila
-        public int Id { get; set; }
+        public int clienteID { get; set; }
         public string lesionOsea{ get; set; }
         public string lesionMuscular{ get; set; }
         public string enfermedadCardiovascular{ get; set; }
@@ -29,7 +31,7 @@ namespace GymApp
 
         public DatosMedicos()
         {
-            this.Id = Id;
+            this.clienteID = clienteID;
             this.lesionOsea = lesionOsea;
             this.lesionMuscular = lesionMuscular;
             this.enfermedadCardiovascular = enfermedadCardiovascular;

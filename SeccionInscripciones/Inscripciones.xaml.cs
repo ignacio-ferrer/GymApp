@@ -24,6 +24,7 @@ namespace GymApp.SeccionInscripciones
         DatosMedicos datosMedicos = new DatosMedicos();
         RepositorioCliente repositorioCliente = new RepositorioCliente();
         RepositorioMedico repositorioMedico = new RepositorioMedico();
+        private string nombreCliente;
 
         public Inscripciones()
         {
@@ -227,12 +228,11 @@ namespace GymApp.SeccionInscripciones
 
             if (imprimir.ShowDialog() == true)
             {
-                // Crear un contenedor para el documento fijo
+                
                 FixedDocument fixedDoc = new FixedDocument();
                 PageContent pageContent = new PageContent();
                 FixedPage fixedPage = new FixedPage();
 
-                // Crear una copia visual del control
                 Grid grid = new Grid
                 {
                     Width = this.ActualWidth,
@@ -250,11 +250,9 @@ namespace GymApp.SeccionInscripciones
                 grid.Children.Add(rect);
                 fixedPage.Children.Add(grid);
 
-                // Configurar el tamaño de la página
                 fixedPage.Width = imprimir.PrintableAreaWidth;
                 fixedPage.Height = imprimir.PrintableAreaHeight;
 
-                // Ajustar el contenido a la página imprimible
                 grid.Measure(new Size(imprimir.PrintableAreaWidth, imprimir.PrintableAreaHeight));
                 grid.Arrange(new Rect(new Point(0, 0), new Size(imprimir.PrintableAreaWidth, imprimir.PrintableAreaHeight)));
                 grid.UpdateLayout();
@@ -262,7 +260,6 @@ namespace GymApp.SeccionInscripciones
                 ((IAddChild)pageContent).AddChild(fixedPage);
                 fixedDoc.Pages.Add(pageContent);
 
-                // Imprimir el documento fijo
                 try
                 {
                     imprimir.PrintDocument(((IDocumentPaginatorSource)fixedDoc).DocumentPaginator, "Formulario Inscripcion");

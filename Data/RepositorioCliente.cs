@@ -16,14 +16,14 @@ namespace GymApp.Data
 
         public RepositorioCliente()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["AppGymDB"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["Probando"].ConnectionString;
         }
 
         public List <DatosPersonales> ObtenerClientes()
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "SELECT ClienteId, nombre, apellido, edad, dni, sexo, fechaNacimiento, direccion, localidad, codigoPostal, grupoSanguineo , telefono, telefonoEmergencia, correo, fechaInscripcion , metodoDePago , valorDeCuota FROM Cliente";
+                var sql = "SELECT ClienteID, nombre, apellido, edad, dni, sexo, fechaNacimiento, direccion, localidad, codigoPostal, grupoSanguineo , telefono, telefonoEmergencia, correo, fechaInscripcion , metodoDePago , valorDeCuota FROM ProbandoCliente";
                 return connection.Query<DatosPersonales>(sql).ToList();
             }
         }
@@ -32,9 +32,9 @@ namespace GymApp.Data
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var command = new SqlCommand("AgregarAlCliente", connection);
+                var command = new SqlCommand("InsertarCliente", connection); 
                 command.CommandType = CommandType.StoredProcedure;
-
+                 
                 command.Parameters.AddWithValue("@nombre", datosPersonales.nombre);
                 command.Parameters.AddWithValue("@apellido", datosPersonales.apellido);
                 command.Parameters.AddWithValue("@edad", datosPersonales.edad);
@@ -61,7 +61,7 @@ namespace GymApp.Data
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "EXEC EditarAlCliente @ClienteId, @nombre, @apellido, @edad, @dni, @sexo, @fechaNacimiento, @direccion, @localidad, @codigoPostal, @grupoSanguineo, @telefono, @telefonoEmergencia, @correo, @fechaInscripcion, @metodoDePago, @valorDeCuota";
+                var sql = "EXEC EditarAlCliente @ClienteID, @nombre, @apellido, @edad, @dni, @sexo, @fechaNacimiento, @direccion, @localidad, @codigoPostal, @grupoSanguineo, @telefono, @telefonoEmergencia, @correo, @fechaInscripcion, @metodoDePago, @valorDeCuota";
 
                 var parameters = new
                 {
@@ -100,7 +100,7 @@ namespace GymApp.Data
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "DELETE FROM Cliente WHERE ClienteId = @ClienteId";
+                var sql = "DELETE FROM ProbandoCliente WHERE ClienteID = @ClienteID";
                 connection.Execute(sql, new { ClienteId = clienteId });
             }
         }

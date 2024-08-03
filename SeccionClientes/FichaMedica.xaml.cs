@@ -27,7 +27,7 @@ namespace GymApp.SeccionClientes
         RepositorioMedico repositorioMedico = new RepositorioMedico();
         RepositorioCliente repositorioCliente = new RepositorioCliente();
         DatosMedicos datosMedicos = new DatosMedicos();
-        private string connectionString = "Server=DESKTOP-E2O57T0\\MSSQLSERVER01;Database=AppGymDB;Trusted_Connection=True;";
+        private string connectionString = "Server=DESKTOP-E2O57T0\\MSSQLSERVER01;Database=Probando;Trusted_Connection=True;";
 
         public FichaMedica()
         {
@@ -38,7 +38,7 @@ namespace GymApp.SeccionClientes
         public class InformacionMedica
         {
             //Primera fila
-            public int id { get; set; }
+            public int clienteId { get; set; }
             public string lesionOsea { get; set; }
             public string lesionMuscular { get; set; }
             public string enfermedadCardiovascular { get; set; }
@@ -66,12 +66,92 @@ namespace GymApp.SeccionClientes
 
             var datosMedicos = repositorioMedico.ObtenerFichaMedica();
             DataGridMedico.ItemsSource = datosMedicos;
+        }               
+
+        private void BuscarPersona(string nombre)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = @"
+                    SELECT     
+	                    ProbandoFichaMedica.IdCliente,
+	                    ProbandoCliente.nombre,
+                        ProbandoFichaMedica.LesionOsea, 
+                        ProbandoFichaMedica.LesionMuscular, 
+                        ProbandoFichaMedica.EnfermedadCardiovascular, 
+                        ProbandoFichaMedica.Afixia, 
+                        ProbandoFichaMedica.Asmatico, 
+                        ProbandoFichaMedica.Diabetico, 
+                        ProbandoFichaMedica.Epileptico, 
+                        ProbandoFichaMedica.Fumador, 
+                        ProbandoFichaMedica.Mareos, 
+                        ProbandoFichaMedica.Desmayos, 
+                        ProbandoFichaMedica.Respirar, 
+                        ProbandoFichaMedica.Nauseas, 
+                        ProbandoFichaMedica.Anemia, 
+                        ProbandoFichaMedica.Embarazada
+                    FROM ProbandoCliente
+                    INNER JOIN ProbandoFichaMedica ON ProbandoCliente.ClienteID = ProbandoFichaMedica.IdCliente
+                    WHERE ProbandoCliente.nombre = @nombre";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@nombre", nombre);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        DataGridMedico.ItemsSource = dataTable.DefaultView;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar la persona: " + ex.Message);
+            }
         }
 
-        private void BtnSalir_Click(object sender, RoutedEventArgs e)
+        private void BtnAplicar_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            string nombre = TextBoxNombre.Text;
+
+            /*string.IsNullOrWhiteSpace(TextBoxID.Text))*/
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(TextBoxNombre.Text))
+                {
+                    MessageBox.Show("Todos los campos son obligatorios.");
+                    return;
+                }
+
+                TextBoxNombre.Clear();
+                TextBoxID.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+
+            BuscarPersona(nombre);
         }
+
+        //private void BtnBorrarFichaMedica_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (DataGridMedico.SelectedItem is DatosMedicos selectedFichaMedica)
+        //    {
+        //        repositorioMedico.BorrarFichaMedica(selectedFichaMedica.Id);
+        //        CargarCliente();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Selecciona una ficha medica para eliminar.");
+        //    }
+        //}
 
         private void TextBoxNombre_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -104,88 +184,9 @@ namespace GymApp.SeccionClientes
             return true;
         }
 
-        private void BtnAplicar_Click(object sender, RoutedEventArgs e)
+        private void BtnSalir_Click(object sender, RoutedEventArgs e)
         {
-            string nombre = TextBoxNombre.Text;
-
-            /*string.IsNullOrWhiteSpace(TextBoxID.Text))*/
-
-            try
-            {
-                if (string.IsNullOrWhiteSpace(TextBoxNombre.Text))
-                {
-                    MessageBox.Show("Todos los campos son obligatorios.");
-                    return;
-                }
-
-                TextBoxNombre.Clear();
-                TextBoxID.Clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-
-            BuscarPersona(nombre);
-        }
-
-        private void BuscarPersona(string nombre)
-        {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string query = @"
-                SELECT 
-                    Cliente.nombre, 
-                    FichaMedica.LesionOsea, 
-                    FichaMedica.LesionMuscular, 
-                    FichaMedica.EnfermedadCardiovascular, 
-                    FichaMedica.Afixia, 
-                    FichaMedica.Asmatico, 
-                    FichaMedica.Diabetico, 
-                    FichaMedica.Epileptico, 
-                    FichaMedica.Fumador, 
-                    FichaMedica.Mareos, 
-                    FichaMedica.Desmayos, 
-                    FichaMedica.Respirar, 
-                    FichaMedica.Nauseas, 
-                    FichaMedica.Anemia, 
-                    FichaMedica.Embarazada
-                FROM Cliente
-                INNER JOIN FichaMedica ON Cliente.ClienteId = FichaMedica.ClienteId
-                WHERE Cliente.nombre = @nombre";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@nombre", nombre);
-
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
-
-                        DataGridMedico.ItemsSource = dataTable.DefaultView;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al buscar la persona: " + ex.Message);
-            }
-        }
-
-        private void BtnBorrarFichaMedica_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataGridMedico.SelectedItem is DatosMedicos selectedFichaMedica)
-            {
-                repositorioMedico.BorrarFichaMedica(selectedFichaMedica.Id);
-                CargarCliente();
-            }
-            else
-            {
-                MessageBox.Show("Selecciona una ficha medica para eliminar.");
-            }
+            this.Close();
         }
     }
 }

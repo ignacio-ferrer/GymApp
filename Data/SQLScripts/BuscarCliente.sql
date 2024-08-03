@@ -1,7 +1,7 @@
 DECLARE @nombre NVARCHAR(50);
 
-SELECT 
-    Cliente.nombre, 
+SELECT     
+	FichaMedica.cliente_id,
     FichaMedica.LesionOsea, 
     FichaMedica.LesionMuscular, 
     FichaMedica.EnfermedadCardiovascular, 
@@ -16,6 +16,9 @@ SELECT
     FichaMedica.Nauseas, 
     FichaMedica.Anemia, 
     FichaMedica.Embarazada
-FROM Cliente
-INNER JOIN FichaMedica ON Cliente.ClienteId = FichaMedica.ClienteId
-WHERE Cliente.nombre = @nombre;
+FROM AppGymDB.dbo.Cliente
+INNER JOIN AppGymDB.dbo.FichaMedica ON AppGymDB.dbo.Cliente.ClienteId = FichaMedica.cliente_id
+WHERE AppGymDB.dbo.Cliente.nombre = @nombre
+
+
+

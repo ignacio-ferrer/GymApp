@@ -19,7 +19,7 @@
           CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False"
           IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow" MaxWidth="1730" HorizontalAlignment="Left" Width="1915"
           HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True"
-          MaxColumnWidth="200" MinColumnWidth="50" Margin="0,0,0,0" FontSize="14" BorderBrush="#FF464646">
+          MaxColumnWidth="200" MinColumnWidth="75" Margin="0,0,0,0" FontSize="14" BorderBrush="#FF464646">
         </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
