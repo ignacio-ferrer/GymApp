@@ -140,18 +140,18 @@ namespace GymApp.SeccionClientes
             BuscarPersona(nombre);
         }
 
-        //private void BtnBorrarFichaMedica_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (DataGridMedico.SelectedItem is DatosMedicos selectedFichaMedica)
-        //    {
-        //        repositorioMedico.BorrarFichaMedica(selectedFichaMedica.Id);
-        //        CargarCliente();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Selecciona una ficha medica para eliminar.");
-        //    }
-        //}
+        private void BtnBorrarFichaMedica_Click(object sender, RoutedEventArgs e)
+        {
+            if (DataGridMedico.SelectedItem is DatosMedicos selectedFichaMedica)
+            {
+                repositorioMedico.BorrarFichaMedica(selectedFichaMedica.clienteID);
+                CargarCliente();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una ficha medica para eliminar.");
+            }
+        }
 
         private void TextBoxNombre_TextChanged(object sender, TextChangedEventArgs e)
         {

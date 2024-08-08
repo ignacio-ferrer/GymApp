@@ -29,7 +29,7 @@ namespace GymApp.API
                 RequestUri = new Uri($"https://myfitnesspal2.p.rapidapi.com/searchByKeyword?keyword={Uri.EscapeDataString(keyword)}"),
                 Headers =
         {
-            { "x-rapidapi-key", "c641617028msh39fe451f650e763p1eda05jsn47ff33edd98b" },
+            { "x-rapidapi-key", "bdf63d6013mshfe9be74e9fc3e72p1947eajsn012e70aff920" },
             { "x-rapidapi-host", "myfitnesspal2.p.rapidapi.com" },
         },
             };

@@ -36,7 +36,7 @@
         <StackPanel Orientation="Vertical" Width="160" Margin="0,74,50,0" Height="145" VerticalAlignment="Top" HorizontalAlignment="Right" >
             <Button x:Name="BtnAplicar" Background="#FFFFAB40" Width="100" Height="30" Content="Aplicar" Margin="10" BorderBrush="{x:Null}" Click="BtnAplicar_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
             <Button x:Name="BtnSalir" Background="#FFFFAB40" Width="100" Height="30" Content="Salir" BorderBrush="{x:Null}" Click="BtnSalir_Click" FontSize="16"/>
-            <Button x:Name="BtnBorrarFichaMedica" Margin="10" Content="Borrar" FontSize="16" Width="100" Height="30" Background="#FFFFAB40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="{x:Null}" />
+            <Button x:Name="BtnBorrarFichaMedica" Margin="10" Content="Borrar" FontSize="16" Width="100" Height="30" Background="#FFFFAB40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="{x:Null}" Click="BtnBorrarFichaMedica_Click" />
         </StackPanel>
     </Grid>
 </Window>

@@ -76,8 +76,8 @@ namespace GymApp.Data
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "DELETE FROM ProbandoFichaMedica WHERE Id = @Id";
-                connection.Execute(sql, new { Id = id });
+                var sql = "DELETE FROM ProbandoFichaMedica WHERE IdCliente = @IdCliente";
+                connection.Execute(sql, new { IdCliente = id });
             }
         }
     }
