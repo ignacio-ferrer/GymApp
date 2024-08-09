@@ -89,7 +89,6 @@ namespace GymApp.SeccionInscripciones
                     return;
                 }
 
-                //DATOS PERSONALES
                 datosPersonales.nombre = BoxNombre.Text;
                 datosPersonales.apellido = BoxApellido.Text;
                 datosPersonales.edad = BoxDeEdad;
@@ -109,7 +108,6 @@ namespace GymApp.SeccionInscripciones
 
                 repositorioCliente.AgregarCliente(datosPersonales);
 
-                //DATOS MEDICOS
                 datosMedicos.lesionOsea = ComboBoxOsea.Text;
                 datosMedicos.lesionMuscular = ComboBoxMuscular.Text;
                 datosMedicos.enfermedadCardiovascular = ComboBoxCardio.Text;
@@ -144,11 +142,9 @@ namespace GymApp.SeccionInscripciones
                 BoxMail.Clear();
                 DateInscripcion.SelectedDate = null;
                 
-                //PAGO
                 BoxValorCuota.Clear();
                 BoxMetodoPago.SelectedItem = null;
 
-                //MEDICO
                 ComboBoxOsea.SelectedItem = null;
                 ComboBoxMuscular.SelectedItem = null;
                 ComboBoxCardio.SelectedItem = null;

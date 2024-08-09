@@ -44,10 +44,10 @@ namespace GymApp
             MainFrame.Navigate(new Uri("SeccionRutina/Rutinas.xaml", UriKind.Relative));
         }
 
-         private void BtnContadorCalorias_Click(object sender, RoutedEventArgs e)
-         {
-            MainFrame.Navigate(new Uri("SeccionCalorias/ContadorCalorias.xaml", UriKind.Relative));
-         }
+        private void BtnContadorCalorias_Click(object sender, RoutedEventArgs e)
+        {
+           MainFrame.Navigate(new Uri("SeccionCalorias/ContadorCalorias.xaml", UriKind.Relative));
+        }
 
         private void BtnSalir_Click(object sender, RoutedEventArgs e)
         {

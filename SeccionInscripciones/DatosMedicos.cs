@@ -10,7 +10,6 @@ namespace GymApp
 {
     internal class DatosMedicos
     {
-        //Primera fila
         public int clienteID { get; set; }
         public string lesionOsea{ get; set; }
         public string lesionMuscular{ get; set; }
@@ -21,7 +20,6 @@ namespace GymApp
         public string epileptico { get; set; }
         public string fumador { get; set; }
         
-        //Segunda fila
         public string mareos { get; set; }
         public string desmayos { get; set; }
         public string respirar { get; set; }

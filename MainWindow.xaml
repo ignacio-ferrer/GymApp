@@ -14,12 +14,10 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Menú lateral -->
         <Border Padding="0,140,0,0" Background="#1C1C1E">
             <StackPanel VerticalAlignment="Top">
                 <Separator Margin="45"/>
 
-                <!-- Opción Inscripciones -->
                 <Button x:Name="BtnInscripciones" Margin="5" FontSize="25" Click="BtnInscripciones_Click" Background="#FFFFAB40">
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon="File" Foreground="Black" Height="20" Width="20" Margin="5"/>
@@ -28,7 +26,6 @@
                 </Button>
                 <Separator Margin="45"/>
 
-                <!-- Opción Clientes -->
                 <Button x:Name="BtnClientes" Margin="5" FontSize="25" Click="BtnClientes_Click" Background="#FFFFAB40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon="Users" Foreground="Black" Height="20" Width="20" Margin="5"/>
@@ -37,7 +34,6 @@
                 </Button>
                 <Separator Margin="45"/>
 
-                <!-- Opción Rutinas -->
                 <Button x:Name="BtnRutinas" Margin="5" FontSize="25" Click="BtnRutinas_Click" Background="#FFFFAB40">
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon="ClockOutline" Foreground="Black" Height="20" Width="20" Margin="5"/>
@@ -46,7 +42,6 @@
                 </Button>
                 <Separator Margin="45"/>
 
-                <!-- Opción Rutinas -->
                 <Button x:Name="BtnCalorias" Margin="5" FontSize="25" Click="BtnContadorCalorias_Click" Background="#FFFFAB40">
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon="Heartbeat" Foreground="Black" Height="20" Width="20" Margin="5"/>
@@ -55,8 +50,6 @@
                 </Button>
                 <Separator Margin="45"/>
                 
-                
-                <!-- Opción Salir -->
                 <Button x:Name="BtnSalir" FontSize="25" Background="#FFFFAB40" Click="BtnSalir_Click">
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon="SignOut" Foreground="Black" Height="20" Width="20" Margin="5"/>
@@ -68,7 +61,6 @@
             </StackPanel>
         </Border>
 
-        <!-- Contenido principal -->
         <Border Grid.Column="1">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

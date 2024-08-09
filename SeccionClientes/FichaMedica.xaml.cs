@@ -19,9 +19,6 @@ using Dapper;
 
 namespace GymApp.SeccionClientes
 {
-    /// <summary>
-    /// Lógica de interacción para FichaMedica.xaml
-    /// </summary>
     public partial class FichaMedica : Window
     {
         RepositorioMedico repositorioMedico = new RepositorioMedico();
@@ -37,7 +34,6 @@ namespace GymApp.SeccionClientes
 
         public class InformacionMedica
         {
-            //Primera fila
             public int clienteId { get; set; }
             public string lesionOsea { get; set; }
             public string lesionMuscular { get; set; }
@@ -48,7 +44,6 @@ namespace GymApp.SeccionClientes
             public string epileptico { get; set; }
             public string fumador { get; set; }
 
-            //Segunda fila
             public string mareos { get; set; }
             public string desmayos { get; set; }
             public string respirar { get; set; }
@@ -118,8 +113,7 @@ namespace GymApp.SeccionClientes
         private void BtnAplicar_Click(object sender, RoutedEventArgs e)
         {
             string nombre = TextBoxNombre.Text;
-
-            /*string.IsNullOrWhiteSpace(TextBoxID.Text))*/
+            string.IsNullOrWhiteSpace(TextBoxID.Text);
 
             try
             {

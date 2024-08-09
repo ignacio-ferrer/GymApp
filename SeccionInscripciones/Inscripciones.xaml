@@ -15,26 +15,21 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <!--DATOS PERSONALES-->
         <GroupBox Header="Datos Personales" Margin="1,1,40,0" Background="#3A3A3C" VerticalAlignment="Top" Height="336" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
             <Canvas Height="316">
-                <!--Seccion Nombre-->
+
                 <Label Content="Nombre: " Canvas.Left="2.766" Canvas.Top="35" HorizontalAlignment="Center" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4"/>
                 <TextBox x:Name="BoxNombre" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="69.017" Canvas.Top="36.499" HorizontalAlignment="Center" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxNombre_TextChanged" Height="22" SelectionTextBrush="#FFF2F2F7" Background="#FFF2F2F7" MaxLength="15"/>
 
-                <!--Seccion Apellido-->
                 <Label Content="Apellido: " Canvas.Left="400" Canvas.Top="30.583" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
                 <TextBox x:Name="BoxApellido" TextWrapping="Wrap" Text="" Width="177" Canvas.Left="470" Canvas.Top="32.5" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" TextChanged="BoxApellido_TextChanged" Height="22" Background="#FFF2F2F7" MaxLength="15"/>
 
-                <!--Seccion Edad-->
                 <Label Content="Edad: " Canvas.Left="750" Canvas.Top="29.583" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
                 <TextBox x:Name="BoxEdad" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="795" Canvas.Top="32.333" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7" MaxLength="3"/>
 
-                <!--Seccion DNI-->
                 <Label Content="DNI: " Canvas.Left="1120" Canvas.Top="28.033" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
                 <TextBox x:Name="BoxDni" TextWrapping="Wrap" Text="" Width="190" Canvas.Left="1160" Canvas.Top="28.283" HorizontalAlignment="Left" VerticalAlignment="Center" UseLayoutRounding="False" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="8"/>
 
-                <!--Seccion Sexo-->
                 <Label Content="Sexo: " Canvas.Left="1460" Canvas.Top="30.194" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Grid.Column="1" Foreground="#FFECEFF4" />
                 <ComboBox x:Name="BoxSexo" Canvas.Left="1505" Canvas.Top="27" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" >
                     <ComboBox.Background>
@@ -47,23 +42,18 @@
                     <ComboBoxItem Content="Femenino"/>
                 </ComboBox>
 
-                <!--Seccion Fecha-->
                 <Label Content="Fecha de nacimiento: " Canvas.Left="2" Canvas.Top="115" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
                 <DatePicker x:Name="DateCumple" Canvas.Left="150" Canvas.Top="113" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="174" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" />
 
-                <!--Seccion Direcc-->
                 <Label Content="Direccion: " Canvas.Left="400" Canvas.Top="109" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
                 <TextBox x:Name="BoxDirec" TextWrapping="Wrap" Text="" Width="170" Canvas.Left="475" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Height="22" Background="#FFF2F2F7" MaxLength="20"/>
 
-                <!--Seccion Localidad-->
                 <Label Content="Localidad: " Canvas.Left="750" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
                 <TextBox x:Name="BoxLocalidad" TextWrapping="Wrap" Text="" Width="171" Canvas.Left="826" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" TextChanged="BoxLocalidad_TextChanged" Height="22" Background="#FFF2F2F7" MaxLength="15"/>
 
-                <!--Seccion C.P-->
                 <Label Content="Codigo Postal: " Canvas.Left="1120" Canvas.Top="108" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
                 <TextBox x:Name="BoxCodigoPostal" TextWrapping="Wrap" Text="" Width="141" Canvas.Left="1225" Canvas.Top="110" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="20" Background="#FFF2F2F7" MaxLength="5"/>
 
-                <!--Seccion G.S-->
                 <Label Content="Grupo Sanguineo:" Canvas.Left="1460" Canvas.Top="108.269" UseLayoutRounding="False" Foreground="#FFECEFF4" HorizontalAlignment="Left" VerticalAlignment="Top" />
                 <ComboBox x:Name="BoxGrupoSanguineo" Canvas.Left="1590" Canvas.Top="107" Width="55" HorizontalAlignment="Center" VerticalAlignment="Top" >
                     <ComboBox.Background>
@@ -82,31 +72,24 @@
                     <ComboBoxItem Content="O-"/>
                 </ComboBox>
 
-                <!--Seccion Tel-->
                 <Label Content="Telefono: " Canvas.Top="195" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
                 <TextBox x:Name="BoxTel" TextWrapping="Wrap" Text="" Width="200" Canvas.Left="67" Canvas.Top="200" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="22" Background="#FFF2F2F7" MaxLength="10"/>
 
-                <!--Seccion Contacto-Emergencia-->
                 <Label Content="Telefono de emergencia: " Canvas.Left="400" Canvas.Top="190" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4" />
                 <TextBox x:Name="BoxContactoEmergencia" TextWrapping="Wrap" Text="" Width="140" Canvas.Left="570" Canvas.Top="195" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" PreviewTextInput="BoxNumerico_PreviewTextInput" Height="22" Background="#FFF2F2F7" MaxLength="10"/>
 
-                <!--Seccion Mail-->
                 <Label Content="Correo Electronico: " Canvas.Left="750" Canvas.Top="189" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
                 <TextBox x:Name="BoxMail" TextWrapping="Wrap" Text="" Width="195" Canvas.Left="883" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="22" Background="#FFF2F2F7" MaxLength="35"/>
 
-                <!--Seccion Fecha Inscripcion-->
                 <Label Canvas.Left="1120" Canvas.Top="188" Content="Fecha de inscripcion: " HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4" />
                 <DatePicker x:Name="DateInscripcion" Canvas.Left="1270" Canvas.Top="187" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Height="25" Width="173" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" BorderBrush="#FF617584"/>
             </Canvas>
         </GroupBox>
 
-        <!--FICHA MEDICA-->
         <GroupBox Header="Ficha Medica" Margin="1,340,40,0" Background="#3A3A3C" VerticalAlignment="Top" Height="665" FontSize="15" Grid.Column="1" Foreground="#FFFFAB40">
             <Canvas Height="670" RenderTransformOrigin="0.393,0.048" Margin="0,0,1,0">
-                <!--GROUP BOX 1-->
 
                 <Canvas>
-                    <!--PREGUNTA 1-->
                     <Label Content="1. ¿Ha tenido o tiene alguna lesion osea? " HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="14" Canvas.Top="18" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="45" Canvas.Top="57" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <TextBox x:Name="BoxMedicoUno" Canvas.Left="51" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFF2F2F7" Grid.Column="1" Height="21" MaxLength="15"/>
@@ -117,10 +100,7 @@
                     <Border Height="2" Background="Gray" Width="1720" Canvas.Top="139" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="3"/>
                 </Canvas>
 
-                <!--GROUP BOX 2-->
-
                 <Canvas>
-                    <!--PREGUNTA 2-->
                     <Label Content="2. ¿Ha tenido o tiene alguna lesion muscular? " Canvas.Left="14" Canvas.Top="158" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="198" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <TextBox x:Name="BoxMedicoDos" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="240" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" MaxLength="15"/>
@@ -131,10 +111,7 @@
                     <Border Height="2" Background="Gray" Width="771" Canvas.Top="420" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="3" Grid.Column="1"/>
                 </Canvas>
 
-                <!--GROUP BOX 3-->
-
                 <Canvas>
-                    <!--PREGUNTA 3-->
                     <Label Content="3. ¿Padece alguna enfermedad cardiovascular? " Canvas.Left="12" Canvas.Top="293" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="5" Foreground="#FFECEFF4"/>
                     <Label Content="En caso de afirmativo , describalo brevemente: " Canvas.Left="44" Canvas.Top="338" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <TextBox x:Name="BoxMedicoTres" Canvas.Left="50" TextWrapping="Wrap" Text="" Canvas.Top="380" Width="400" Background="#FFF2F2F7" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" MaxLength="15"/>
@@ -146,7 +123,6 @@
                 </Canvas>
 
                 <Canvas>
-                    <!--PREGUNTA 4-->
                     <Label Content="4. ¿Se afixia con facilidad al realizar ejercicio fisico? " Canvas.Left="13" Canvas.Top="438" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxAfixia" Canvas.Left="725" Canvas.Top="473" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -155,11 +131,8 @@
                     <Border Height="2" Background="Gray" Width="771" Canvas.Top="499" Canvas.Left="3" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
                 </Canvas>
 
-
-                <!--PREGUNTA 5-->
                 <Label Content="5. ¿Es usted? " Canvas.Left="14" Canvas.Top="518" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFECEFF4"/>
 
-                <!--1.-->
                 <Canvas>
                     <Label Content="Asmatico/a" Canvas.Left="205" Canvas.Top="538" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxAsmatico" Canvas.Left="290" Canvas.Top="540" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="50">
@@ -169,7 +142,6 @@
                 </Canvas>
 
                 <Canvas>
-                    <!--2.-->
                     <Label Content="Epileptico/a" Canvas.Left="204" Canvas.Top="578" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxEpileptico" Canvas.Left="292" Canvas.Top="580" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -178,7 +150,6 @@
                 </Canvas>
 
                 <Canvas>
-                    <!--3.-->
                     <Label Content="Diabetico/a" Canvas.Left="424" Canvas.Top="538" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxDiabetico" Canvas.Left="510" Canvas.Top="540" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -187,7 +158,6 @@
                 </Canvas>
 
                 <Canvas>
-                    <!--4.-->
                     <Label Content="Fumador/a" Canvas.Left="424" Canvas.Top="578" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxFumador" Canvas.Left="507" Canvas.Top="580" HorizontalAlignment="Center" VerticalAlignment="Top" Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -206,11 +176,9 @@
                     </Border.RenderTransform>
                 </Border>
 
-                <!--PREGUNTA 6-->
                 <Label Content="6. Indique si ha tenido alguno de estos sintomas al realizar esfuerzos o ejercicio fisico: " Canvas.Left="785" Canvas.Top="18" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
 
                 <Canvas>
-                    <!--A.-->
                     <Label Content="Mareos: " Canvas.Left="804" Canvas.Top="63" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxMareos" Canvas.Left="867" Canvas.Top="65" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -218,9 +186,7 @@
                     </ComboBox>
                 </Canvas>
 
-                <!--G.P 2-->
                 <Canvas>
-                    <!--B.-->
                     <Label Content="Desmayos o Lipotomias: " Canvas.Left="804" Canvas.Top="103" Grid.Column="1" Foreground="#FFECEFF4" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                     <ComboBox x:Name="ComboBoxDesmayos" Canvas.Left="972" Canvas.Top="103" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -228,9 +194,7 @@
                     </ComboBox>
                 </Canvas>
 
-                <!--G.P 3-->
                 <Canvas>
-                    <!--C.-->
                     <Label Content="Dificultad para respirar: " Canvas.Left="1104" Canvas.Top="63" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxRespirar" Canvas.Left="1267" Canvas.Top="63" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -238,9 +202,7 @@
                     </ComboBox>
                 </Canvas>
 
-                <!--G.P 4-->
                 <Canvas>
-                    <!--D.-->
                     <Label Content="Nauseas: " Canvas.Left="1104" Canvas.Top="104" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxNauseas" Canvas.Left="1174" Canvas.Top="104" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -248,10 +210,7 @@
                     </ComboBox>
                 </Canvas>
 
-
-                <!--G.P 7-->
                 <Canvas>
-                    <!--PREGUNTA 7-->
                     <Label Content="7. ¿Padece de anemia en la actualidad?" Canvas.Left="785" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxAnemia" Canvas.Left="1042" Canvas.Top="173" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -259,9 +218,7 @@
                     </ComboBox>
                 </Canvas>
 
-                <!--G.P 8-->
                 <Canvas>
-                    <!--PREGUNTA 8-->
                     <Label Content="8. ¿Esta ud. Embarazada o sospecha estarlo?" Canvas.Left="785" Canvas.Top="198" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxEmbarazada" Canvas.Left="1077" Canvas.Top="254" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -269,9 +226,7 @@
                     </ComboBox>
                 </Canvas>
 
-                <!--G.P 9-->
                 <Canvas>
-                    <!--PREGUNTA 9-->
                     <Label Content="9. ¿Ha practicado o practica alguna actividad deportiva?" Canvas.Left="785" Canvas.Top="278" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
                     <ComboBox x:Name="ComboBoxDeporte" Canvas.Left="1157" Canvas.Top="333" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="50">
                         <ComboBoxItem Content="SI"></ComboBoxItem>
@@ -279,7 +234,6 @@
                     </ComboBox>
                 </Canvas>
 
-                <!--Guardar datos-->
                 <Button x:Name="BtnGuardar" Canvas.Left="1360" Canvas.Top="589" Height="30" Width="135" Click="BtnGuardar_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Background="#FFFFAB40" BorderBrush="{x:Null}">
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon="DataBase" Foreground="Black" MaxWidth="40" Height="15"  Width="15"/>
@@ -298,7 +252,6 @@
                     </Border.RenderTransform>
                 </Border>
 
-                <!--Imprimir datos-->
                 <Button x:Name="BtnImprimir" Canvas.Left="1510" Canvas.Top="589" Height="30" Width="135" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Click="BtnImprimir_Click" Background="#FFFFAB40" BorderBrush="{x:Null}">
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon="Print" Foreground="Black" MaxWidth="40" Height="15"  Width="15"/>
@@ -339,20 +292,16 @@
 
                 <GroupBox Height="267" Header="Formas de pago" Width="500" Canvas.Left="825" Canvas.Top="364" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFFFAB40" BorderBrush="#FFFFAB40">
                     <Canvas Margin="2,5,2,1">
-                        <!--TARJETA-->
                         <Label Content="N° Tarjeta:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Canvas.Left="9" Foreground="#FFECEFF4"/>
                         <TextBox x:Name="BoxTarjeta" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="41" Width="140" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="16"/>
 
-                        <!--CADUCIDAD-->
                         <Label Content="Caducidad:"  Canvas.Top="75" RenderTransformOrigin="0.378,0.699" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Canvas.Left="10" Foreground="#FFECEFF4"/>
                         <TextBox x:Name="BoxCaducidadUno" Canvas.Left="15" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="2"/>
                         <TextBox x:Name="BoxCaducidadDos" Canvas.Left="75" TextWrapping="Wrap" Text="" Canvas.Top="121" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="2"/>
 
-                        <!--CODIGO SEGURIDAD-->
                         <Label Content="Cod. Seguridad:"  Canvas.Top="160" Grid.Column="1" Canvas.Left="9" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFECEFF4"/>
                         <PasswordBox x:Name="BoxCodigoSeguridad" Canvas.Left="15" Canvas.Top="201" Width="60" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="21" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7"  MaxLength="3"/>
 
-                        <!--$ CUOTA-->
                         <Label Content="Valor de cuota:" Canvas.Left="240" Canvas.Top="120" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFECEFF4"/>
                         <TextBox x:Name="BoxValorCuota" Canvas.Left="247" TextWrapping="Wrap" Text="" Canvas.Top="150" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" PreviewTextInput="BoxNumerico_PreviewTextInput" Background="#FFF2F2F7" MaxLength="6"/>
                         <GridSplitter Height="21" Canvas.Left="69" Canvas.Top="121" Width="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFFFAB40"/>

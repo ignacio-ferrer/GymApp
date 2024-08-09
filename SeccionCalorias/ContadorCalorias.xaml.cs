@@ -16,6 +16,7 @@ using GymApp.API;
 using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace GymApp.SeccionCalorias
 {
@@ -46,7 +47,7 @@ namespace GymApp.SeccionCalorias
                         var items = JArray.Parse(result);
                         if (items.Count > 0)
                         {
-                            var item = items[0];
+                            var item = items[0]; 
                             MostrarNutrientes(item);
                         }
                         else
@@ -54,11 +55,22 @@ namespace GymApp.SeccionCalorias
                             ResultTextBlock.Text = "No se encontraron resultados.";
                         }
                     }
-                    catch (Exception)
+                    catch (JsonException)
                     {
-                        var item = JObject.Parse(result);
-                        MostrarNutrientes(item);
+                        try
+                        {
+                            var item = JObject.Parse(result);
+                            MostrarNutrientes(item);
+                        }
+                        catch (JsonException ex)
+                        {
+                            ResultTextBlock.Text = $"Error: {ex.Message}\nJSON Response:\n{result}";
+                        }
                     }
+                }
+                catch (TaskCanceledException)
+                {
+                    ResultTextBlock.Text = "Error: La solicitud ha sido cancelada. Asegúrese de que la conexión a Internet sea estable y vuelva a intentarlo.";
                 }
                 catch (Exception ex)
                 {
@@ -73,31 +85,19 @@ namespace GymApp.SeccionCalorias
 
         private void MostrarNutrientes(JToken item)
         {
-            var name = item["brand_name"]?.ToString() ?? item["description"]?.ToString() ?? "Desconocido";
-            var calories = item["nutritional_contents"]?["energy"]?["value"]?.ToString() ?? "Desconocido";
-            var protein = item["nutritional_contents"]?["protein"]?.ToString() ?? "Desconocido";
-            var carbohydrates = item["nutritional_contents"]?["carbohydrates"]?.ToString() ?? "Desconocido";
-            var fat = item["nutritional_contents"]?["fat"]?.ToString() ?? "Desconocido";
-            var fiber = item["nutritional_contents"]?["fiber"]?.ToString() ?? "Desconocido";
+            var name = item["name"]?.ToString() ?? "Desconocido";
+            var calories = item["nutrition"]?["Calories"]?.ToString() ?? "Desconocido";
+            var protein = item["nutrition"]?["Protein"]?.ToString() ?? "Desconocido";
+            var carbohydrates = item["nutrition"]?["Carbs"]?.ToString() ?? "Desconocido";
+            var fat = item["nutrition"]?["Fat"]?.ToString() ?? "Desconocido";
 
             var formattedResult = $"Nombre: {name}\n" +
                                   $"Calorías: {calories}\n" +
                                   $"Proteína: {protein}\n" +
                                   $"Carbohidratos: {carbohydrates}\n" +
-                                  $"Grasa: {fat}\n" +
-                                  $"Fibra: {fiber}";
+                                  $"Grasa: {fat}";
 
             ResultTextBlock.Text = formattedResult;
-        }
-
-        private void BoxNombre_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (!IsAllLetters(FoodTextBox.Text))
-            {
-                MessageBox.Show("Por favor, introduce solo letras en el nombre.");
-                FoodTextBox.Text = new string(FoodTextBox.Text.Where(char.IsLetter).ToArray());
-                FoodTextBox.CaretIndex = FoodTextBox.Text.Length;
-            }
         }
 
         private bool IsAllLetters(string str)
@@ -140,7 +140,6 @@ namespace GymApp.SeccionCalorias
             double pocoEjercicio = 1.2, ejercicioLigero = 1.375, ejercicioModerado = 1.55, ejercicioFuerte = 1.725, ejercicioMuyFuerte = 1.9;
             double caloriasFinales, resultado, primeraSuma, segundaSuma, primeraResta;
 
-            //1
             if (RadioPocoEjercicio.IsChecked.HasValue && RadioPocoEjercicio.IsChecked.Value)
             {
                 if (sexo == "Masculino")
@@ -169,7 +168,6 @@ namespace GymApp.SeccionCalorias
                 BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
 
-            //2
             if (RadioEjercicioLigero.IsChecked.HasValue && RadioEjercicioLigero.IsChecked.Value)
             {
                 if (sexo == "Masculino")
@@ -198,7 +196,6 @@ namespace GymApp.SeccionCalorias
                 BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
 
-            //3
             if (RadioEjercicioModerado.IsChecked.HasValue && RadioEjercicioModerado.IsChecked.Value)
             {
                 if (sexo == "Masculino")
@@ -227,7 +224,6 @@ namespace GymApp.SeccionCalorias
                 BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
 
-            //4
             if (RadioEjercicioFuerte.IsChecked.HasValue && RadioEjercicioFuerte.IsChecked.Value)
             {
                 if (sexo == "Masculino")
@@ -256,7 +252,6 @@ namespace GymApp.SeccionCalorias
                 BoxResultadoCalorias.Text = caloriasFinales.ToString("F2");
             }
 
-            //5
             if (RadioEjercicioMuyFuerte.IsChecked.HasValue && RadioEjercicioMuyFuerte.IsChecked.Value)
             {
                 if (sexo == "Masculino")

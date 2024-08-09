@@ -15,7 +15,6 @@
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Ejercicios seleccionados -->
         <ListBox x:Name="ListaEjerciciosSeleccionados" Grid.Column="0" 
                  ItemsSource="{Binding EjerciciosSeleccionados}" Background="#2E3440" d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="#FFEDEDED" FontSize="22" BorderBrush="{x:Null}">
             <ListBox.ItemTemplate>
@@ -50,9 +49,6 @@
             </ListBox.ItemTemplate>
         </ListBox>
         
-        <!-- GRUPO MUSCULARES GRANDES-->
-
-        <!-- Ejercicios de Pecho -->
         <StackPanel Grid.Column="1" Background="#3A3A3C" Margin="0,0,0,1">
             <Label Content="Pecho" FontSize="22.5" Margin="1" Height="35" Foreground="#FFECEFF4" UseLayoutRounding="False" FontWeight="Bold" />
             <ListBox x:Name="ListaEjerciciosPecho" 
@@ -69,7 +65,6 @@
             </ListBox>
         </StackPanel>
 
-        <!-- Ejercicios de Espalda -->
         <StackPanel Grid.Column="1" Margin="0,155,0,0">
             <Label Content="Espalda" FontWeight="Bold" FontSize="22.5" Margin="1" Height="42" Foreground="#FFECEFF4"/>
             <ListBox x:Name="ListaEjerciciosEspalda" 
@@ -87,7 +82,6 @@
             </ListBox>
         </StackPanel>
 
-        <!-- Ejercicios de Piernas -->
         <StackPanel Grid.Column="1" Margin="0,325,0,0">
             <Label Content="Piernas" FontWeight="Bold" FontSize="22.5" Margin="1"  Height="34" Background="#00000000" Foreground="#FFECEFF4"/>
             <ListBox x:Name="ListaEjerciciosPiernas" 
@@ -104,7 +98,6 @@
             </ListBox>
         </StackPanel>
 
-        <!-- Ejercicios de Biceps -->
         <StackPanel Grid.Column="1" Margin="0,485,0,0">
             <Label Content="Biceps" FontWeight="Bold" FontSize="22.5" Margin="1"  Height="40" Background="#00000000" Foreground="#FFECEFF4"/>
             <ListBox x:Name="ListaEjerciciosBiceps" 
@@ -121,7 +114,6 @@
             </ListBox>
         </StackPanel>
 
-        <!-- Ejercicios de Triceps -->
         <StackPanel Grid.Column="1" Margin="1,596,0,0">
             <Label Content="Triceps" FontWeight="Bold" FontSize="22.5" Margin="1"  Height="38" Background="#00000000" Foreground="#FFECEFF4"/>
             <ListBox x:Name="ListaEjerciciosTriceps" 
@@ -138,7 +130,6 @@
             </ListBox>
         </StackPanel>
 
-        <!-- Ejercicios de Hombros -->
         <StackPanel Grid.Column="1" Margin="0,711,0,0">
             <Label Content="Hombros" FontWeight="Bold" FontSize="22.5" Margin="1" Height="35" Background="#00000000" Foreground="#FFECEFF4"/>
             <ListBox x:Name="ListaEjerciciosHombros" 
@@ -155,7 +146,6 @@
             </ListBox>
         </StackPanel>
 
-        <!-- Ejercicios de Trapecio -->
         <StackPanel Grid.Column="1" Margin="0,825,0,0">
             <Label Content="Trapecio" FontWeight="Bold" FontSize="22.5" Margin="1"  Height="38" Background="#00000000" Foreground="#FFECEFF4"/>
             <ListBox x:Name="ListaEjerciciosTrapecio" 
@@ -172,7 +162,6 @@
             </ListBox>
         </StackPanel>
 
-        <!-- Ejercicios de Gemelos -->
         <StackPanel Grid.Column="1" Margin="0,913,0,0">
             <Label Content="Gemelos" FontWeight="Bold" FontSize="22.5" Margin="1"  Height="38" Background="#00000000" Foreground="#FFECEFF4"/>
             <ListBox x:Name="ListaEjerciciosGemelos" 

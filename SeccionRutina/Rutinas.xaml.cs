@@ -18,19 +18,16 @@ namespace GymApp.SeccionRutina
 {
     public partial class Rutinas : Page
     {
-        //grupo muscular grande
         public ObservableCollection<Ejercicio> EjerciciosPecho { get; set; }
         public ObservableCollection<Ejercicio> EjerciciosEspalda { get; set; }
         public ObservableCollection<Ejercicio> EjerciciosPiernas { get; set; }
 
-        //grupo muscular chico
         public ObservableCollection<Ejercicio> EjerciciosBiceps { get; set; }
         public ObservableCollection<Ejercicio> EjerciciosTriceps { get; set; }
         public ObservableCollection<Ejercicio> EjerciciosHombros { get; set; }
         public ObservableCollection<Ejercicio> EjerciciosTrapecio { get; set; }
         public ObservableCollection<Ejercicio> EjerciciosGemelos { get; set; }
 
-        //el ejercicio seleccionado
         public ObservableCollection<Ejercicio> EjerciciosSeleccionados { get; set; }
         public ICommand ComandoAgregarEjercicios { get; set; }
 
@@ -38,7 +35,6 @@ namespace GymApp.SeccionRutina
         {
             InitializeComponent();
 
-            //GRUPO MUSCULAR GRANDE
             EjerciciosPecho = new ObservableCollection<Ejercicio>
             {
                 new Ejercicio { Nombre = "Press de banca"},
@@ -66,8 +62,6 @@ namespace GymApp.SeccionRutina
                 new Ejercicio { Nombre = "Hip Thrust"}
             };
 
-
-            //GRUPO MUSCULAR CHICO
             EjerciciosBiceps = new ObservableCollection<Ejercicio>
             {
                 new Ejercicio { Nombre = "Curl inclinado en banco con mancuernas (Enfasis en cabeza larga)"},
