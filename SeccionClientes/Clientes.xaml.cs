@@ -64,7 +64,7 @@ namespace GymApp.SeccionClientes
         {
             if (ClientesDataGrid.SelectedItem is DatosPersonales selectedClient)
             {
-                repositorioCliente.BorrarUsuario(selectedClient.ClienteId);
+                repositorioCliente.BorrarUsuario(selectedClient.ClienteID);
                 LoadCliente();
             }
             else
@@ -77,22 +77,22 @@ namespace GymApp.SeccionClientes
         {
             if (ClientesDataGrid.SelectedItem is DatosPersonales selectedClient)
             {
-                selectedClient.nombre = "";
-                selectedClient.apellido = "";
-                selectedClient.edad = 0;
-                selectedClient.dni = 0;
-                selectedClient.sexo = "";
-                selectedClient.fechaNacimiento = new DateTime();
-                selectedClient.direccion = "";
-                selectedClient.localidad = "";
-                selectedClient.codigoPostal = 0;
-                selectedClient.grupoSanguineo = "";
-                selectedClient.telefono = 0;
-                selectedClient.telefonoEmergencia = 0;
-                selectedClient.correo = "";
-                selectedClient.fechaInscripcion = DateTime.Now;
-                selectedClient.metodoDePago = "";
-                selectedClient.valorDeCuota = 0;
+                selectedClient.Nombre = "";
+                selectedClient.Apellido = "";
+                selectedClient.Edad = 0;
+                selectedClient.Dni = 0;
+                selectedClient.Sexo = "";
+                selectedClient.FechaNacimiento = new DateTime();
+                selectedClient.Direccion = "";
+                selectedClient.Localidad = "";
+                selectedClient.CodigoPostal = 0;
+                selectedClient.GrupoSanguineo = "";
+                selectedClient.Telefono = 0;
+                selectedClient.TelefonoEmergencia = 0;
+                selectedClient.Correo = "";
+                selectedClient.FechaInscripcion = DateTime.Now;
+                selectedClient.MetodoDePago = "";
+                selectedClient.ValorDeCuota = 0;
 
                 repositorioCliente.EditarUsuario(selectedClient);
                 LoadCliente();

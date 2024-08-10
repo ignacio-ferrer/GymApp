@@ -138,7 +138,7 @@ namespace GymApp.SeccionClientes
         {
             if (DataGridMedico.SelectedItem is DatosMedicos selectedFichaMedica)
             {
-                repositorioMedico.BorrarFichaMedica(selectedFichaMedica.clienteID);
+                repositorioMedico.BorrarFichaMedica(selectedFichaMedica.ClienteID);
                 CargarCliente();
             }
             else

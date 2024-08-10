@@ -49,21 +49,21 @@ namespace GymApp.Data
                 @Asmatico, @Diabetico, @Epileptico, @Fumador, @Mareos, 
                 @Desmayos, @Respirar, @Nauseas, @Anemia, @Embarazada);", connection);
 
-                insertCommand.Parameters.AddWithValue("@IdCliente", datosMedicos.clienteID);
-                insertCommand.Parameters.AddWithValue("@LesionOsea", datosMedicos.lesionOsea);
-                insertCommand.Parameters.AddWithValue("@LesionMuscular", datosMedicos.lesionMuscular);
-                insertCommand.Parameters.AddWithValue("@EnfermedadCardiovascular", datosMedicos.enfermedadCardiovascular);
-                insertCommand.Parameters.AddWithValue("@Afixia", datosMedicos.afixia);
-                insertCommand.Parameters.AddWithValue("@Asmatico", datosMedicos.asmatico);
-                insertCommand.Parameters.AddWithValue("@Diabetico", datosMedicos.diabetico);
-                insertCommand.Parameters.AddWithValue("@Epileptico", datosMedicos.epileptico);
-                insertCommand.Parameters.AddWithValue("@Fumador", datosMedicos.fumador);
-                insertCommand.Parameters.AddWithValue("@Mareos", datosMedicos.mareos);
-                insertCommand.Parameters.AddWithValue("@Desmayos", datosMedicos.desmayos);
-                insertCommand.Parameters.AddWithValue("@Respirar", datosMedicos.respirar);
-                insertCommand.Parameters.AddWithValue("@Nauseas", datosMedicos.nauseas);
-                insertCommand.Parameters.AddWithValue("@Anemia", datosMedicos.anemia);
-                insertCommand.Parameters.AddWithValue("@Embarazada", datosMedicos.embarazada);
+                insertCommand.Parameters.AddWithValue("@IdCliente", datosMedicos.ClienteID);
+                insertCommand.Parameters.AddWithValue("@LesionOsea", datosMedicos.LesionOsea);
+                insertCommand.Parameters.AddWithValue("@LesionMuscular", datosMedicos.LesionMuscular);
+                insertCommand.Parameters.AddWithValue("@EnfermedadCardiovascular", datosMedicos.EnfermedadCardiovascular);
+                insertCommand.Parameters.AddWithValue("@Afixia", datosMedicos.Afixia);
+                insertCommand.Parameters.AddWithValue("@Asmatico", datosMedicos.Asmatico);
+                insertCommand.Parameters.AddWithValue("@Diabetico", datosMedicos.Diabetico);
+                insertCommand.Parameters.AddWithValue("@Epileptico", datosMedicos.Epileptico);
+                insertCommand.Parameters.AddWithValue("@Fumador", datosMedicos.Fumador);
+                insertCommand.Parameters.AddWithValue("@Mareos", datosMedicos.Mareos);
+                insertCommand.Parameters.AddWithValue("@Desmayos", datosMedicos.Desmayos);
+                insertCommand.Parameters.AddWithValue("@Respirar", datosMedicos.Respirar);
+                insertCommand.Parameters.AddWithValue("@Nauseas", datosMedicos.Nauseas);
+                insertCommand.Parameters.AddWithValue("@Anemia", datosMedicos.Anemia);
+                insertCommand.Parameters.AddWithValue("@Embarazada", datosMedicos.Embarazada);
 
                 insertCommand.ExecuteNonQuery();
 

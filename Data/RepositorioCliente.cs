@@ -35,22 +35,22 @@ namespace GymApp.Data
                 var command = new SqlCommand("InsertarCliente", connection); 
                 command.CommandType = CommandType.StoredProcedure;
                  
-                command.Parameters.AddWithValue("@nombre", datosPersonales.nombre);
-                command.Parameters.AddWithValue("@apellido", datosPersonales.apellido);
-                command.Parameters.AddWithValue("@edad", datosPersonales.edad);
-                command.Parameters.AddWithValue("@dni", datosPersonales.dni);
-                command.Parameters.AddWithValue("@sexo", datosPersonales.sexo);
-                command.Parameters.AddWithValue("@fechaNacimiento", datosPersonales.fechaNacimiento);
-                command.Parameters.AddWithValue("@direccion", datosPersonales.direccion);
-                command.Parameters.AddWithValue("@localidad", datosPersonales.localidad);
-                command.Parameters.AddWithValue("@codigoPostal", datosPersonales.codigoPostal);
-                command.Parameters.AddWithValue("@grupoSanguineo", datosPersonales.grupoSanguineo);
-                command.Parameters.AddWithValue("@telefono", datosPersonales.telefono);
-                command.Parameters.AddWithValue("@telefonoEmergencia", datosPersonales.telefonoEmergencia);
-                command.Parameters.AddWithValue("@correo", datosPersonales.correo);
-                command.Parameters.AddWithValue("@fechaInscripcion", datosPersonales.fechaInscripcion);
-                command.Parameters.AddWithValue("@metodoDePago", datosPersonales.metodoDePago);
-                command.Parameters.AddWithValue("@valorDeCuota", datosPersonales.valorDeCuota);
+                command.Parameters.AddWithValue("@nombre", datosPersonales.Nombre);
+                command.Parameters.AddWithValue("@apellido", datosPersonales.Apellido);
+                command.Parameters.AddWithValue("@edad", datosPersonales.Edad);
+                command.Parameters.AddWithValue("@dni", datosPersonales.Dni);
+                command.Parameters.AddWithValue("@sexo", datosPersonales.Sexo);
+                command.Parameters.AddWithValue("@fechaNacimiento", datosPersonales.FechaNacimiento);
+                command.Parameters.AddWithValue("@direccion", datosPersonales.Direccion);
+                command.Parameters.AddWithValue("@localidad", datosPersonales.Localidad);
+                command.Parameters.AddWithValue("@codigoPostal", datosPersonales.CodigoPostal);
+                command.Parameters.AddWithValue("@grupoSanguineo", datosPersonales.GrupoSanguineo);
+                command.Parameters.AddWithValue("@telefono", datosPersonales.Telefono);
+                command.Parameters.AddWithValue("@telefonoEmergencia", datosPersonales.TelefonoEmergencia);
+                command.Parameters.AddWithValue("@correo", datosPersonales.Correo);
+                command.Parameters.AddWithValue("@fechaInscripcion", datosPersonales.FechaInscripcion);
+                command.Parameters.AddWithValue("@metodoDePago", datosPersonales.MetodoDePago);
+                command.Parameters.AddWithValue("@valorDeCuota", datosPersonales.ValorDeCuota);
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -65,23 +65,23 @@ namespace GymApp.Data
 
                 var parameters = new
                 {
-                    ClienteId = datosPersonales.ClienteId,
-                    nombre = datosPersonales.nombre,
-                    apellido = datosPersonales.apellido,
-                    edad = datosPersonales.edad,
-                    dni = datosPersonales.dni,
-                    sexo = datosPersonales.sexo,
-                    fechaNacimiento =datosPersonales.fechaNacimiento,
-                    direccion = datosPersonales.direccion,
-                    localidad = datosPersonales.localidad,
-                    codigoPostal = datosPersonales.codigoPostal,
-                    grupoSanguineo = datosPersonales.grupoSanguineo,
-                    telefono = datosPersonales.telefono,
-                    telefonoEmergencia = datosPersonales.telefonoEmergencia,
-                    correo = datosPersonales.correo,
-                    fechaInscripcion = datosPersonales.fechaInscripcion,
-                    metodoDePago = datosPersonales.metodoDePago,
-                    valorDeCuota = datosPersonales.valorDeCuota
+                    ClienteId = datosPersonales.ClienteID,
+                    nombre = datosPersonales.Nombre,
+                    apellido = datosPersonales.Apellido,
+                    edad = datosPersonales.Edad,
+                    dni = datosPersonales.Dni,
+                    sexo = datosPersonales.Sexo,
+                    fechaNacimiento =datosPersonales.FechaNacimiento,
+                    direccion = datosPersonales.Direccion,
+                    localidad = datosPersonales.Localidad,
+                    codigoPostal = datosPersonales.CodigoPostal,
+                    grupoSanguineo = datosPersonales.GrupoSanguineo,
+                    telefono = datosPersonales.Telefono,
+                    telefonoEmergencia = datosPersonales.TelefonoEmergencia,
+                    correo = datosPersonales.Correo,
+                    fechaInscripcion = datosPersonales.FechaInscripcion,
+                    metodoDePago = datosPersonales.MetodoDePago,
+                    valorDeCuota = datosPersonales.ValorDeCuota
                 };
 
                 connection.Execute(sql, parameters);

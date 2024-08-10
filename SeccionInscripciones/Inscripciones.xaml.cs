@@ -89,39 +89,39 @@ namespace GymApp.SeccionInscripciones
                     return;
                 }
 
-                datosPersonales.nombre = BoxNombre.Text;
-                datosPersonales.apellido = BoxApellido.Text;
-                datosPersonales.edad = BoxDeEdad;
-                datosPersonales.dni = BoxDeDni;
-                datosPersonales.sexo = BoxSexo.Text;
-                datosPersonales.fechaNacimiento = FechaCumple;
-                datosPersonales.direccion = BoxDirec.Text;
-                datosPersonales.localidad = BoxLocalidad.Text;
-                datosPersonales.codigoPostal = BoxDeCP;
-                datosPersonales.grupoSanguineo = BoxGrupoSanguineo.Text;
-                datosPersonales.telefono = BoxDeTelefono;
-                datosPersonales.telefonoEmergencia = BoxDeTelefonoEmergencia;
-                datosPersonales.correo = BoxMail.Text;
-                datosPersonales.fechaInscripcion = FechaInscripcion;
-                datosPersonales.metodoDePago = BoxMetodoPago.Text;
-                datosPersonales.valorDeCuota = BoxDeValorCuota;
+                datosPersonales.Nombre = BoxNombre.Text;
+                datosPersonales.Apellido = BoxApellido.Text;
+                datosPersonales.Edad = BoxDeEdad;
+                datosPersonales.Dni = BoxDeDni;
+                datosPersonales.Sexo = BoxSexo.Text;
+                datosPersonales.FechaNacimiento = FechaCumple;
+                datosPersonales.Direccion = BoxDirec.Text;
+                datosPersonales.Localidad = BoxLocalidad.Text;
+                datosPersonales.CodigoPostal = BoxDeCP;
+                datosPersonales.GrupoSanguineo = BoxGrupoSanguineo.Text;
+                datosPersonales.Telefono = BoxDeTelefono;
+                datosPersonales.TelefonoEmergencia = BoxDeTelefonoEmergencia;
+                datosPersonales.Correo = BoxMail.Text;
+                datosPersonales.FechaInscripcion = FechaInscripcion;
+                datosPersonales.MetodoDePago = BoxMetodoPago.Text;
+                datosPersonales.ValorDeCuota = BoxDeValorCuota;
 
                 repositorioCliente.AgregarCliente(datosPersonales);
 
-                datosMedicos.lesionOsea = ComboBoxOsea.Text;
-                datosMedicos.lesionMuscular = ComboBoxMuscular.Text;
-                datosMedicos.enfermedadCardiovascular = ComboBoxCardio.Text;
-                datosMedicos.afixia = ComboBoxAfixia.Text;
-                datosMedicos.asmatico = ComboBoxAsmatico.Text;
-                datosMedicos.diabetico = ComboBoxDiabetico.Text;
-                datosMedicos.epileptico = ComboBoxEpileptico.Text;
-                datosMedicos.fumador = ComboBoxFumador.Text;
-                datosMedicos.mareos =  ComboBoxMareos.Text;
-                datosMedicos.desmayos = ComboBoxDesmayos.Text;
-                datosMedicos.respirar = ComboBoxRespirar.Text;
-                datosMedicos.nauseas =  ComboBoxNauseas.Text;
-                datosMedicos.anemia = ComboBoxAnemia.Text;
-                datosMedicos.embarazada = ComboBoxEmbarazada.Text;
+                datosMedicos.LesionOsea = ComboBoxOsea.Text;
+                datosMedicos.LesionMuscular = ComboBoxMuscular.Text;
+                datosMedicos.EnfermedadCardiovascular = ComboBoxCardio.Text;
+                datosMedicos.Afixia = ComboBoxAfixia.Text;
+                datosMedicos.Asmatico = ComboBoxAsmatico.Text;
+                datosMedicos.Diabetico = ComboBoxDiabetico.Text;
+                datosMedicos.Epileptico = ComboBoxEpileptico.Text;
+                datosMedicos.Fumador = ComboBoxFumador.Text;
+                datosMedicos.Mareos =  ComboBoxMareos.Text;
+                datosMedicos.Desmayos = ComboBoxDesmayos.Text;
+                datosMedicos.Respirar = ComboBoxRespirar.Text;
+                datosMedicos.Nauseas =  ComboBoxNauseas.Text;
+                datosMedicos.Anemia = ComboBoxAnemia.Text;
+                datosMedicos.Embarazada = ComboBoxEmbarazada.Text;
 
                 repositorioMedico.AgregarFichaMedica(datosMedicos);
 
