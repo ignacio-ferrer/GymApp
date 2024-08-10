@@ -2,7 +2,7 @@
 
 •La aplicacion es ideal para un gimnasio , facilita la inscripcion de un cliente , se puede hacer mediante la aplicacion o tambien con la funcionalidad de imprimri la planilla y asi cada cliente lo puede llenar.
 
-•La informacion personal y medica de cada cliente es guardada , esto facilita al usuario hacerle un correcto seguimiento a cada cliente.
+•La informacion personal y medica de cada cliente es guardada , esto facilita al usuario hacerle un correcto seguimiento a cada persona.
 
 •Con el creador de rutinas , es posible crear una totalmente personalizada , depediendo lo que busque el cliente , contiene todos los grupos musculares importantes para la hora de entrenar
 
@@ -19,7 +19,7 @@ la aplicacion cuenta con 5 opciones:
 
 3. [Ficha Medica]: Acceso rápido a la ficha médica de los clientes mediante búsquedas por nombre.
 
-4. [Rutinas]: Esta seccion es un creador de rutinas totalmente personalizado para cada cliente. Cuenta con 5 distintos ejercicios para los 3 grupos musculares mas grandes (Pecho , Espalda , Piernas) y para los otros musculos , cuenta con una variedad entre 3 y 2 ejercicios. Se puede elegir cuantas series y repeticiones hacer por cada ejercicio. Una vez que tengas la rutina hecha para tu cliente , podes imprimirlo , permitiendole al cliente tener la rutina con mas facilidad (esta ultima parte cambiarla un poco , pero con la misma idea ) 
+4. [Rutinas]: Esta seccion es un creador de rutinas totalmente personalizado para cada cliente. Cuenta con 5 distintos ejercicios para los 3 grupos musculares mas grandes (Pecho , Espalda , Piernas) y para los otros musculos , cuenta con una variedad entre 3 y 2 ejercicios. Se puede elegir cuantas series y repeticiones hacer por cada ejercicio. Una vez que tengas la rutina hecha para tu cliente , podes imprimirlo , permitiendole al cliente tener la rutina con mas facilidad.
 
 5. [Calorias]: Ideal para saber cuantas calorias consumir dependiendo de tu nivel de actividad fisica y mediante la: edad, altura, sexo y peso. Tambien cuenta con un 'check de nutrientes' , en donde el usuario ingresa un alimento y este le regresa los nutrientes de dicho alimento.
 
@@ -41,7 +41,7 @@ la aplicacion cuenta con 5 opciones:
 
 	¿Por qué el proyecto es útil?
 
- Para todas aquellas personas que entrenan y quieren cuidar de su alimentacion , dentro de una sola aplicacion , contiene un creador de rutina totalmente personalizado , un contador de calorias y un check de nutrientes para saber la informacion nutricional del alimento buscado por el usuario.
+ Es util para simplificar y mejorar la eficiencia de la gestión integral de un gimnasio. Ayuda potencialmente a mejorar la dieta alimenticia de cada persona y a su enfoque de entrenamiento.
 
  	[MENU PRINCIPAL]
  
